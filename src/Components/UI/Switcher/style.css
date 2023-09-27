@@ -1,0 +1,18 @@
+.indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: -3px;
+}
+
+.eye {
+  background-image: url("../../Graphic/Icons/light-dark/eye.png");
+  background-color: #fff;
+}
+
+.eye-close {
+  background-image: url("../../Graphic/Icons/light-dark/sleep.png");
+  background-color: rgba(255, 255, 255, 0.05);
+}

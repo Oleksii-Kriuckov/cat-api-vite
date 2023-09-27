@@ -1,0 +1,40 @@
+.card_back {
+  width: 138px;
+  height: 198px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+.card_button {
+  display: block;
+  text-decoration: none;
+  width: 138px;
+  height: 36px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ff868e;
+}
+.card_button:hover {
+  color: #ff868e;
+}
+
+.active {
+  background: #ff868e;
+  color: #ffffff;
+}
+.active:hover {
+  background: #ff868e;
+  color: #ffffff;
+}
+
+img {
+  display: block;
+}

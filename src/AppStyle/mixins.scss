@@ -1,0 +1,21 @@
+@import "variables"; 
+
+@mixin pinkButton ( $url, $urlHover){  //$bg: #fff,
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    // padding: 10px;
+    // background-color: $bg;
+    border: none;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+        background-color: $darkPink;
+        background-image: url($urlHover);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+}
+

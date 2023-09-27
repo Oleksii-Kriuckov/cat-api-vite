@@ -1,0 +1,193 @@
+@import "mixins";
+@import "variables";
+
+.App {
+  // font-family: "Jost";
+  font-style: normal;
+  width: 100%;
+}
+
+.light { 
+  background: #f8f8f7;
+}
+.dark {
+  background: #1d1d1d;
+}
+
+.light_background {
+  background: #ffffff;
+}
+
+.light_pink_background {
+  background-color: $pink;
+}
+.dark_pink_background {
+  background-color: rgba(255, 134, 142, 0.2);
+}
+
+.dark_background {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark_background01 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.light_border {
+  &:hover {
+    outline: 2px solid #fbe0dc;
+  }
+}
+.dark_border {
+  option {
+    outline: 2px dashed green;
+    background: rgba(60, 60, 60, 1);
+    padding: 10px;
+    border: none;
+  }
+  &:hover {
+    outline: 2px solid rgba(255, 134, 142, 0.3);
+  }
+}
+
+.pink_hover {
+  &:hover {
+    background-color: $pink;
+  }
+}
+.pink_hover_dark {
+  &:hover {
+    background-color: rgba(255, 134, 142, 0.2);
+  }
+}
+
+.black {
+  color: $textDark;
+}
+.gray {
+  color: $textGrey;
+}
+.pink {
+  color: $darkPink;
+  text-decoration: none;
+} 
+.white {
+  color: #fff;
+}
+
+.aside_wrapper {
+  width: 100%;
+}
+
+.back_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/back-20.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/back-white-20.png"
+  );
+  margin-right: 10px;
+}
+
+.search_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/search-20.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/search-white-20.png"
+  );
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.update_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/update-20.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/update-white-20.png"
+  );
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.fav_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/fav-color-20.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/fav-full-white-20.png"
+  );
+  display: none;
+}
+
+.like_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/like-30.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/like-white-30.png"
+  );
+  background-size: 20px 20px;
+  display: none;
+}
+
+.dislike_button {
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/dislike-30.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/dislike-white-30.png"
+  );
+  background-size: 20px 20px;
+  display: none;
+}
+
+.close_button {
+  @include pinkButton (
+    $url: 'src/Components/Graphic/Icons/close-20.png',
+    $urlHover: 'src/Components/Graphic/Icons/white-icon/close-white-20.png'
+  );
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.title_button {
+  height: 40px;
+  padding: 5px 30px;
+  background: #ff868e;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.id_button {
+  height: 40px;
+  padding: 5px 30px;
+  background: $pink;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: $darkPink;
+}
+
+.page {
+  height: 40px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #ff868e;
+  padding: 12px 30px;
+  user-select: none;
+  text-align: center;
+}
+
+.page_light {
+  background: #fbe0dc;
+}
+.page_dark {
+  background: rgba(255, 134, 142, 0.2);
+}

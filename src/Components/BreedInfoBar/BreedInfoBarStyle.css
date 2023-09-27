@@ -1,0 +1,55 @@
+.breed_name {
+  width: max-content;
+  height: 62px;
+  padding: 5px 40px;
+  margin: -30px auto;
+  border-radius: 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 52px;
+}
+.breed_name_dark {
+  background: #282828;
+}
+
+.breedsinfo_bar {
+  width: 640px;
+  margin-top: 50px;
+  border: 2px solid #fbe0dc;
+  border-radius: 20px;
+}
+
+.breedsinfo_bar_dark {
+  width: 640px;
+  margin-top: 50px;
+  border: 2px solid rgba(255, 134, 142, 0.2);
+  border-radius: 20px;
+}
+
+.breed_description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 25px 40px 20px;
+  text-align: justify;
+}
+
+.characteristic {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #1d1d1d;
+}
+
+.description {
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+color: #8C8C8C;
+}

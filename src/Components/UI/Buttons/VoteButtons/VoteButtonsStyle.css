@@ -1,0 +1,45 @@
+.groupButtons {
+  width: 248px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  background: #ffffff;
+  outline: 4px solid #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px auto;
+}
+.groupButtons :first-child {
+  background-color: #97EAB9;
+  background-image: url("src/Components/Graphic/Icons/white-icon/like-white-30.png");
+}
+.groupButtons :first-child:hover {
+  background-color: rgba(151, 234, 185, 0.4);
+  background-image: url("src/Components/Graphic/Icons/like-color-30.png");
+}
+.groupButtons :nth-child(2) {
+  background-color: #FF868E;
+  background-image: url("src/Components/Graphic/Icons/white-icon/fav-white-30.png");
+}
+.groupButtons :nth-child(2):hover {
+  background-color: rgba(255, 134, 142, 0.4);
+  background-image: url("src/Components/Graphic/Icons/fav-30.png");
+}
+.groupButtons :last-child {
+  background-color: #FFD280;
+  background-image: url("src/Components/Graphic/Icons/white-icon/dislike-white-30.png");
+}
+.groupButtons :last-child:hover {
+  background-color: rgba(255, 210, 128, 0.4);
+  background-image: url("src/Components/Graphic/Icons/dislike-color-30.png");
+}
+
+.vote_button {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

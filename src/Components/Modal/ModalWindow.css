@@ -1,0 +1,16 @@
+.modal_h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 52px;
+  margin-bottom: 10px;
+}
+
+.modal_input {
+  display: contents;
+  cursor: pointer;
+}
+
+.modal_p {
+  font-size: 20px;
+  line-height: 30px;
+}

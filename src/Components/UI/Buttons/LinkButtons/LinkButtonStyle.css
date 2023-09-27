@@ -1,0 +1,17 @@
+.link_button {
+  width: 60px;
+  height: 60px;
+  left: 115px;
+  top: 485px;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.active {
+  background: #ff868e;
+}
+
+.active:hover {
+  background: #ff868e;
+}

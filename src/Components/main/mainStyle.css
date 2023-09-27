@@ -1,0 +1,18 @@
+.background {
+  width: 680px;
+  height: 840px;
+  border-radius: 20px;
+}
+
+.background_light{ 
+  background: #FBE0DC;
+}
+  
+.background_dark {
+background: rgba(255, 255, 255, 0.05);
+}
+
+main {
+  width: 680px;
+  margin: 30px ;
+}

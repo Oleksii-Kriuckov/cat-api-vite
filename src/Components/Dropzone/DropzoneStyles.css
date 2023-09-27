@@ -1,0 +1,44 @@
+.dropzone {
+  padding: 20px 40px;
+  border-radius: 20px;
+  width: 600px;
+  height: 320px;
+  font-weight: 500;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightBorder {
+border: 2px dashed #fbe0dc;
+}
+.darkBorder {
+  border: 2px dashed rgba(255, 134, 142, 0.4)
+}
+
+.isAccept {
+  border: 2px green dashed;
+}
+.isReject {
+  border: 2px red dashed;
+}
+
+.dropzone-content {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.fileName {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#photoSing {
+  margin: auto;
+  margin-top: -120px;
+}
+

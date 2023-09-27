@@ -1,0 +1,41 @@
+.breedsSelect {
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  padding: 8px 0 8px 10px;
+  color: #8c8c8c;
+}
+.breedsSelect:active {
+  outline: none;
+}
+.breedsSelect:focus {
+  outline: none;
+}
+
+.border_hover option {
+  outline: 2px dashed green;
+  background-color: #ffffff;
+  padding: 10px;
+  border: none;
+}
+
+.gallerySelect {
+  width: 290px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 8px 10px;
+}
+.gallerySelect option {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+}
+.gallerySelect:active {
+  outline: none;
+}
+.gallerySelect:focus {
+  outline: none;
+}
