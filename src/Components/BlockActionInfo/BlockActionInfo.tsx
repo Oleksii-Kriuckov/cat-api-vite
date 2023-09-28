@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
-import "./BlockActionInfo.css";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
+import "./BlockActionInfo.css";
 
 type BlockActionInfoProps = PropsWithChildren<{
   date: string;
@@ -15,7 +15,11 @@ const BlockActionInfo = (props: BlockActionInfoProps) => {
   return (
     <div
       className={isLight ? "block light" : "block dark_background01"}
-      style={{ backgroundImage: `url(${props.icon})` }}
+      style={{
+        backgroundImage: `url(${props.icon})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "600px 20px",
+      }}
     >
       <div className="d-flex">
         <div

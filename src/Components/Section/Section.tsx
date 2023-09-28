@@ -1,9 +1,8 @@
 import "./sectionStyle.css";
-import { PropsWithChildren } from "react";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
 
-type SectionProps = PropsWithChildren<React.ReactNode>;
+type SectionProps = {children: React.ReactNode};
 
 const Section = (props: SectionProps) => {
   const isLight = useRecoilValue(lightDark$);

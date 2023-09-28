@@ -9,7 +9,7 @@ import { lightDark$ } from "../../Recoil/atoms";
 import { UploadPhoto } from "../UI/Buttons/UploadButtons/UploadPhoto";
 import { img } from "./DropzoneData";
 
-function Dropzone({}) {
+function Dropzone() {
   const [file, setFile] = useState({});
   const {
     getRootProps,
@@ -36,6 +36,7 @@ function Dropzone({}) {
   const isLight = useRecoilValue(lightDark$);
 
   const isObject = (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any
   ): value is {
     path: string,

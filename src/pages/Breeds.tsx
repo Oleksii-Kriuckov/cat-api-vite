@@ -15,7 +15,6 @@ import {
 import { useRecoilValue, useRecoilState } from "recoil";
 import SortButton1 from "../Components/UI/Buttons/sortButton/SortButton1";
 import { useSearchSortBreeds } from "../Hooks/useSearchSortBreeds";
-import useFetch from "../Hooks/useFetch";
 import GridForBreeds from "../Components/UI/Grid/GridForBreeds";
 import SelectLimits from "../Components/UI/Select/SelectLimits";
 import { usePagination } from "../Hooks/usePagination";

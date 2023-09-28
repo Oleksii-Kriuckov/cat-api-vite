@@ -16,7 +16,7 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
+))(() => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "#282828",
     color: "#fff",
