@@ -28,11 +28,11 @@
 
 .active {
   background: #ff868e;
-  color: #ffffff;
+  color: #8c8c8c;
 }
 .active:hover {
   background: #ff868e;
-  color: #ffffff;
+  color: #8c8c8c;
 }
 
 img {

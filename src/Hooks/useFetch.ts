@@ -33,9 +33,6 @@ function useFetch(url: string) {
         if (url === "https://api.thecatapi.com/v1/breeds") {
           const res = response.data;
           console.log(res);
-          
-          res.splice(30, 1);
-          res.splice(40, 1);
 
           setErrorMessage("");
           setBreedsArray(res);
@@ -47,7 +44,6 @@ function useFetch(url: string) {
       })
       .catch((error) => {
         setErrorMessage(error.toJSON().message)
-        // console.log(error.toJSON().message);
       })
       .finally(() => {
         setIsLoading(false);

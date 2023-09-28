@@ -1,4 +1,3 @@
-import "./styles.css";
 import logo from "../Graphic/logo.png";
 import logoDark from "../Graphic/Logo-dark.png";
 import { GreyTextRegular } from "../UI/Texts/GreyTextRegular";
@@ -9,6 +8,7 @@ import { INITIAL_ROUTE } from "../../Router/path";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
+import "./styles.css";
 
 const Aside = () => {
   const navigate = useNavigate();

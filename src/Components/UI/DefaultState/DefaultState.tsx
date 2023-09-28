@@ -1,9 +1,8 @@
-import React, { PropsWithChildren } from "react";
-import "./defaultState.css";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../../Recoil/atoms";
+import "./defaultState.css";
 
-type DefaultStateProps = PropsWithChildren<React.ReactNode>;
+type DefaultStateProps = {children: string};
 
 const DefaultState = (props: DefaultStateProps) => {
   const checked = useRecoilValue(lightDark$);
