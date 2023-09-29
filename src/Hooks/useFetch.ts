@@ -10,6 +10,7 @@ import {
   displayArray$,
   errorMessage$
 } from "../Recoil/atoms";
+import { BREEDS_PATH, SEARCH_PATH } from "../Router/fetch";
 
 function useFetch(url: string) {
   const setIsLoading = useSetRecoilState(isLoading$);
@@ -27,10 +28,10 @@ function useFetch(url: string) {
     await axios
       .get(url)
       .then((response) => {
-        if (url === "https://api.thecatapi.com/v1/images/search") {
+        if (url === SEARCH_PATH) {
           setVoteResponse(response.data[0]);
         }
-        if (url === "https://api.thecatapi.com/v1/breeds") {
+        if (url === BREEDS_PATH) {
           const res = response.data;
           console.log(res);
 

@@ -32,13 +32,13 @@ const SelectBreeds = (props: SelectProps) => {
         onChange={(e) => changeOption(e)}
       >
         <option value="">{props.children}</option>
-        {/* {props.optionArray.map((elem) =>
+        {props.optionArray.map((elem) =>
           isObjectForInfo(elem) ? (
             <option key={elem.name} value={elem.id}>
               {elem.name}
             </option>
           ) : null
-        )} */}
+        )}
       </select>
     </div>
   );

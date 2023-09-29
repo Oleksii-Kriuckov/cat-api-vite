@@ -13,7 +13,7 @@ import {
   lightDark$,
 } from "../Recoil/atoms";
 import { useRecoilValue, useRecoilState } from "recoil";
-import SortButton1 from "../Components/UI/Buttons/sortButton/SortButton1";
+import SortButton from "../Components/UI/Buttons/sortButton/SortButton";
 import { useSearchSortBreeds } from "../Hooks/useSearchSortBreeds";
 import GridForBreeds from "../Components/UI/Grid/GridForBreeds";
 import SelectLimits from "../Components/UI/Select/SelectLimits";
@@ -22,6 +22,7 @@ import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageInd
 import { optionArrayForLimitBreeds } from "../Components/UI/Select/DataForSelects";
 import { BlackText } from "../Components/UI/Texts/BlackText";
 import breeds from '../Assets/breeds.json'
+import useFetch from "../Hooks/useFetch";
 
 const Breeds = () => {
   const [breedsArray, setBreedsArray] = useRecoilState(breedsArray$);
@@ -35,11 +36,12 @@ const Breeds = () => {
   const { sliceArray, pageAmount } = usePagination(breeds);
   const { sortByName_From_Z_To_A, sortByName_From_A_To_Z } =
     useSearchSortBreeds();
+    const { getRequest } = useFetch("https://api.thecatapi.com/v1/breeds");
 
   useEffect(() => {
-    // if (breedsArray.length === 0) {
-    //   getRequest();
-    // }
+    if (breedsArray.length === 0) {
+      getRequest();
+    }
 
     return () => {
       setLimit(5);
@@ -78,7 +80,7 @@ const Breeds = () => {
                 : "breedsSelect dark_background01 dark_border"
             }
           />
-          <SortButton1
+          <SortButton
             class_name={
               checked
                 ? "sortButton z-a light light_border"
@@ -86,7 +88,7 @@ const Breeds = () => {
             }
             sortFunction={() => setBreedsArray(sortByName_From_Z_To_A())}
           />
-          <SortButton1
+          <SortButton
             class_name={
               checked
                 ? "sortButton a-z light light_border"
