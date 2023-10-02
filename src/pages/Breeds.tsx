@@ -36,11 +36,11 @@ const Breeds = () => {
   const { sliceArray, pageAmount } = usePagination(breeds);
   const { sortByName_From_Z_To_A, sortByName_From_A_To_Z } =
     useSearchSortBreeds();
-    const { getRequest } = useFetch("https://api.thecatapi.com/v1/breeds");
+    const { getBreeds } = useFetch();
 
   useEffect(() => {
     if (breedsArray.length === 0) {
-      getRequest();
+      getBreeds();
     }
 
     return () => {

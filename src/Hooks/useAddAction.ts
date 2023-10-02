@@ -15,7 +15,7 @@ const useAddVote = () => {
   const [actionInfoArray, setActionInfoArray] =
     useRecoilState(actionInfoArray$);
 
-  const { getRequest } = useFetch("https://api.thecatapi.com/v1/images/search");
+  const { getRandomCat } = useFetch();
 
   const addAction = (
     message: string,
@@ -40,7 +40,7 @@ const useAddVote = () => {
 
       if (!actionInfoArray.some(el => el.id === voteResponseData.id)) {
         setActionInfoArray([newAction, ...actionInfoArray]);
-        getRequest();
+        getRandomCat();
         setGalleryArray([...galleryArray, newAction]);
       }
     }

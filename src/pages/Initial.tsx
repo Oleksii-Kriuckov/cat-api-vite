@@ -7,10 +7,10 @@ import "../Components/main/mainStyle.css";
 
 const Initial = () => {
   const checked = useRecoilValue(lightDark$);
-  const { getRequest } = useFetch("https://api.thecatapi.com/v1/breeds");
+  const { getBreeds } = useFetch();
 
   useEffect(() => {
-    getRequest();
+    getBreeds();
   }, []);
 
   return (

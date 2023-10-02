@@ -7,3 +7,5 @@ export const FAVORITES_ROUTE = '/favorites';
 export const DISLIKES_ROUTE = '/dislikes';
 export const SEARCH_ROUTE = '/search';
 // export const _ROUTE = '/';
+
+export const SEARCH_CAT_API_PATH = "https://api.thecatapi.com/v1/images/search";

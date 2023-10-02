@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { initialArr, NewAct, IBreedInfo, IBreedInfoWithoutImage } from "../Types/types";
+import { initialArr, NewAct, BreedInfo } from "../Types/types";
 
 // Actions logs array
 export const actionInfoArray$ = atom({
@@ -7,18 +7,18 @@ export const actionInfoArray$ = atom({
   default: initialArr,
 });
 
-export const breedsArray$ = atom({
+export const breedsArray$ = atom<Array<BreedInfo>>({
   key: "breedsArrayState",
   default: [],
 });
 
-export const breedInfo$ = atom<IBreedInfo | IBreedInfoWithoutImage>({
+export const breedInfo$ = atom<BreedInfo>({
   key: "breedInfoState",
-  default: {} as IBreedInfo | IBreedInfoWithoutImage,
+  default: {} as BreedInfo,
 });
 
 // It use for options list in select
-export const copyBreedsArray$ = atom({
+export const copyBreedsArray$ = atom<Array<BreedInfo>>({
   key: "copyBreedsArrayState",
   default: [],
 });
@@ -26,11 +26,6 @@ export const copyBreedsArray$ = atom({
 export const copyGalleryArray$ = atom({
   key: "copyGalleryArrayState",
   default: initialArr,
-});
-
-export const inputValue$ = atom({
-  key: "inputValueState",
-  default: "",
 });
 
 export const displayArray$ = atom({
@@ -56,6 +51,11 @@ export const favoritesArray$ = atom({
 export const galleryArray$ = atom<NewAct[]>({
   key: "galleryArrayState",
   default: [],
+});
+
+export const inputValue$ = atom({
+  key: "inputValueState",
+  default: "",
 });
 
 export const isLoading$ = atom({

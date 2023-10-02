@@ -1,56 +1,54 @@
 import axios from "axios";
 import { useSetRecoilState, useRecoilValue } from "recoil";
+import breeds from "../Assets/breeds.json";
 import {
   isLoading$,
-  voteResponse$,
   breedsArray$,
-  copyBreedsArray$,
-  limit$,
   pageNumber$,
+  limit$,
   displayArray$,
-  errorMessage$
+  errorMessage$,
+  copyBreedsArray$,
+  voteResponse$,
 } from "../Recoil/atoms";
-import { BREEDS_PATH, SEARCH_PATH } from "../Router/fetch";
+import { SEARCH_CAT_API_PATH } from "../Router/path";
+import { ErrorResponse } from "react-router-dom";
 
-function useFetch(url: string) {
+function useFetch() {
   const setIsLoading = useSetRecoilState(isLoading$);
   const setVoteResponse = useSetRecoilState(voteResponse$);
   const setBreedsArray = useSetRecoilState(breedsArray$);
   const setCopyBreedsArray = useSetRecoilState(copyBreedsArray$);
   const limit = useRecoilValue(limit$);
   const pageNumber = useRecoilValue(pageNumber$);
-  const  setDisplayBreed = useSetRecoilState(displayArray$);
+  const setDisplayBreed = useSetRecoilState(displayArray$);
   const setErrorMessage = useSetRecoilState(errorMessage$);
 
-  const getRequest = async () => {
+  const getBreeds = () => {
+    setBreedsArray(breeds);
+    setCopyBreedsArray(breeds);
+    setDisplayBreed(breeds.slice((pageNumber - 1) * limit, pageNumber * limit));
+  };
+
+  const getRandomCat = async () => {
     setIsLoading(true);
 
     await axios
-      .get(url)
-      .then((response) => {
-        if (url === SEARCH_PATH) {
-          setVoteResponse(response.data[0]);
-        }
-        if (url === BREEDS_PATH) {
-          const res = response.data;
-          console.log(res);
-
+      .get(SEARCH_CAT_API_PATH)
+      .then((response: { data: any[] }) => {
           setErrorMessage("");
-          setBreedsArray(res);
-          setCopyBreedsArray(res);
-          setDisplayBreed(
-            res.slice((pageNumber - 1) * limit, pageNumber * limit)
-          );
+          setVoteResponse(response.data[0]);
+      })
+      .catch(
+        (error: ErrorResponse) => {
+          setErrorMessage(error.statusText);
         }
-      })
-      .catch((error) => {
-        setErrorMessage(error.toJSON().message)
-      })
+      )
       .finally(() => {
         setIsLoading(false);
       });
   };
 
-  return { getRequest };
+  return { getBreeds, getRandomCat };
 }
 export default useFetch;

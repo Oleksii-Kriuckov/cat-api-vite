@@ -12,7 +12,7 @@ import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
 
 const Voting = () => {
-  const { getRequest } = useFetch("https://api.thecatapi.com/v1/images/search");
+  const { getRandomCat } = useFetch();
 
   const isLoading = useRecoilValue(isLoading$);
   const voteResponseData = useRecoilValue(voteResponseData$);
@@ -20,6 +20,7 @@ const Voting = () => {
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
 
   const isObject = (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any
   ): value is { icon: string; date: string; id: string; message: string } =>
     typeof value === "object" &&
@@ -28,7 +29,7 @@ const Voting = () => {
     typeof value.message === "string";
 
   useEffect(() => {
-    getRequest();
+    getRandomCat();
     return () => {
       setErrorMessage("");
     };
