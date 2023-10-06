@@ -13,13 +13,10 @@ export const useSearchSortBreeds = () => {
   const breedsArray= useRecoilValue(breedsArray$);
   const copyBreedsArray = useRecoilValue(copyBreedsArray$);
 
-  const isObject = (value: any): value is { name: string } =>
-    typeof value === "object" && typeof value.name === "string";
-
   const searchBreeds = () => {
     setSearchingBreeds(
-      copyBreedsArray.filter((breed: {}) => {
-        if (inputValue && isObject(breed)) {
+      copyBreedsArray.filter((breed) => {
+        if (inputValue) {
           return breed.name.toLowerCase().includes(inputValue.toLowerCase());
         }
       })
@@ -29,12 +26,14 @@ export const useSearchSortBreeds = () => {
   const sortByName_From_Z_To_A = () => {
     const res = [...breedsArray].sort((a, b) => (a["name"] < b["name"] ? 1 : -1));
     console.log("sortByName_From_Z_To_A");
+    console.log(res)
     return res;
   };
 
   const sortByName_From_A_To_Z = () => {
     const res = [...breedsArray].sort((a, b) => (a["name"] > b["name"] ? 1 : -1));
     console.log("sortByName_From_A_To_Z");
+    console.log(res)
     return res;
   };
 

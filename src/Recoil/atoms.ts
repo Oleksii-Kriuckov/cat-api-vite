@@ -2,9 +2,9 @@ import { atom } from "recoil";
 import { initialArr, NewAct, BreedInfo } from "../Types/types";
 
 // Actions logs array
-export const actionInfoArray$ = atom({
+export const actionInfoArray$ = atom<Array<NewAct>>({
   key: "actionInfoArray",
-  default: initialArr,
+  default: [],
 });
 
 export const breedsArray$ = atom<Array<BreedInfo>>({
@@ -33,9 +33,9 @@ export const displayArray$ = atom({
   default: [{}],
 });
 
-export const dislikesArray$ = atom({
+export const dislikesArray$ = atom<Array<NewAct>>({
   key: "DislikesArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const errorMessage$ = atom({
@@ -43,9 +43,9 @@ export const errorMessage$ = atom({
   default: "",
 });
 
-export const favoritesArray$ = atom({
+export const favoritesArray$ = atom<Array<NewAct>>({
   key: "FavoritesArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const galleryArray$ = atom<NewAct[]>({
@@ -68,9 +68,9 @@ export const lightDark$ = atom({
   default: false,
 });
 
-export const likesArray$ = atom({
+export const likesArray$ = atom<Array<NewAct>>({
   key: "likesArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const limit$ = atom({

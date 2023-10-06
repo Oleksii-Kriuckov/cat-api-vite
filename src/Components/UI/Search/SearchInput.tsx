@@ -1,9 +1,10 @@
-import "./inputStyle.css";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { SEARCH_ROUTE } from "../../../Router/path";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { lightDark$, inputValue$} from "../../../Recoil/atoms";
 import { useSearchSortBreeds } from "../../../Hooks/useSearchSortBreeds";
+import "./inputStyle.css";
 
 type SearchInputProps = { width: string | number };
 
@@ -17,7 +18,7 @@ const SearchInput = (props: SearchInputProps) => {
     searchBreeds();
     navigate(SEARCH_ROUTE);
   };
-  const pressEnter = (e: any) => {
+  const pressEnter = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       search();
     }

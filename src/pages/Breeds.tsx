@@ -21,7 +21,6 @@ import { usePagination } from "../Hooks/usePagination";
 import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageIndicatorBlock";
 import { optionArrayForLimitBreeds } from "../Components/UI/Select/DataForSelects";
 import { BlackText } from "../Components/UI/Texts/BlackText";
-import breeds from '../Assets/breeds.json'
 import useFetch from "../Hooks/useFetch";
 
 const Breeds = () => {
@@ -33,7 +32,7 @@ const Breeds = () => {
   const checked = useRecoilValue(lightDark$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
 
-  const { sliceArray, pageAmount } = usePagination(breeds);
+  const { sliceArray, pageAmount } = usePagination(breedsArray);
   const { sortByName_From_Z_To_A, sortByName_From_A_To_Z } =
     useSearchSortBreeds();
     const { getBreeds } = useFetch();
@@ -52,7 +51,6 @@ const Breeds = () => {
 
   useMemo(() => {
     sliceArray();
-    // console.log(displayBreed);
   }, [limit, pageNumber, breedsArray]);
 
   return (

@@ -1,4 +1,4 @@
-import { useRecoilValue, useSetRecoilState, useRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
   galleryArray$,
   likesArray$,
@@ -11,8 +11,6 @@ export const useAddToCategories = () => {
   const  setFavoritesArray = useSetRecoilState(favoritesArray$);
   const  setDislikesArray = useSetRecoilState(dislikesArray$);
   const galleryArray = useRecoilValue(galleryArray$);
-  // const [copyGalleryArray, setCopyGalleryArray] =
-  //   useRecoilState(copyGalleryArray$);
 
   const isObject = (value: any): value is { alt: string } =>
     typeof value === "object" && typeof value.alt === "string";
