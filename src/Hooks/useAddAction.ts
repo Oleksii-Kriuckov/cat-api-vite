@@ -6,7 +6,8 @@ import {
 } from "../Recoil/atoms";
 import useFetch from "./useFetch";
 import { NewAct } from "../Types/types";
-import { dateTransform } from "../Components/UI/Buttons/VoteButtons/Data";
+import { dateTransform } from "../functions/dateFunctions";
+// import { dateTransform } from "../Components/UI/Buttons/VoteButtons/Data";
 
 const useAddVote = () => {
   const [galleryArray, setGalleryArray] = useRecoilState(galleryArray$);

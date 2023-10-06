@@ -25,15 +25,11 @@ export const useSearchSortBreeds = () => {
 
   const sortByName_From_Z_To_A = () => {
     const res = [...breedsArray].sort((a, b) => (a["name"] < b["name"] ? 1 : -1));
-    console.log("sortByName_From_Z_To_A");
-    console.log(res)
     return res;
   };
 
   const sortByName_From_A_To_Z = () => {
     const res = [...breedsArray].sort((a, b) => (a["name"] > b["name"] ? 1 : -1));
-    console.log("sortByName_From_A_To_Z");
-    console.log(res)
     return res;
   };
 

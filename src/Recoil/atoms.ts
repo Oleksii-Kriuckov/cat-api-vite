@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { initialArr, NewAct, BreedInfo } from "../Types/types";
+import { NewAct, BreedInfo } from "../Types/types";
 
 // Actions logs array
 export const actionInfoArray$ = atom<Array<NewAct>>({
@@ -23,9 +23,9 @@ export const copyBreedsArray$ = atom<Array<BreedInfo>>({
   default: [],
 });
 
-export const copyGalleryArray$ = atom({
+export const copyGalleryArray$ = atom<Array<NewAct>>({
   key: "copyGalleryArrayState",
-  default: initialArr,
+  default: [],
 });
 
 export const displayArray$ = atom({

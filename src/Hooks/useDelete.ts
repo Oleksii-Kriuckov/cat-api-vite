@@ -1,4 +1,4 @@
-import { dateTransform } from "../Components/UI/Buttons/VoteButtons/Data";
+import { dateTransform } from "../assets/DataForVote";
 import {
   galleryArray$,
   actionInfoArray$,

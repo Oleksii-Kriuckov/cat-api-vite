@@ -2,7 +2,7 @@ import VoteButton from "./VoteButton";
 import LikeIcon from "../../../Graphic/Icons/like-color-20.png";
 import FavIcon from "../../../Graphic/Icons/fav-20.png";
 import DislikeIcon from "../../../Graphic/Icons/dislike-color-20.png";
-import { LikeMessage, FavMessage, DislikeMessage } from "./Data";
+import { LikeMessage, FavMessage, DislikeMessage } from "../../../../assets/DataForVote";
 import { linkButtonArray } from "../LinkButtons/LinkButtonData";
 
 //Buttons for voting Like, Favorite, Dislike
