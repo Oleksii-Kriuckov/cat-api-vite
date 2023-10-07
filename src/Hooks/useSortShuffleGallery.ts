@@ -21,12 +21,12 @@ export const useSortShuffleGallery = (array: NewAct[]) => {
   }
 
   const sortById_From_Z_To_A = () => {
-    const res = [...array].sort((a, b) => (a["id"] < b["id"] ? 1 : -1));
+    const res = [...array].sort((a, b) => (a["mSec"] < b["mSec"] ? 1 : -1));
     return res;
   };
 
   const sortById_From_A_To_Z = () => {
-    const res = [...array].sort((a, b) => (a["id"] > b["id"] ? 1 : -1));
+    const res = [...array].sort((a, b) => (a["mSec"] > b["mSec"] ? 1 : -1));
     return res;
   };
 

@@ -27,7 +27,7 @@ const BlockActionInfo = (props: BlockActionInfoProps) => {
             isLight ? "date light_background black" : "date white dark"
           }
         >
-          {props.date}
+          {props.date.slice(0, 5)}
         </div>
         <div className="message">
           Image ID:{" "}

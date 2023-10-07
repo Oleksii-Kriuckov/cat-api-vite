@@ -1,4 +1,3 @@
-import { dateTransform } from "../assets/DataForVote";
 import {
   galleryArray$,
   actionInfoArray$,
@@ -10,6 +9,7 @@ import {
   removeDislikesActions$,
 } from "../Recoil/atoms";
 import { useRecoilState } from "recoil";
+import { dateTransform } from "../functions/dateFunctions";
 
 export const useDelete = () => {
   const [likesArray, setLikesArray] = useRecoilState(likesArray$);
@@ -32,7 +32,8 @@ export const useDelete = () => {
 
   const addRemoveAction = (id: string, alt: string, message: string) => {
     const newAction = {
-      date: dateTransform(),
+      date: dateTransform().date,
+      mSec: dateTransform().mSec,
       image: { url: "" },
       id,
       message,

@@ -1,5 +1,6 @@
 export interface NewAct {
   date: string;
+  mSec: number;
   image: { url: string };
   id: string;
   message: string;

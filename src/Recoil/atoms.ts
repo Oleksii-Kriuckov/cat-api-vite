@@ -28,9 +28,9 @@ export const copyGalleryArray$ = atom<Array<NewAct>>({
   default: [],
 });
 
-export const displayArray$ = atom({
+export const displayArray$ = atom<BreedInfo[] | NewAct[]>({
   key: "displayBreedsArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const dislikesArray$ = atom<Array<NewAct>>({
