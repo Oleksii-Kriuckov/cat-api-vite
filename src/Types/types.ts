@@ -3,8 +3,8 @@ export interface NewAct {
   mSec: number;
   image: { url: string };
   id: string;
-  message: string;
   icon: string;
+  message: string;
   alt: string;
 }
 
@@ -18,3 +18,5 @@ export interface BreedInfo {
   weight: { metric: string };
   life_span: string;
 }
+
+export type AltType = "like" | "favorite" | "dislike"

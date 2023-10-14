@@ -93,24 +93,24 @@ export const removeActionArray$ = atom({
   default: [{}],
 });
 
-export const removeLikesActions$ = atom({
-  key: "removeLikesState",
-  default: [{}],
-});
-
-export const removeFavoritesActions$ = atom({
-  key: "removeFavoritesState",
-  default: [{}],
-});
-
-export const removeDislikesActions$ = atom({
+export const removeDislikesActions$ = atom<NewAct[]>({
   key: "removeDislikesState",
-  default: [{}],
+  default: [],
 });
 
-export const searchingBreeds$ = atom({
+export const removeFavoritesActions$ = atom<NewAct[]>({
+  key: "removeFavoritesState",
+  default: [],
+});
+
+export const removeLikesActions$ = atom<NewAct[]>({
+  key: "removeLikesState",
+  default: [],
+});
+
+export const searchingBreeds$ = atom<Array<BreedInfo>>({
   key: "searchingBreedsState",
-  default: [{}],
+  default: [],
 });
 
 export const voteResponse$ = atom({

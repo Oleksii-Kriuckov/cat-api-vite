@@ -2,7 +2,6 @@ import { useRecoilValue } from "recoil";
 import { BreedTitle } from "./BreedTitle";
 import "./GridStyle.css";
 import { limit$, pageNumber$ } from "../../../Recoil/atoms";
-import { isObjectForInfo } from "../../../Types/isObject";
 import { BreedInfo } from "../../../Types/types";
 
 type GridForBreedsProps = { array: BreedInfo[]; pageAmount: number };
@@ -22,7 +21,6 @@ const GridForBreeds = (props: GridForBreedsProps) => {
       }}
     >
       {props.array.map((elem) =>
-        //  isObjectForInfo(elem) && (
           <div
             className="grid_item for_breeds"
             key={elem.id}
@@ -31,7 +29,6 @@ const GridForBreeds = (props: GridForBreedsProps) => {
             <div className="background_grid_item"></div>
             <BreedTitle info={elem}>{elem.name}</BreedTitle>
           </div>
-        // ) 
       )}
     </div>
   );

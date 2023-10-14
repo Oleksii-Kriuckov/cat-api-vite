@@ -27,9 +27,6 @@ export const useDelete = () => {
   const [removeDislikesArray, setRemoveDislikesArray] =
     useRecoilState(removeDislikesActions$);
 
-  const isObject = (value: any): value is { id: string } =>
-    typeof value === "object" && typeof value.id === "string";
-
   const addRemoveAction = (id: string, alt: string, message: string) => {
     const newAction = {
       date: dateTransform().date,
@@ -40,11 +37,10 @@ export const useDelete = () => {
       icon: "",
       alt,
     };
+
     setGalleryArray(
       galleryArray.filter((elem) => {
-        if (isObject(elem)) {
           return elem.id !== id;
-        }
       })
     );
 
@@ -54,9 +50,7 @@ export const useDelete = () => {
       case "like":
         setLikesArray(
           likesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveLikesActions([newAction, ...removeLikesActions]);
@@ -65,9 +59,7 @@ export const useDelete = () => {
       case "favorite":
         setFavoritesArray(
           favoritesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveFavoritesArray([newAction, ...removeFavoritesArray]);
@@ -76,9 +68,7 @@ export const useDelete = () => {
       case "dislike":
         setDislikesArray(
           dislikesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveDislikesArray([newAction, ...removeDislikesArray]);

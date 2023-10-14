@@ -1,10 +1,10 @@
 import RemoveButton from "../Buttons/RemoveButton";
-import "./GridStyle.css";
 import { countRows } from "../../../functions/countRows";
-import { isObjectForInfo } from "../../../Types/isObject";
+import { NewAct } from "../../../Types/types";
+import "./GridStyle.css";
 
 type GridFormProps = {
-  array: {}[];
+  array: NewAct[];
   class_name_btn: string;
   alt: string;
   removeMessage: string;
@@ -21,7 +21,6 @@ const GridForm = (props: GridFormProps) => {
       }}
     >
       {props.array.map((elem, ind) =>
-        isObjectForInfo(elem) ? (
           <div
             className="grid_item grid_form"
             key={ind}
@@ -35,7 +34,6 @@ const GridForm = (props: GridFormProps) => {
               message={props.removeMessage}
             />
           </div>
-        ) : null
       )}
     </div>
   );

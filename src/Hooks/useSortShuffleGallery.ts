@@ -1,4 +1,4 @@
-import { isObjectForInfo } from "../Types/isObject";
+// import { isObjectForInfo } from "../Types/isObject";
 import { NewAct } from "../Types/types";
 
 export const useSortShuffleGallery = (array: NewAct[]) => {
@@ -32,18 +32,18 @@ export const useSortShuffleGallery = (array: NewAct[]) => {
 
   const filterAnimated = () => {
     const res = [...array].filter((el) => {
-      if (isObjectForInfo(el)) {
+      // if (isObjectForInfo(el)) {}
         return el.image.url.substring(el.image.url.length - 3) === "gif";
-      }
+      
     });
     return res;
   };
 
   const filterStatic = () => {
     const res = [...array].filter((el) => {
-      if (isObjectForInfo(el)) {
+      // if (isObjectForInfo(el)) {}
         return el.image.url.substring(el.image.url.length - 3) !== "gif";
-      }
+      
     });
     return res;
   };

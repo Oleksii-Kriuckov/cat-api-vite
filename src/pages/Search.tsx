@@ -19,7 +19,7 @@ const Search = () => {
 
     return () => {
       setInputValue("");
-      setSearchingBreeds([{}]);
+      setSearchingBreeds([]);
     };
   }, []);
 
