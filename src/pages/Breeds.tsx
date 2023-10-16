@@ -14,7 +14,7 @@ import {
 } from "../Recoil/atoms";
 import { useRecoilValue, useRecoilState } from "recoil";
 import SortButton from "../Components/UI/Buttons/sortButton/SortButton";
-import { useSearchSortBreeds } from "../Hooks/useSearchSortBreeds";
+import { useSearchSort } from "../Hooks/useSearchSort";
 import GridForBreeds from "../Components/UI/Grid/GridForBreeds";
 import SelectLimits from "../Components/UI/Select/SelectLimits";
 import { usePagination } from "../Hooks/usePagination";
@@ -33,9 +33,8 @@ const Breeds = () => {
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
 
   const { sliceArray, pageAmount } = usePagination(breedsArray);
-  const { sortByName_From_Z_To_A, sortByName_From_A_To_Z } =
-    useSearchSortBreeds();
-    const { getBreeds } = useFetch();
+  const { sort_From_A_To_Z, sort_From_Z_To_A } = useSearchSort();
+  const { getBreeds } = useFetch();
 
   useEffect(() => {
     if (breedsArray.length === 0) {
@@ -84,7 +83,9 @@ const Breeds = () => {
                 ? "sortButton z-a light light_border"
                 : "sortButton z-a dark_background01 dark_border"
             }
-            sortFunction={() => setBreedsArray(sortByName_From_Z_To_A())}
+            sortFunction={() =>
+              setBreedsArray(sort_From_Z_To_A(breedsArray, "name"))
+            }
           />
           <SortButton
             class_name={
@@ -92,7 +93,9 @@ const Breeds = () => {
                 ? "sortButton a-z light light_border"
                 : "sortButton a-z dark_background01 dark_border"
             }
-            sortFunction={() => setBreedsArray(sortByName_From_A_To_Z())}
+            sortFunction={() =>
+              setBreedsArray(sort_From_A_To_Z(breedsArray, "name"))
+            }
           />
         </Header>
         {errorMessage !== "" ? (

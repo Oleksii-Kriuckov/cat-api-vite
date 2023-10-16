@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { initialArr, NewAct, BreedInfo } from "../Types/types";
+import { NewAct, BreedInfo } from "../Types/types";
 
 // Actions logs array
 export const actionInfoArray$ = atom<Array<NewAct>>({
@@ -23,14 +23,14 @@ export const copyBreedsArray$ = atom<Array<BreedInfo>>({
   default: [],
 });
 
-export const copyGalleryArray$ = atom({
+export const copyGalleryArray$ = atom<Array<NewAct>>({
   key: "copyGalleryArrayState",
-  default: initialArr,
+  default: [],
 });
 
-export const displayArray$ = atom({
+export const displayArray$ = atom<BreedInfo[] | NewAct[]>({
   key: "displayBreedsArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const dislikesArray$ = atom<Array<NewAct>>({
@@ -88,29 +88,29 @@ export const pageNumber$ = atom({
   default: 1,
 });
 
-export const removeActionArray$ = atom({
+export const removeActionArray$ = atom<NewAct[]>({
   key: "removeArrayState",
-  default: [{}],
+  default: [],
 });
 
-export const removeLikesActions$ = atom({
-  key: "removeLikesState",
-  default: [{}],
-});
-
-export const removeFavoritesActions$ = atom({
-  key: "removeFavoritesState",
-  default: [{}],
-});
-
-export const removeDislikesActions$ = atom({
+export const removeDislikesActions$ = atom<NewAct[]>({
   key: "removeDislikesState",
-  default: [{}],
+  default: [],
 });
 
-export const searchingBreeds$ = atom({
+export const removeFavoritesActions$ = atom<NewAct[]>({
+  key: "removeFavoritesState",
+  default: [],
+});
+
+export const removeLikesActions$ = atom<NewAct[]>({
+  key: "removeLikesState",
+  default: [],
+});
+
+export const searchingBreeds$ = atom<Array<BreedInfo>>({
   key: "searchingBreedsState",
-  default: [{}],
+  default: [],
 });
 
 export const voteResponse$ = atom({

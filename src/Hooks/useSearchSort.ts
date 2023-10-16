@@ -1,16 +1,15 @@
 import {
   inputValue$,
-  breedsArray$,
+  // breedsArray$,
   copyBreedsArray$,
   searchingBreeds$,
 } from "../Recoil/atoms";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 
-export const useSearchSortBreeds = () => {
+export const useSearchSort = () => {
   const inputValue = useRecoilValue(inputValue$);
   const  setSearchingBreeds =
   useSetRecoilState(searchingBreeds$);
-  const breedsArray= useRecoilValue(breedsArray$);
   const copyBreedsArray = useRecoilValue(copyBreedsArray$);
 
   const searchBreeds = () => {
@@ -23,19 +22,15 @@ export const useSearchSortBreeds = () => {
     );
   };
 
-  const sortByName_From_Z_To_A = () => {
-    const res = [...breedsArray].sort((a, b) => (a["name"] < b["name"] ? 1 : -1));
-    console.log("sortByName_From_Z_To_A");
-    console.log(res)
+  const sort_From_Z_To_A = (array: any[], key: string) => {
+    const res = [...array].sort((a, b) => (a[key] < b[key] ? 1 : -1));
     return res;
   };
 
-  const sortByName_From_A_To_Z = () => {
-    const res = [...breedsArray].sort((a, b) => (a["name"] > b["name"] ? 1 : -1));
-    console.log("sortByName_From_A_To_Z");
-    console.log(res)
+  const sort_From_A_To_Z = (array: any[], key: string) => {
+    const res = [...array].sort((a, b) => (a[key] > b[key] ? 1 : -1));
     return res;
   };
 
-  return { searchBreeds, sortByName_From_A_To_Z, sortByName_From_Z_To_A };
+  return { searchBreeds, sort_From_A_To_Z, sort_From_Z_To_A };
 };

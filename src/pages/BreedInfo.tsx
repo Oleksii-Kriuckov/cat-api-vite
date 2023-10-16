@@ -5,7 +5,6 @@ import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
 import { breedInfo$ } from "../Recoil/atoms";
 import { useRecoilValue } from "recoil";
 import BreedInfoBar from "../Components/BreedInfoBar/BreedInfoBar";
-import { isObjectForInfo } from "../Types/isObject";
 
 export default function BreedInfo() {
   const breedInfo = useRecoilValue(breedInfo$);
@@ -19,7 +18,7 @@ export default function BreedInfo() {
             {breedInfo.id}
           </TitleButton>
         </Header>
-        {isObjectForInfo(breedInfo) ? 
+        {breedInfo.image.url ? 
         <img
           src={breedInfo.image.url}
           alt="cat"

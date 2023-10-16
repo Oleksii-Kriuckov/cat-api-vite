@@ -3,9 +3,9 @@ import "./GridStyle.css";
 import { countLastPageRows } from "../../../functions/countRows";
 import { IdTitle } from "./IdTitle";
 import { limit$, pageNumber$ } from "../../../Recoil/atoms";
-import { isObjectForInfo } from "../../../Types/isObject";
+import { NewAct } from "../../../Types/types";
 
-type GridForGalleryProps = { array: {}[]; pageAmount: number };
+type GridForGalleryProps = { array: NewAct[]; pageAmount: number };
 
 const GridForGallery = (props: GridForGalleryProps) => {
   const limit = useRecoilValue(limit$);
@@ -22,16 +22,14 @@ const GridForGallery = (props: GridForGalleryProps) => {
       }}
     >
       {props.array.map((elem, ind) =>
-        isObjectForInfo(elem) ? (
           <div
             className="grid_item for_breeds"
             key={ind}
             style={{ backgroundImage: `url(${elem.image.url})` }}
           >
             {" "}
-            <IdTitle>{elem.id}</IdTitle>
+            <IdTitle>Add at {elem.date}</IdTitle>
           </div>
-        ) : null
       )}
     </div>
   );

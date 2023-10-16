@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./styles/SelectStyle.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { orderArray } from "./DataForSelects";
-import { useSortShuffleGallery } from "../../../Hooks/useSortShuffleGallery";
+import { useSortShuffleGallery } from "../../../Hooks/useShuffleFilter";
+import { useSearchSort } from "../../../Hooks/useSearchSort";
 import {
   lightDark$,
   galleryArray$,
@@ -18,8 +19,8 @@ const SelectOrder = (props: SelectGalleryProps) => {
   const checked = useRecoilValue(lightDark$);
   const [value, setValue] = useState("");
   const galleryArray = useRecoilValue(galleryArray$);
-  const { shuffle, sortById_From_A_To_Z, sortById_From_Z_To_A } =
-    useSortShuffleGallery(galleryArray);
+  const { shuffle } = useSortShuffleGallery(galleryArray);
+  const { sort_From_A_To_Z, sort_From_Z_To_A } = useSearchSort();
 
   const sortByOrder = (e: any) => {
     setValue(e.target.value);
@@ -28,10 +29,10 @@ const SelectOrder = (props: SelectGalleryProps) => {
         setCopyGalleryArray(shuffle());
         break;
       case "Desc":
-        setCopyGalleryArray(sortById_From_A_To_Z());
+        setCopyGalleryArray(sort_From_A_To_Z(galleryArray, 'mSec'));
         break;
       case "Asc":
-        setCopyGalleryArray(sortById_From_Z_To_A());
+        setCopyGalleryArray(sort_From_Z_To_A(galleryArray, 'mSec'));
         break;
     }
   };

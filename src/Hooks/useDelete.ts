@@ -1,4 +1,3 @@
-import { dateTransform } from "../Components/UI/Buttons/VoteButtons/Data";
 import {
   galleryArray$,
   actionInfoArray$,
@@ -10,6 +9,7 @@ import {
   removeDislikesActions$,
 } from "../Recoil/atoms";
 import { useRecoilState } from "recoil";
+import { dateTransform } from "../functions/dateFunctions";
 
 export const useDelete = () => {
   const [likesArray, setLikesArray] = useRecoilState(likesArray$);
@@ -27,23 +27,20 @@ export const useDelete = () => {
   const [removeDislikesArray, setRemoveDislikesArray] =
     useRecoilState(removeDislikesActions$);
 
-  const isObject = (value: any): value is { id: string } =>
-    typeof value === "object" && typeof value.id === "string";
-
   const addRemoveAction = (id: string, alt: string, message: string) => {
     const newAction = {
-      date: dateTransform(),
+      date: dateTransform().date,
+      mSec: dateTransform().mSec,
       image: { url: "" },
       id,
       message,
       icon: "",
       alt,
     };
+
     setGalleryArray(
       galleryArray.filter((elem) => {
-        if (isObject(elem)) {
           return elem.id !== id;
-        }
       })
     );
 
@@ -53,9 +50,7 @@ export const useDelete = () => {
       case "like":
         setLikesArray(
           likesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveLikesActions([newAction, ...removeLikesActions]);
@@ -64,9 +59,7 @@ export const useDelete = () => {
       case "favorite":
         setFavoritesArray(
           favoritesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveFavoritesArray([newAction, ...removeFavoritesArray]);
@@ -75,9 +68,7 @@ export const useDelete = () => {
       case "dislike":
         setDislikesArray(
           dislikesArray.filter((elem) => {
-            if (isObject(elem)) {
               return elem.id !== id;
-            }
           })
         );
         setRemoveDislikesArray([newAction, ...removeDislikesArray]);

@@ -9,7 +9,6 @@ import GridForm from "../Components/UI/Grid/GridForm";
 import { useAddToCategories } from "../Hooks/useAddToCategories";
 import { linkButtonArray } from "../Components/UI/Buttons/LinkButtons/LinkButtonData";
 import { RemoveActionsBlock } from "../Components/RemoveActionsBlock";
-import { isObjectForArray } from "../Types/isObject";
 
 const Likes = () => {
   const likesArray = useRecoilValue(likesArray$);
@@ -30,7 +29,7 @@ const Likes = () => {
           <Header class_name="title_button" title_content="LIKES" />
           {likesArray.length === 0 ? (
             <DefaultState>No item found</DefaultState>
-          ) : isObjectForArray(likesArray[0]) ? (
+          ) :
             <GridForm
               alt={likesArray[0].alt}
               class_name_btn={
@@ -39,7 +38,7 @@ const Likes = () => {
               array={likesArray}
               removeMessage="removed from Likes"
             />
-          ) : null}
+          }
           <RemoveActionsBlock removeArray={removeLikesActions} />
         </>
       </Section>

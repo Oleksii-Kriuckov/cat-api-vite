@@ -1,9 +1,9 @@
 import {BreedTitle}from "./BreedTitle";
 import { countRows } from "../../../functions/countRows";
 import "./GridStyle.css";
-import { isObjectForInfo } from "../../../Types/isObject";
+import { BreedInfo } from "../../../Types/types";
 
-type GridForBreedsProps = { array: {}[] };
+type GridForBreedsProps = { array: BreedInfo[] };
 
 export const GridForSearching = (props: GridForBreedsProps) => {
 
@@ -15,8 +15,7 @@ export const GridForSearching = (props: GridForBreedsProps) => {
         marginBottom: 40,
       }}
     >
-      {props.array.map((elem, ind) =>
-        isObjectForInfo(elem) ? (
+      {props.array.map((elem, ind) => (
           <div
             className="grid_item for_breeds"
             key={ind}
@@ -25,7 +24,7 @@ export const GridForSearching = (props: GridForBreedsProps) => {
             <div className="background_grid_item"></div>
             <BreedTitle info={elem}>{elem.name}</BreedTitle>
           </div>
-        ) : null
+        ) 
       )}
     </div>
   );

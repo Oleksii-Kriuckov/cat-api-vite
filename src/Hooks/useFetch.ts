@@ -26,7 +26,6 @@ function useFetch() {
 
   const getBreeds = () => {
     setBreedsArray(breeds);
-    console.log('setBreedsArray(breeds)')
     setCopyBreedsArray(breeds);
     setDisplayBreed(breeds.slice((pageNumber - 1) * limit, pageNumber * limit));
   };
