@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import "./styles/SelectStyle.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { typeArray } from "./DataForSelects";
-import { useSortShuffleGallery } from "../../../Hooks/useShuffleFilter";
+import { useShuffleFilter } from "../../../Hooks/useShuffleFilter";
 import {
   pageNumber$,
   copyGalleryArray$,
@@ -20,7 +20,7 @@ export const SelectType = (props: SelectTypeProps) => {
   const [selectTypeValue, setSelectTypeValue] = useState("");
   const galleryArray = useRecoilValue(galleryArray$);
   const setCopyGalleryArray = useSetRecoilState(copyGalleryArray$);
-  const { filterAnimated, filterStatic } = useSortShuffleGallery(galleryArray);
+  const { filterAnimated, filterStatic } = useShuffleFilter(galleryArray);
   const setPageNumber = useSetRecoilState(pageNumber$);
 
   const sortByType = (e: any) => {

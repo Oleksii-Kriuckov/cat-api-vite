@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./styles/SelectStyle.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { orderArray } from "./DataForSelects";
-import { useSortShuffleGallery } from "../../../Hooks/useShuffleFilter";
+import { useShuffleFilter } from "../../../Hooks/useShuffleFilter";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
 import {
   lightDark$,
@@ -19,7 +19,7 @@ const SelectOrder = (props: SelectGalleryProps) => {
   const checked = useRecoilValue(lightDark$);
   const [value, setValue] = useState("");
   const galleryArray = useRecoilValue(galleryArray$);
-  const { shuffle } = useSortShuffleGallery(galleryArray);
+  const { shuffle } = useShuffleFilter(galleryArray);
   const { sort_From_A_To_Z, sort_From_Z_To_A } = useSearchSort();
 
   const sortByOrder = (e: any) => {

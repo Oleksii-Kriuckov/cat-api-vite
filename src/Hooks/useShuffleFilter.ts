@@ -1,4 +1,3 @@
-// import { isObjectForInfo } from "../Types/isObject";
 import { NewAct } from "../Types/types";
 
 export const useShuffleFilter = (array: NewAct[]) => {
