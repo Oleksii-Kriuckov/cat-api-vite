@@ -10,7 +10,9 @@ export const Upload = (props: Props) => {
   return (
     <div
       className={
-        isLight ? "upload light_pink_background" : "upload dark_pink_background"
+        isLight
+          ? "title upload light_pink_background"
+          : "title upload dark_pink_background"
       }
       onClick={props.onClick}
     >

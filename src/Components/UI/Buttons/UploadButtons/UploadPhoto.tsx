@@ -26,7 +26,7 @@ export const UploadPhoto = (props: Props) => {
 
   return (
     <div
-      className="upload_photo"
+      className="title upload_photo"
       onClick={() => addPhoto()}
     >
       UPLOAD PHOTO
