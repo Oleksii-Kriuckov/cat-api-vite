@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { SEARCH_ROUTE } from "../../../Router/path";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { lightDark$, inputValue$} from "../../../Recoil/atoms";
-import { useSearchSortBreeds } from "../../../Hooks/useSearchSortBreeds";
+import { useSearchSort } from "../../../Hooks/useSearchSort";
 import "./inputStyle.css";
 
 type SearchInputProps = { width: string | number };
@@ -12,7 +12,7 @@ const SearchInput = (props: SearchInputProps) => {
   const navigate = useNavigate();
   const isLight = useRecoilValue(lightDark$);
   const [inputValue, setInputValue] = useRecoilState(inputValue$);
-  const { searchBreeds } = useSearchSortBreeds();
+  const { searchBreeds } = useSearchSort();
 
   const search = () => {
     searchBreeds();

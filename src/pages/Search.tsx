@@ -5,14 +5,14 @@ import Section from "../Components/Section/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { searchingBreeds$, inputValue$ } from "../Recoil/atoms";
 import { useSetRecoilState, useRecoilState } from "recoil";
-import { useSearchSortBreeds } from "../Hooks/useSearchSortBreeds";
+import { useSearchSort } from "../Hooks/useSearchSort";
 import { GridForSearching } from "../Components/UI/Grid/GridForSearching";
 
 const Search = () => {
   const [searchingBreeds, setSearchingBreeds] =
     useRecoilState(searchingBreeds$);
   const setInputValue = useSetRecoilState(inputValue$);
-  const { searchBreeds } = useSearchSortBreeds();
+  const { searchBreeds } = useSearchSort();
 
   useEffect(() => {
     searchBreeds();

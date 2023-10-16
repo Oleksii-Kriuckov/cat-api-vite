@@ -11,22 +11,30 @@ import {
   copyGalleryArray$,
   limit$,
   pageNumber$,
+  breedsArray$,
 } from "../Recoil/atoms";
 import GridForGallery from "../Components/UI/Grid/GridForGallery";
 import { usePagination } from "../Hooks/usePagination";
 import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageIndicatorBlock";
 import ModalWindow from "../Components/Modal/ModalWindow";
+import useFetch from "../Hooks/useFetch";
 
 const Gallery = () => {
   const [copyGalleryArray, setCopyGalleryArray] =
     useRecoilState(copyGalleryArray$);
   const galleryArray = useRecoilValue(galleryArray$);
+  const breedsArray = useRecoilValue(breedsArray$);
   const [limit, setLimit] = useRecoilState(limit$);
   const [pageNumber, setPageNumber] = useRecoilState(pageNumber$);
   const displayArray = useRecoilValue(displayArray$);
   const { sliceArray, pageAmount } = usePagination(copyGalleryArray);
+  const { getBreeds } = useFetch();
 
   useEffect(() => {
+    if (breedsArray.length === 0) {
+      getBreeds();
+    }
+
     setCopyGalleryArray(galleryArray)
     return () => {
       setLimit(5);

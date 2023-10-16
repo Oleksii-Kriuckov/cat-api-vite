@@ -88,9 +88,9 @@ export const pageNumber$ = atom({
   default: 1,
 });
 
-export const removeActionArray$ = atom({
+export const removeActionArray$ = atom<NewAct[]>({
   key: "removeArrayState",
-  default: [{}],
+  default: [],
 });
 
 export const removeDislikesActions$ = atom<NewAct[]>({
