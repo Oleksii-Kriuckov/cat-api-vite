@@ -1,5 +1,5 @@
 export const style = {
-  position: "absolute" as "absolute",
+  position: "absolute",
   top: "30px",
   right: "30px",
   width: 680,

@@ -10,6 +10,7 @@ import { isLoading$, actionInfoArray$, errorMessage$ } from "../Recoil/atoms";
 import { voteResponseData$ } from "../Recoil/selectors";
 import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
+import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
 
 const Voting = () => {
   const { getRandomCat } = useFetch();
@@ -39,8 +40,9 @@ const Voting = () => {
     <>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="VOTING" />
-
+        <Header class_name="title_button" title_content="VOTING" >
+          <TitleButton >Clear log</TitleButton>
+</Header>
         {isLoading ? (
           <Loader />
         ) : errorMessage !== "" ? (
