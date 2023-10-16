@@ -1,7 +1,7 @@
 // import { isObjectForInfo } from "../Types/isObject";
 import { NewAct } from "../Types/types";
 
-export const useSortShuffleGallery = (array: NewAct[]) => {
+export const useShuffleFilter = (array: NewAct[]) => {
   function shuffle() {
     let currentIndex = array.length,
       randomIndex,

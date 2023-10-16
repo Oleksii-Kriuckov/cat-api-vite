@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./styles/SelectStyle.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { orderArray } from "./DataForSelects";
-import { useSortShuffleGallery } from "../../../Hooks/useSortShuffleGallery";
+import { useSortShuffleGallery } from "../../../Hooks/useShuffleFilter";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
 import {
   lightDark$,

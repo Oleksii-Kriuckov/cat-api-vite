@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import "./styles/SelectStyle.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { typeArray } from "./DataForSelects";
-import { useSortShuffleGallery } from "../../../Hooks/useSortShuffleGallery";
+import { useSortShuffleGallery } from "../../../Hooks/useShuffleFilter";
 import {
   pageNumber$,
   copyGalleryArray$,
