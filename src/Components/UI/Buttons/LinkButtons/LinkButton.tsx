@@ -22,6 +22,7 @@ const LinkButton = (props: LinkButtonProps) => {
           ? "link_button light_background pink_hover"
           : "link_button dark_background pink_hover_dark"
       }
+      style={match ? { backgroundColor: "#ff868e" } : {}}
     >
       <img src={match ? props.srcActive : props.src} alt={props.alt} />
     </NavLink>

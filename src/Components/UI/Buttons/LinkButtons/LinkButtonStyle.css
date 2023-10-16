@@ -7,11 +7,3 @@
   padding: 15px;
   cursor: pointer;
 }
-
-.active {
-  background: #ff868e;
-}
-
-.active:hover {
-  background: #ff868e;
-}

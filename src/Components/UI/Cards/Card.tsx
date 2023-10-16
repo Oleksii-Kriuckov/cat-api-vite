@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../../Recoil/atoms";
 import "./cardStyle.css";
@@ -12,6 +12,8 @@ type CardProps = PropsWithChildren<{
 }>;
 
 const Card = (props: CardProps) => {
+  const match = useMatch(props.link);
+
   const checked = useRecoilValue(lightDark$);
   return (
     <div>
@@ -28,6 +30,7 @@ const Card = (props: CardProps) => {
             ? "card_button light_background pink_hover"
             : "card_button dark_background01 pink_hover_dark"
         }
+        style={match ? { backgroundColor: "#ff868e" } : {}}
       >
         {props.children}
       </NavLink>

@@ -27,11 +27,10 @@
 }
 
 .active {
-  background: #ff868e;
-  color: #8c8c8c;
+  color: #fff;
   &:hover {
-    background: #ff868e;
-    color: #8c8c8c;
+    color: #fff;
+    cursor: context-menu;
   }
 }
 
