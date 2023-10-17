@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { SEARCH_ROUTE } from "../../../Router/path";
 import { useRecoilValue, useRecoilState } from "recoil";
-import { lightDark$, inputValue$} from "../../../Recoil/atoms";
+import { lightDark$, inputValue$ } from "../../../Recoil/atoms";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
 import "./inputStyle.css";
+import { SquareButton } from "../Buttons/SquearButton";
 
 type SearchInputProps = { width: string | number };
 
@@ -38,14 +39,7 @@ const SearchInput = (props: SearchInputProps) => {
         onKeyUp={pressEnter}
       />
 
-      <button
-        onClick={search}
-        className={
-          isLight
-            ? "search_button light_pink_background"
-            : "search_button dark_pink_background"
-        }
-      ></button>
+      <SquareButton class_name="search_button" onClick={search} />
     </div>
   );
 };

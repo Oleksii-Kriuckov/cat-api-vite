@@ -1,12 +1,12 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { CloseButton } from "../UI/Buttons/CloseButton";
 import { useRecoilValue, useRecoilState } from "recoil";
 import "./ModalWindow.css";
 import { modal_dark, modal_light, style } from "./styleObj";
 import { lightDark$, openModal$ } from "../../Recoil/atoms";
 import { Upload } from "../UI/Buttons/UploadButtons/Upload";
 import Dropzone from "../Dropzone/Dropzone";
+import { SquareButton } from "../UI/Buttons/SquearButton";
 
 export default function ModalWindow() {
   const isLight = useRecoilValue(lightDark$);
@@ -31,7 +31,7 @@ export default function ModalWindow() {
               : Object.assign(style, modal_dark)
           }
         >
-          <CloseButton onClick={handleClose} />
+          <SquareButton class_name="close_button" onClick={handleClose} />
           <h1 className="modal_h1">Upload a .jpg or .png Cat Image</h1>
           <p className="gray modal_p" style={{ fontWeight: 400 }}>
             Any uploads must comply with the{" "}

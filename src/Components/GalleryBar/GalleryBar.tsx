@@ -7,6 +7,7 @@ import SelectLimits from "../UI/Select/SelectLimits";
 import { SelectType } from "../UI/Select/SelectType";
 import { copyBreedsArray$, lightDark$ } from "../../Recoil/atoms";
 import { optionArrayForLimitGallery } from "../UI/Select/DataForSelects";
+// import { SquareButton } from "../UI/Buttons/SquearButton";
 
 const GalleryBar = () => {
   const copyBreedsArray = useRecoilValue(copyBreedsArray$);
@@ -52,7 +53,7 @@ const GalleryBar = () => {
           }
         />
       </GalleryItem>
-      {/* <UpdateButton /> */}
+      {/* <SquareButton class_name="update_button" onClick={()=>(console.log('update'))}/> */}
     </div>
   );
 };
