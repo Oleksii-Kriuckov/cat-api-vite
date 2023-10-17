@@ -20,15 +20,15 @@
 
 .upload_photo {
   margin: auto;
-  padding: 12px 29px;
-  width: 172px;
-  background: #ff868e;
+  padding: 12px 25px;
+  width: 170px;
+  background: #fbe0dc;
   font-size: 12px;
   line-height: 16px;
-  color: #ffffff;
+  color: #ff868e;
   cursor: pointer;
 }
 .upload_photo:hover {
-  background: #fbe0dc;
-  color: #ff868e;
+  background: #ff868e;
+  color: #ffffff;
 }

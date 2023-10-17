@@ -12,6 +12,6 @@ export const optionArrayForLimitGallery: string[] = [
   "20 items per page",
 ];
 
-export const orderArray = ["Random", "Desc", "Asc"];
+export const orderArray = ["Desc", "Asc", "Random"];
 
 export const typeArray = ["All", "Static", "Animated"];

@@ -5,7 +5,7 @@ import { useRecoilValue, useRecoilState } from "recoil";
 import { lightDark$, inputValue$ } from "../../../Recoil/atoms";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
 import "./inputStyle.css";
-import { SquareButton } from "../Buttons/SquearButton";
+import { SquareButton } from "../Buttons/SquareButton";
 
 type SearchInputProps = { width: string | number };
 

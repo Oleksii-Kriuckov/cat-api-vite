@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import TitleButton from "./UI/Buttons/TitleButton/TitleButton";
-import { SquareButton } from "./UI/Buttons/SquearButton";
+import { SquareButton } from "./UI/Buttons/SquareButton";
 import { useNavigate } from "react-router-dom";
 
 type HeaderProps = PropsWithChildren<{
