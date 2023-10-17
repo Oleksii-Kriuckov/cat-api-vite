@@ -50,7 +50,7 @@ const Gallery = () => {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="GALLERY">
+        <Header class_name="title title_button" title_content="GALLERY">
           <ModalWindow />
         </Header>
         <GalleryBar />

@@ -13,8 +13,8 @@ export default function BreedInfo() {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="id_button" title_content="BREED">
-          <TitleButton class_name="title_button">
+        <Header class_name="title id_button" title_content="BREED">
+          <TitleButton class_name="title title_button">
             {breedInfo.id}
           </TitleButton>
         </Header>

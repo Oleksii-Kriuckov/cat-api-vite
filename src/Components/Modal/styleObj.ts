@@ -3,7 +3,6 @@ export const style = {
   top: "30px",
   right: "30px",
   width: 680,
-  height: "90%",
   borderRadius: "20px",
   p: "20px",
   border: "none",

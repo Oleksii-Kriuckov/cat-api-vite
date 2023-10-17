@@ -217,48 +217,33 @@
 }
 
 .title_button {
-  height: 40px;
   padding: 5px 30px;
   background: #FF868E;
-  border-radius: 10px;
   font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  text-align: center;
-  letter-spacing: 2px;
   color: #ffffff;
 }
 
 .id_button {
-  height: 40px;
   padding: 5px 30px;
   background: #FBE0DC;
-  border-radius: 10px;
   font-style: normal;
-  font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  text-align: center;
-  letter-spacing: 2px;
   color: #FF868E;
 }
 
 .page {
-  height: 40px;
-  border-radius: 10px;
   font-style: normal;
-  font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  letter-spacing: 2px;
   color: #ff868e;
   padding: 12px 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-align: center;
 }
 
 .page_light {

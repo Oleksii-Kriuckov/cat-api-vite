@@ -27,7 +27,7 @@ const Dislikes = () => {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="DISLIKES" />
+        <Header class_name="title title_button" title_content="DISLIKES" />
         {dislikesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
         ) : isObject(dislikesArray[0]) ? (

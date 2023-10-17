@@ -27,7 +27,7 @@ const Search = () => {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="SEARCH" />
+        <Header class_name="title title_button" title_content="SEARCH" />
         {
           searchingBreeds.length === 0 ? (
             <DefaultState>No item found</DefaultState>

@@ -56,7 +56,7 @@ const Breeds = () => {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="BREEDS">
+        <Header class_name="title title_button" title_content="BREEDS">
           <SelectBreeds
             width={225}
             optionArray={copyBreedsArray}

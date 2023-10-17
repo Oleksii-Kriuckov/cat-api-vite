@@ -31,7 +31,7 @@ const Favorites = () => {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="FAVORITES" />
+        <Header class_name="title title_button" title_content="FAVORITES" />
         {favoritesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
         ) : isObject(favoritesArray[0]) ? (

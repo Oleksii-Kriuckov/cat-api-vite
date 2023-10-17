@@ -10,7 +10,7 @@ import { isLoading$, actionInfoArray$, errorMessage$ } from "../Recoil/atoms";
 import { voteResponseData$ } from "../Recoil/selectors";
 import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
-import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
+// import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
 
 const Voting = () => {
   const { getRandomCat } = useFetch();
@@ -19,15 +19,6 @@ const Voting = () => {
   const voteResponseData = useRecoilValue(voteResponseData$);
   const actionInfoArray = useRecoilValue(actionInfoArray$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
-
-  const isObject = (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    value: any
-  ): value is { icon: string; date: string; id: string; message: string } =>
-    typeof value === "object" &&
-    typeof value.icon === "string" &&
-    typeof value.id === "string" &&
-    typeof value.message === "string";
 
   useEffect(() => {
     getRandomCat();
@@ -40,8 +31,8 @@ const Voting = () => {
     <>
       <NavBar />
       <Section>
-        <Header class_name="title_button" title_content="VOTING" >
-          <TitleButton >Clear log</TitleButton>
+        <Header class_name="title title_button" title_content="VOTING" >
+          {/* <TitleButton >Clear log</TitleButton> */}
 </Header>
         {isLoading ? (
           <Loader />
@@ -64,7 +55,6 @@ const Voting = () => {
               <GroupVoteButtons />
               {actionInfoArray.map((block, ind) => (
                 <div key={ind}>
-                  {isObject(block) ? (
                     <BlockActionInfo
                       message={block.message}
                       icon={block.icon}
@@ -72,7 +62,6 @@ const Voting = () => {
                     >
                       {block.id}
                     </BlockActionInfo>
-                  ) : null}
                 </div>
               ))}
             </div>

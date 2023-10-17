@@ -26,7 +26,7 @@ const Likes = () => {
       <NavBar />
       <Section>
         <>
-          <Header class_name="title_button" title_content="LIKES" />
+          <Header class_name="title title_button" title_content="LIKES" />
           {likesArray.length === 0 ? (
             <DefaultState>No item found</DefaultState>
           ) :
