@@ -17,18 +17,3 @@
   background-repeat: no-repeat;
   background-position: 30px 12px;
 }
-
-.upload_photo {
-  margin: auto;
-  padding: 12px 25px;
-  width: 170px;
-  background: #fbe0dc;
-  font-size: 12px;
-  line-height: 16px;
-  color: #ff868e;
-  cursor: pointer;
-}
-.upload_photo:hover {
-  background: #ff868e;
-  color: #ffffff;
-}

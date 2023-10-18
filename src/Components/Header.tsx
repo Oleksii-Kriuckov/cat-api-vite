@@ -13,7 +13,7 @@ const Header = (props: HeaderProps) => {
 
   return (
     <header
-      className="d-flex"
+      className="d-flex justify-content-between"
       style={{ width: "100%", marginBottom: 20, gap: 10 }}
     >
       <div className="d-flex">
@@ -22,7 +22,8 @@ const Header = (props: HeaderProps) => {
           {props.title_content}
         </TitleButton>
       </div>
-      {props.children}
+      
+      <div className="d-flex" style={{ gap: 10 }}>{props.children}</div>
     </header>
   );
 };

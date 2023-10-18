@@ -2,15 +2,18 @@ import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import photoSignLight from "../Graphic/Images/photoSignLight.png";
 import photoSignDark from "../Graphic/Images/photoSignDark.png";
-import "./DropzoneStyles.css";
 import { BlackText } from "../../Components/UI/Texts/BlackText";
-import {  useRecoilValue } from "recoil";
-import { lightDark$ } from "../../Recoil/atoms";
-import { UploadPhoto } from "../UI/Buttons/UploadButtons/UploadPhoto";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { lightDark$, openModal$ } from "../../Recoil/atoms";
+// import { UploadPhoto } from "../UI/Buttons/UploadButtons/UploadPhoto";
 import { img } from "./DropzoneData";
+import "./DropzoneStyles.css";
+import { RectButton } from "../UI/Buttons/RectButton";
 
 function Dropzone() {
-  const [file, setFile] = useState({});
+  const [file, setFile] = useState({ preview: "" });
+  const setOpenModal = useSetRecoilState(openModal$);
+
   const {
     getRootProps,
     getInputProps,
@@ -20,7 +23,7 @@ function Dropzone() {
     isDragReject,
   } = useDropzone({
     accept: {
-      'image/jpeg': [],
+      "image/jpeg": [],
       "image/png": [],
       "image/gif": [],
     },
@@ -35,18 +38,15 @@ function Dropzone() {
   });
   const isLight = useRecoilValue(lightDark$);
 
-  const isObject = (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    value: any
-  ): value is {
-    path: string,
-    preview: string
-  } => typeof value === "object" && typeof value.path === "string";
+  const addPhoto = () => {
+    // addAction("", "", "", props.file.path);
+    // console.log(props.file.path)
+    // console.log(props.file.preview)
+    setOpenModal(false);
+  };
 
   const fileInfo = acceptedFiles.map((file) => {
-    if (isObject(file)) {
-      return <p key={file.path}>Image File Name: {file.name}</p>;
-    }
+    return <p key={file.webkitRelativePath}>Image File Name: {file.name}</p>;
   });
 
   const errors = fileRejections.map(({ errors }) => (
@@ -88,16 +88,14 @@ function Dropzone() {
             />
           </div>
         ) : (
-          isObject(file) && (
-            <img
-              src={file.preview}
-              alt="cat" 
-              style={img}
-              onLoad={() => {
-                URL.revokeObjectURL(file.preview);
-              }}
-            />
-          )
+          <img
+            src={file.preview}
+            alt="cat"
+            style={img}
+            onLoad={() => {
+              URL.revokeObjectURL(file.preview);
+            }}
+          />
         )}
       </div>
 
@@ -109,7 +107,10 @@ function Dropzone() {
         ) : (
           <>
             {fileInfo}
-            <UploadPhoto file={file}/>
+            {/* <UploadPhoto file={file} /> */}
+            <RectButton class_name="upload_photo" onClick={addPhoto}>
+              UPLOAD PHOTO
+            </RectButton>
           </>
         )}
       </div>

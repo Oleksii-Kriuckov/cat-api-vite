@@ -208,6 +208,20 @@
   cursor: pointer;
 }
 
+.upload_photo {
+  margin: auto;
+  padding: 12px 25px;
+  width: 170px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ff868e;
+  cursor: pointer;
+}
+.upload_photo:hover {
+  background: #ff868e;
+  color: #ffffff;
+}
+
 .title {
   height: 40px;
   border-radius: 10px;

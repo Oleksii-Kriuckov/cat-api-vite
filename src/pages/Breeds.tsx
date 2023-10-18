@@ -68,6 +68,7 @@ const Breeds = () => {
           >
             All breeds
           </SelectBreeds>
+
           <SelectLimits
             width={100}
             optionArray={optionArrayForLimitBreeds}
@@ -77,6 +78,7 @@ const Breeds = () => {
                 : "breedsSelect dark_background01 dark_border"
             }
           />
+
           <SortButton
             class_name={
               checked
@@ -87,6 +89,7 @@ const Breeds = () => {
               setBreedsArray(sort_From_Z_To_A(breedsArray, "name"))
             }
           />
+          
           <SortButton
             class_name={
               checked

@@ -10,14 +10,15 @@ import { isLoading$, actionInfoArray$, errorMessage$ } from "../Recoil/atoms";
 import { voteResponseData$ } from "../Recoil/selectors";
 import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
-// import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
+import { RectButton } from "../Components/UI/Buttons/RectButton";
 
 const Voting = () => {
   const { getRandomCat } = useFetch();
 
   const isLoading = useRecoilValue(isLoading$);
   const voteResponseData = useRecoilValue(voteResponseData$);
-  const actionInfoArray = useRecoilValue(actionInfoArray$);
+  const [actionInfoArray, setActionInfoArray] =
+    useRecoilState(actionInfoArray$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
 
   useEffect(() => {
@@ -31,9 +32,16 @@ const Voting = () => {
     <>
       <NavBar />
       <Section>
-        <Header class_name="title title_button" title_content="VOTING" >
-          {/* <TitleButton >Clear log</TitleButton> */}
-</Header>
+        <Header class_name="title title_button" title_content="VOTING">
+          <RectButton
+            class_name="upload_photo"
+            onClick={() => {
+              setActionInfoArray([]);
+            }}
+          >
+            Clear log
+          </RectButton>
+        </Header>
         {isLoading ? (
           <Loader />
         ) : errorMessage !== "" ? (
@@ -55,13 +63,13 @@ const Voting = () => {
               <GroupVoteButtons />
               {actionInfoArray.map((block, ind) => (
                 <div key={ind}>
-                    <BlockActionInfo
-                      message={block.message}
-                      icon={block.icon}
-                      date={block.date}
-                    >
-                      {block.id}
-                    </BlockActionInfo>
+                  <BlockActionInfo
+                    message={block.message}
+                    icon={block.icon}
+                    date={block.date}
+                  >
+                    {block.id}
+                  </BlockActionInfo>
                 </div>
               ))}
             </div>
