@@ -133,6 +133,12 @@
   display: none;
 }
 
+.aside_button {
+  background-image: url("src/Components/Graphic/Icons/stroke.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .close_button {
   @include pinkButton (
     $url: 'src/Components/Graphic/Icons/close-20.png',

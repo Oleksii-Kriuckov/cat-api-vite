@@ -4,6 +4,7 @@ import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../Recoil/atoms";
 import useFetch from "../Hooks/useFetch";
 import "../Components/main/mainStyle.css";
+import '../AppStyle/adaptive.css'
 
 const Initial = () => {
   const checked = useRecoilValue(lightDark$);
@@ -14,8 +15,9 @@ const Initial = () => {
   }, []);
 
   return (
-    <>
+    <div className="initial">
       <img
+        id="picture"
         style={{ width: "100%", position: "absolute", left: 0, top: 0 }}
         src={mainPicture}
         alt="Girl and pet"
@@ -25,7 +27,7 @@ const Initial = () => {
           checked ? "background background_light" : "background background_dark"
         }
       ></div>
-    </>
+    </div>
   );
 };
 

@@ -31,7 +31,11 @@ export default function ModalWindow() {
               : Object.assign(style, modal_dark)
           }
         >
-          <SquareButton class_name="close_button" onClick={handleClose} />
+          <SquareButton
+            class_name_dark="close_button dark_pink_background"
+            class_name_light="close_button light_background"
+            onClick={handleClose}
+          />
           <h1 className="modal_h1">Upload a .jpg or .png Cat Image</h1>
           <p className="gray modal_p" style={{ fontWeight: 400 }}>
             Any uploads must comply with the{" "}

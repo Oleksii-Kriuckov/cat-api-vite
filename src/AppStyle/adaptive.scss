@@ -1,0 +1,34 @@
+@media screen and (min-width: 1280px) {
+  .search {
+    width: 470px;
+  }
+  .offcan {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279) {
+  .search {
+  width: 400px;
+  }
+  .offcan {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1279) {
+  .initial {
+    background-color: red;
+  }
+  #picture {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px /* or 375px */) and (max-width: 767px /* or 711px */) {
+  .initial {
+    display: none;
+  }
+}
