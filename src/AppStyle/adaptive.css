@@ -1,4 +1,4 @@
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .search {
     width: 470px;
   }
@@ -6,23 +6,25 @@
     display: none;
   }
 }
-@media screen and (max-width: 1279) {
-  .search {
-    width: 400px;
+@media (min-width: 768px) and (max-width: 1279px) {
+  .aside_wrapper {
+    display: none;
   }
-  .offcan {
-    display: block;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279) {
   .initial {
     background-color: red;
   }
   #picture {
     display: none;
   }
+  .search {
+    width: 400px;
+  }
+  #we {
+    width: 768px;
+    padding-top: 110px;
+  }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .initial {
     display: none;
   }

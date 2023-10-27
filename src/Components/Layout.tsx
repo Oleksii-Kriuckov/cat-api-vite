@@ -8,9 +8,9 @@ const Layout = () => {
   const checked = useRecoilValue(lightDark$);
   return (
     <div className={checked ? "App light" : "App dark"}>
-      <div className="d-flex">
+      <div className="d-flex" style={{maxWidth: 1440, margin: 'auto'}}>
         <div className="aside_wrapper">
-          <Aside />
+          <Aside class_name="aside_desktop"/>
         </div>
         <div style={{ position: "relative", minHeight: '100vh'}}>
           <Main>

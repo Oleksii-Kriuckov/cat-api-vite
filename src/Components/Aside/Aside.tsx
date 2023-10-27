@@ -10,12 +10,14 @@ import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
 import "./styles.css";
 
-const Aside = () => {
+type AsideProps = { class_name: string };
+
+const Aside = ({ class_name }: AsideProps) => {
   const navigate = useNavigate();
   const isLight = useRecoilValue(lightDark$);
 
   return (
-    <aside>
+    <aside className={class_name}>
       <div
         className="d-flex justify-content-between align-items-center"
         style={{ marginBottom: 70 }}

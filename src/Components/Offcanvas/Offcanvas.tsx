@@ -2,9 +2,13 @@ import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { SquareButton } from "../UI/Buttons/SquareButton";
 import "../UI/Buttons/LinkButtons/LinkButtonStyle.css";
+import { useRecoilValue } from "recoil";
+import { lightDark$ } from "../../Recoil/atoms";
+import NavCards from "../UI/Cards/NavCards";
 
 export function MyOffcanvas() {
   const [show, setShow] = useState(false);
+  const isLight = useRecoilValue(lightDark$);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -17,14 +21,13 @@ export function MyOffcanvas() {
         onClick={handleShow}
       />
 
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
+      <Offcanvas id='we' show={show} onHide={handleClose}>
+        <SquareButton
+          class_name_dark="close_button dark_pink_background"
+          class_name_light="close_button light_background"
+          onClick={handleClose}
+        />
+        <NavCards />
       </Offcanvas>
     </div>
   );
