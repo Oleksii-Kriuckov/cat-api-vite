@@ -5,9 +5,10 @@ import { lightDark$ } from "../Recoil/atoms";
 import useFetch from "../Hooks/useFetch";
 import "../Components/main/mainStyle.css";
 import '../AppStyle/adaptive.css'
+import Aside from "../Components/Aside/Aside";
 
 const Initial = () => {
-  const checked = useRecoilValue(lightDark$);
+  const isLight = useRecoilValue(lightDark$);
   const { getBreeds } = useFetch();
 
   useEffect(() => {
@@ -15,6 +16,8 @@ const Initial = () => {
   }, []);
 
   return (
+    <>
+    <Aside class_name="aside_tablet"/>
     <div className="initial">
       <img
         id="picture"
@@ -24,10 +27,11 @@ const Initial = () => {
       />
       <div
         className={
-          checked ? "background background_light" : "background background_dark"
+          isLight ? "background background_light" : "background background_dark"
         }
       ></div>
     </div>
+  </>  
   );
 };
 

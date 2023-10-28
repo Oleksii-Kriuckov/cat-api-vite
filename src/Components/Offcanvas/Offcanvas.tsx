@@ -5,6 +5,7 @@ import "../UI/Buttons/LinkButtons/LinkButtonStyle.css";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
 import NavCards from "../UI/Cards/NavCards";
+import LogoBar from "../LogoBar/LogoBar";
 
 export function MyOffcanvas() {
   const [show, setShow] = useState(false);
@@ -21,13 +22,21 @@ export function MyOffcanvas() {
         onClick={handleShow}
       />
 
-      <Offcanvas id='we' show={show} onHide={handleClose}>
-        <SquareButton
-          class_name_dark="close_button dark_pink_background"
-          class_name_light="close_button light_background"
-          onClick={handleClose}
-        />
-        <NavCards />
+      <Offcanvas
+        id="we"
+        className={isLight ? "App light" : "App dark"}
+        show={show}
+        onHide={handleClose}
+      >
+        <div style={{ width: 446, margin: "auto" }}>
+          <SquareButton
+            class_name_dark="close_button dark_pink_background"
+            class_name_light="close_button light_background"
+            onClick={handleClose}
+          />
+          <LogoBar />
+          <NavCards />
+        </div>
       </Offcanvas>
     </div>
   );
