@@ -9,19 +9,19 @@
   line-height: 30px;
 }
 .search:focus {
-  border: 2px solid #ff868e;
+  border: 2px solid #FF868E;
   outline: none;
 }
 .search:focus:hover {
-  border: 2px solid #ff868e;
+  border: 2px solid #FF868E;
 }
 
 .search_light {
   background: #ffffff;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 .search_light:hover {
-  border: 2px solid #fbe0dc;
+  border: 2px solid #FBE0DC;
 }
 
 .search_dark {
@@ -37,7 +37,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 
 .search::-moz-placeholder {
@@ -45,7 +45,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 
 .search:-ms-input-placeholder {
@@ -53,7 +53,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 
 .search::-ms-input-placeholder {
@@ -61,7 +61,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 
 .search::placeholder {
@@ -69,5 +69,5 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }

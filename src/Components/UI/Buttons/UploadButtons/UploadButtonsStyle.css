@@ -1,6 +1,6 @@
 .upload {
   width: 143px;
-  color: #ff868e;
+  color: #FF868E;
   background-image: url("src/Components/Graphic/Icons/upload-16.png");
   background-repeat: no-repeat;
   background-position: 30px 12px;
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 .upload:hover {
-  background: #ff868e;
+  background: #FF868E;
   color: #ffffff;
   background-image: url("src/Components/Graphic/Icons/white-icon/upload-white-16.png");
   background-repeat: no-repeat;

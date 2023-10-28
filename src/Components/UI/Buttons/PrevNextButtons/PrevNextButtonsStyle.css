@@ -7,7 +7,7 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 2px;
-  color: #ff868e;
+  color: #FF868E;
   background-repeat: no-repeat;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -15,14 +15,14 @@
           user-select: none;
 }
 .prev_next_button:hover {
-  background: #ff868e;
+  background: #FF868E;
   color: #ffffff;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .prev_next_button_light {
-  background-color: #fbe0dc;
+  background-color: #FBE0DC;
 }
 
 .prev_next_button_dark {
@@ -69,7 +69,7 @@
 }
 
 .disabled_light {
-  background-color: #F8F8F7;
+  background-color: #ededed;
 }
 
 .disabled_dark {

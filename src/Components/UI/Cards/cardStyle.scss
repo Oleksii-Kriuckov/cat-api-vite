@@ -1,3 +1,5 @@
+@import "../../../AppStyle/variables.scss";
+
 .card_back {
   width: 138px;
   height: 198px;
@@ -20,9 +22,9 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: 2px;
-  color: #ff868e;
+  color: $darkPink;
   &:hover {
-      color: #ff868e;
+      color: $darkPink;
   }
 }
 

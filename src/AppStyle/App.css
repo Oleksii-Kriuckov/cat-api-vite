@@ -8,7 +8,7 @@
 }
 
 .dark {
-  background-color: #1d1d1d;
+  background-color: #1D1D1D;
 }
 
 .light_background {
@@ -32,7 +32,7 @@
 }
 
 .light_border:hover {
-  outline: 2px solid #fbe0dc;
+  outline: 2px solid #FBE0DC;
 }
 
 .dark_border option {
@@ -220,11 +220,11 @@
   width: 170px;
   font-size: 12px;
   line-height: 16px;
-  color: #ff868e;
+  color: #FF868E;
   cursor: pointer;
 }
 .upload_photo:hover {
-  background: #ff868e;
+  background: #FF868E;
   color: #ffffff;
 }
 
@@ -258,7 +258,7 @@
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #ff868e;
+  color: #FF868E;
   padding: 12px 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -267,7 +267,7 @@
 }
 
 .page_light {
-  background: #fbe0dc;
+  background: #FBE0DC;
 }
 
 .page_dark {

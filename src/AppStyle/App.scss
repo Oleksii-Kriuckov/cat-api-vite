@@ -8,10 +8,10 @@
 }
 
 .light { 
-  background-color: #ededed;
+  background-color: $bgLight;
 }
 .dark {
-  background-color: #1d1d1d;
+  background-color: $dark;
 }
 
 .light_background {
@@ -35,7 +35,7 @@
 
 .light_border {
   &:hover {
-    outline: 2px solid #fbe0dc;
+    outline: 2px solid $pink;
   }
 }
 .dark_border {
@@ -62,7 +62,7 @@
 }
 
 .black {
-  color: $textDark;
+  color: $dark;
 }
 .gray {
   color: $textGrey;
@@ -155,10 +155,10 @@
   width: 170px;
   font-size: 12px;
   line-height: 16px;
-  color: #ff868e;
+  color: $darkPink;
   cursor: pointer;
   &:hover {
-    background: #ff868e;
+    background: $darkPink;
     color: #ffffff;
   }
 }
@@ -193,13 +193,13 @@
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #ff868e;
+  color: $darkPink;
   padding: 12px 30px;
   user-select: none;
 }
 
 .page_light {
-  background: #fbe0dc;
+  background: $pink;
 }
 .page_dark {
   background: rgba(255, 134, 142, 0.2);

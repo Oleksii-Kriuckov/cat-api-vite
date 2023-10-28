@@ -1,6 +1,8 @@
+@import "../../../../AppStyle/variables.scss";
+
 .upload {
   width: 143px;
-  color: #ff868e;
+  color: $darkPink;
   background-image: url("src/Components/Graphic/Icons/upload-16.png");
   background-repeat: no-repeat;
   background-position: 30px 12px;
@@ -10,7 +12,7 @@
   margin-left: auto;
   cursor: pointer;
   &:hover {
-    background: #ff868e;
+    background: $darkPink;
     color: #ffffff;
     background-image: url("src/Components/Graphic/Icons/white-icon/upload-white-16.png");
     background-repeat: no-repeat;

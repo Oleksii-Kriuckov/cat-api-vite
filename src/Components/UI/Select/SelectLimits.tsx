@@ -25,7 +25,7 @@ const SelectLimits = (props: SelectLimitsProps) => {
         value={limit}
         onChange={(e) => changeLimit(e.target.value)}
       >
-        {props.optionArray.map((el, ind, arr) => (
+        {props.optionArray.map((el, ind) => (
           <option key={el} value={(ind + 1) * 5}>
             {el}
           </option>
