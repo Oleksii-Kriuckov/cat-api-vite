@@ -1,6 +1,15 @@
 @import "mixins";
 @import "variables";
 
+main {
+  padding: 30px;
+  position: relative;
+  min-height: 100vh;
+}
+.initial {
+  width: 680px;
+}
+
 .App {
   // font-family: "Jost";
   font-style: normal;
@@ -13,12 +22,7 @@
   border-radius: 20px;
 }
 
-main {
-  width: 680px;
-  margin: 30px ;
-}
-
-.light { 
+.light {
   background-color: $bgLight;
 }
 .dark {
@@ -79,7 +83,7 @@ main {
 .pink {
   color: $darkPink;
   text-decoration: none;
-} 
+}
 .white {
   color: #fff;
 }
@@ -149,9 +153,9 @@ main {
 }
 
 .close_button {
-  @include pinkButton (
-    $url: 'src/Components/Graphic/Icons/close-20.png',
-    $urlHover: 'src/Components/Graphic/Icons/white-icon/close-white-20.png'
+  @include pinkButton(
+    $url: "src/Components/Graphic/Icons/close-20.png",
+    $urlHover: "src/Components/Graphic/Icons/white-icon/close-white-20.png"
   );
   position: absolute;
   top: 20px;

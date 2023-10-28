@@ -11,11 +11,9 @@ const Layout = () => {
         <div className="aside_wrapper">
           <Aside class_name="aside_desktop"/>
         </div>
-        <div style={{ position: "relative", minHeight: '100vh'}}>
           <main>
             <Outlet />
           </main>
-        </div>
       </div>
     </div>
   );
