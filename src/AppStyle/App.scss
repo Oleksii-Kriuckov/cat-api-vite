@@ -7,6 +7,17 @@
   width: 100%;
 }
 
+.background {
+  width: 680px;
+  height: 840px;
+  border-radius: 20px;
+}
+
+main {
+  width: 680px;
+  margin: 30px ;
+}
+
 .light { 
   background-color: $bgLight;
 }
@@ -17,14 +28,12 @@
 .light_background {
   background-color: #ffffff;
 }
-
 .light_pink_background {
   background-color: $pink;
 }
 .dark_pink_background {
   background-color: rgba(255, 134, 142, 0.2);
 }
-
 .dark_background {
   background-color: rgba(255, 255, 255, 0.05);
 }

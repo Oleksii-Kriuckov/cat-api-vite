@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../Recoil/atoms";
 import Aside from "../Components/Aside/Aside";
-import Main from "../Components/main/Main";
 
 const Layout = () => {
   const checked = useRecoilValue(lightDark$);
