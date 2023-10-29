@@ -1,7 +1,5 @@
 export const style = {
-  position: "absolute",
-  top: "30px",
-  right: "30px",
+  position: "relative",
   width: 680,
   borderRadius: "20px",
   p: "20px",
@@ -17,6 +15,6 @@ export const modal_dark = {
 };
 
 export const modal_light = {
-  background: " #F8F8F7",
+  background: "#F8F8F7",
   color: "#1D1D1D",
 };

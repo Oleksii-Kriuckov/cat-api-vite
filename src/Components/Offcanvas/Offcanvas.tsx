@@ -23,7 +23,7 @@ export function MyOffcanvas() {
       />
 
       <Offcanvas
-        id="we"
+        id="offcanvas"
         className={isLight ? "App light" : "App dark"}
         show={show}
         onHide={handleClose}
