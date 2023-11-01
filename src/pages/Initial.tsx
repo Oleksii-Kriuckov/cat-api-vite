@@ -16,7 +16,7 @@ const Initial = () => {
 
   return (
     <>
-    <Aside class_name="aside_tablet"/>
+    <Aside class_name="aside_mobile"/>
     <div className="initial">
       <img
         style={{ width: "100%", position: "absolute", left: 0, top: 0 }}

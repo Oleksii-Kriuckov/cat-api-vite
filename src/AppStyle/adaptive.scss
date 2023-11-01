@@ -6,7 +6,7 @@
   .offcan {
     display: none;
   }
-  .aside_tablet {
+  .aside_mobile {
     display: none;
   }
   #box {
@@ -31,7 +31,6 @@
   }
   #offcanvas {
     width: 768px;
-    // padding-top: 110px;
   }
   #box {
     margin: 30px auto;
@@ -39,7 +38,48 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .aside_wrapper {
+    display: none;
+  }
+
   .initial {
     display: none;
+  }
+
+  main {
+    margin: auto;
+  }
+}
+
+@media (min-width: 540px) {
+  .card_back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card_button {
+    width: 138px;
+  }
+
+  aside {
+    width: 446px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 539px) {
+  .card_back {
+    display: none;
+  }
+  .card_button {
+    width: 100%;
+  }
+  .nav_card {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  aside {
+    max-width: 446px;
   }
 }
