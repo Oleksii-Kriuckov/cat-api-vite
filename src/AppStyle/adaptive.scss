@@ -3,7 +3,7 @@
   .search {
     width: 470px;
   }
-  .offcan {
+  .offcanvas_wrapper {
     display: none;
   }
   .aside_mobile {
@@ -32,6 +32,7 @@
   #offcanvas {
     width: 768px;
   }
+  
   #box {
     margin: 30px auto;
   }
@@ -49,6 +50,11 @@
   main {
     margin: auto;
   }
+
+  #offcanvas {
+    width: 100vw;
+    padding: 30px;
+  }
 }
 
 @media (min-width: 540px) {
@@ -63,6 +69,10 @@
 
   aside {
     width: 446px;
+  }
+  .offcan{
+    width: 446px;
+    margin: auto;
   }
 }
 
@@ -81,5 +91,11 @@
   
   aside {
     max-width: 446px;
+  }
+  
+  .offcan{
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
   }
 }

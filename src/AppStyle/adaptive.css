@@ -2,7 +2,7 @@
   .search {
     width: 470px;
   }
-  .offcan {
+  .offcanvas_wrapper {
     display: none;
   }
   .aside_mobile {
@@ -43,6 +43,10 @@
   main {
     margin: auto;
   }
+  #offcanvas {
+    width: 100vw;
+    padding: 30px;
+  }
 }
 @media (min-width: 540px) {
   .card_back {
@@ -62,6 +66,10 @@
   aside {
     width: 446px;
   }
+  .offcan {
+    width: 446px;
+    margin: auto;
+  }
 }
 @media (min-width: 320px) and (max-width: 539px) {
   .card_back {
@@ -80,5 +88,10 @@
   }
   aside {
     max-width: 446px;
+  }
+  .offcan {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
   }
 }

@@ -15,7 +15,7 @@ export function MyOffcanvas() {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="offcan">
+    <div className="offcanvas_wrapper">
       <SquareButton
         class_name_dark="link_button aside_button dark_background pink_hover"
         class_name_light="link_button aside_button light_background pink_hover_dark"
@@ -28,7 +28,7 @@ export function MyOffcanvas() {
         show={show}
         onHide={handleClose}
       >
-        <div style={{ width: 446, margin: "auto" }}>
+        <div className="offcan">
           <SquareButton
             class_name_dark="close_button dark_pink_background"
             class_name_light="close_button light_background"
