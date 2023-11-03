@@ -33,6 +33,11 @@
     margin: 30px auto;
   }
 }
+@media (min-width: 660px) and (max-width: 767px) {
+  .search {
+    width: 320px;
+  }
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .aside_wrapper {
     display: none;
@@ -42,13 +47,15 @@
   }
   main {
     margin: auto;
+    padding: 20px;
+    width: 100vw;
   }
   #offcanvas {
     width: 100vw;
     padding: 30px;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 660px) {
   .card_back {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,12 +73,27 @@
   aside {
     width: 446px;
   }
+  main {
+    padding: 30px;
+  }
+  .navbar_mobile {
+    display: none;
+  }
   .offcan {
     width: 446px;
     margin: auto;
   }
 }
-@media (min-width: 320px) and (max-width: 539px) {
+@media (min-width: 320px) and (max-width: 659px) {
+  .search {
+    width: 100%;
+  }
+  aside {
+    max-width: 446px;
+  }
+  .navbar {
+    display: none;
+  }
   .card_back {
     display: none;
   }
@@ -85,9 +107,6 @@
             flex-direction: column;
     gap: 20px;
     margin-top: 20px;
-  }
-  aside {
-    max-width: 446px;
   }
   .offcan {
     max-width: 400px;
