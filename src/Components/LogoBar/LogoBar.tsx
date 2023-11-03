@@ -18,10 +18,7 @@ const LogoBar = () => {
       <img
         src={isLight ? logo : logoDark}
         alt="logo"
-        style={{
-          marginLeft: -10,
-          cursor: "pointer",
-        }}
+        style={{ cursor: "pointer" }}
         onClick={() => navigate(INITIAL_ROUTE)}
       />
       <Switcher />

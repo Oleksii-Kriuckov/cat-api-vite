@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import "./GridStyle.css";
 import { breedInfo$, lightDark$ } from "../../../Recoil/atoms";
-import { BreedInfo, IBreedInfoWithoutImage } from "../../../Types/types";
+import { BreedInfo } from "../../../Types/types";
 
 type NameTitleProps = PropsWithChildren<{
-  info: BreedInfo | IBreedInfoWithoutImage
+  info: BreedInfo
 }>;
 
 export const BreedTitle = (props: NameTitleProps) => {

@@ -1,6 +1,7 @@
 @import "../../../AppStyle/variables.scss";
 
-.search {
+input {
+  width: 100%;
   border-radius: 20px;
   border: 2px solid transparent;
   height: 60px;
@@ -15,6 +16,15 @@
     &:hover{border: 2px solid $darkPink;}
   }
 }
+
+input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $textGrey;
+}
+
 .search_light {
   background: #ffffff;
   color: $dark;
@@ -28,11 +38,4 @@
   &:hover {
     border: 2px solid rgba(255, 134, 142, 0.3);
   }
-}
-.search::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: $textGrey;
 }

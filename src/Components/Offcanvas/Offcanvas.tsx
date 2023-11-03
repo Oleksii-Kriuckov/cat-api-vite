@@ -28,7 +28,7 @@ export function MyOffcanvas() {
         show={show}
         onHide={handleClose}
       >
-        <div className="offcan">
+        <div className="offcan m-auto">
           <SquareButton
             class_name_dark="close_button dark_pink_background"
             class_name_light="close_button light_background"

@@ -18,7 +18,7 @@ const Card = (props: CardProps) => {
   return (
     <div>
       <div
-        className="card_back"
+        className="card_back d-none d-sm-flex justify-content-sm-center align-items-sm-center"
         style={{ backgroundColor: props.bgColor }}
       >
         <img src={props.src} alt={props.children} />
