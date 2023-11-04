@@ -14,6 +14,11 @@
     margin: 30px;
     margin-left: auto;
   }
+
+  main {
+    width: 740px;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -23,6 +28,7 @@
 
   main {
     margin: auto;
+    width: 740px;
   }
 
   .initial {
@@ -39,6 +45,7 @@
   #box {
     margin: 30px auto;
   }
+
 }
 
 // @media (min-width: 660px) and (max-width: 767px) {
@@ -67,7 +74,7 @@
   }
 }
 
-@media (min-width: 576px) {  // 660 sm
+@media (min-width: 576px) {
   .card_button {
     width: 138px;
   }
@@ -82,15 +89,18 @@
   .offcan {
     width: 446px;
   }
-  
+
+  .block {
+    background-position: right 20px top 20px;
+  }
   // .card_back {
   //   display: flex;
   //   justify-content: center;
   //   align-items: center;
   // }
   // .navbar_mobile {
-    //   display: none;
-    // }
+  //   display: none;
+  // }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
@@ -114,6 +124,10 @@
   .offcan {
     max-width: 400px;
     width: 100%;
+  }
+
+  .block {
+    background-position: right 20px top 20px;
   }
   // .navbar {
   //   display: none;

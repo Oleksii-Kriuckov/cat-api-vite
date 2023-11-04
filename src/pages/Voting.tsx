@@ -54,8 +54,9 @@ const Voting = () => {
               <img
                 src={voteResponseData.url}
                 alt="cat"
+                // className="voting_img"
                 style={{
-                  width: "640px",
+                  width: "100%",
                   maxHeight: "640px",
                   borderRadius: "20px",
                 }}

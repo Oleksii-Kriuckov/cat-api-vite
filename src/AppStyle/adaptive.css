@@ -12,6 +12,9 @@
     margin: 30px;
     margin-left: auto;
   }
+  main {
+    width: 740px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .aside_wrapper {
@@ -19,6 +22,7 @@
   }
   main {
     margin: auto;
+    width: 740px;
   }
   .initial {
     display: none;
@@ -63,6 +67,9 @@
   .offcan {
     width: 446px;
   }
+  .block {
+    background-position: right 20px top 20px;
+  }
 }
 @media (min-width: 320px) and (max-width: 575px) {
   .search {
@@ -81,5 +88,8 @@
   .offcan {
     max-width: 400px;
     width: 100%;
+  }
+  .block {
+    background-position: right 20px top 20px;
   }
 }
