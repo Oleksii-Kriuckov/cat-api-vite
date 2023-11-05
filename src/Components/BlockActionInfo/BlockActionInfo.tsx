@@ -18,7 +18,6 @@ const BlockActionInfo = (props: BlockActionInfoProps) => {
       style={{
         backgroundImage: `url(${props.icon})`,
         backgroundRepeat: "no-repeat",
-        // backgroundPosition: "600px 20px",
       }}
     >
       <div className="d-flex flex-column flex-sm-row">

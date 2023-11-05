@@ -39,8 +39,9 @@ const SearchInput = () => {
       />
 
       <SquareButton
-        class_name_dark="search_button dark_pink_background"
-        class_name_light="search_button light_pink_background"
+        id="search_button"
+        class_name_dark="dark_pink_background"
+        class_name_light="light_pink_background"
         onClick={search}
       />
     </div>

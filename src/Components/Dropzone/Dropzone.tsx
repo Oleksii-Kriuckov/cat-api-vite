@@ -5,7 +5,6 @@ import photoSignDark from "../Graphic/Images/photoSignDark.png";
 import { BlackText } from "../../Components/UI/Texts/BlackText";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { lightDark$, openModal$ } from "../../Recoil/atoms";
-// import { UploadPhoto } from "../UI/Buttons/UploadButtons/UploadPhoto";
 import { img } from "./DropzoneData";
 import "./DropzoneStyles.css";
 import { RectButton } from "../UI/Buttons/RectButton";
@@ -107,7 +106,6 @@ function Dropzone() {
         ) : (
           <>
             {fileInfo}
-            {/* <UploadPhoto file={file} /> */}
             <RectButton class_name="upload_photo" onClick={addPhoto}>
               UPLOAD PHOTO
             </RectButton>

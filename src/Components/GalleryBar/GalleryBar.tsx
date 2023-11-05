@@ -53,7 +53,7 @@ const GalleryBar = () => {
           }
         />
       </GalleryItem>
-      {/* <SquareButton class_name="update_button" onClick={()=>(console.log('update'))}/> */}
+      {/* <SquareButton id="update_button" class_name="update_button" onClick={()=>(console.log('update'))}/> */}
     </div>
   );
 };

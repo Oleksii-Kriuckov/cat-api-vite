@@ -18,8 +18,9 @@ const Header = (props: HeaderProps) => {
     >
       <div className="d-flex">
         <SquareButton
-          class_name_dark="back_button dark_pink_background"
-          class_name_light="back_button light_pink_background"
+          id="back_button"
+          class_name_dark="dark_pink_background"
+          class_name_light="light_pink_background"
           onClick={() => navigate(-1)}
         />
         <TitleButton class_name={props.class_name}>

@@ -92,7 +92,7 @@ main {
   width: 100%;
 }
 
-.back_button {
+#back_button {
   @include pinkButton(
     $url: "src/Components/Graphic/Icons/back-20.png",
     $urlHover: "src/Components/Graphic/Icons/white-icon/back-white-20.png"
@@ -100,7 +100,7 @@ main {
   margin-right: 10px;
 }
 
-.search_button {
+#search_button {
   @include pinkButton(
     $url: "src/Components/Graphic/Icons/search-20.png",
     $urlHover: "src/Components/Graphic/Icons/white-icon/search-white-20.png"
@@ -110,7 +110,7 @@ main {
   right: 10px;
 }
 
-.update_button {
+#update_button {
   @include pinkButton(
     $url: "src/Components/Graphic/Icons/update-20.png",
     $urlHover: "src/Components/Graphic/Icons/white-icon/update-white-20.png"
@@ -146,13 +146,13 @@ main {
   display: none;
 }
 
-.aside_button {
+#aside_button {
   background-image: url("src/Components/Graphic/Icons/stroke.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.close_button {
+#close_button {
   @include pinkButton(
     $url: "src/Components/Graphic/Icons/close-20.png",
     $urlHover: "src/Components/Graphic/Icons/white-icon/close-white-20.png"

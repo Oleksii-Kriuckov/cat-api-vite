@@ -17,8 +17,9 @@ export function MyOffcanvas() {
   return (
     <div className="offcanvas_wrapper">
       <SquareButton
-        class_name_dark="link_button aside_button dark_background pink_hover"
-        class_name_light="link_button aside_button light_background pink_hover_dark"
+        id="aside_button"
+        class_name_dark="link_button dark_background pink_hover"
+        class_name_light="link_button light_background pink_hover_dark"
         onClick={handleShow}
       />
 
@@ -30,8 +31,9 @@ export function MyOffcanvas() {
       >
         <div className="offcan m-auto">
           <SquareButton
-            class_name_dark="close_button dark_pink_background"
-            class_name_light="close_button light_background"
+            id="close_button"
+            class_name_dark="dark_pink_background"
+            class_name_light="light_background"
             onClick={handleClose}
           />
           <LogoBar />
