@@ -57,7 +57,7 @@ const Voting = () => {
                 // className="voting_img"
                 style={{
                   width: "100%",
-                  maxHeight: "640px",
+                  maxHeight: "740px",
                   borderRadius: "20px",
                 }}
               />

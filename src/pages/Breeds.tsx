@@ -57,49 +57,56 @@ const Breeds = () => {
       <NavBar />
       <Section>
         <Header class_name="title title_button" title_content="BREEDS">
-          <SelectBreeds
-            width={225}
-            optionArray={copyBreedsArray}
-            class_name={
-              checked
-                ? "breedsSelect light border_hover light_border"
-                : "breedsSelect dark_background01 dark_border"
-            }
+          <div
+            className="d-flex flex-column flex-sm-row"
+            style={{ gap: 10 }}
           >
-            All breeds
-          </SelectBreeds>
+            <SelectBreeds
+              width={225}
+              optionArray={copyBreedsArray}
+              class_name={
+                checked
+                  ? "breedsSelect light border_hover light_border"
+                  : "breedsSelect dark_background01 dark_border"
+              }
+            >
+              All breeds
+            </SelectBreeds>
 
-          <SelectLimits
-            width={100}
-            optionArray={optionArrayForLimitBreeds}
-            class_name={
-              checked
-                ? "breedsSelect light border_hover light_border"
-                : "breedsSelect dark_background01 dark_border"
-            }
-          />
+            <div className="d-flex" style={{ gap: 10 }}>
+              <SelectLimits
+                width={100}
+                optionArray={optionArrayForLimitBreeds}
+                class_name={
+                  checked
+                    ? "breedsSelect light border_hover light_border"
+                    : "breedsSelect dark_background01 dark_border"
+                }
+              />
 
-          <SortButton
-            class_name={
-              checked
-                ? "sortButton z-a light light_border"
-                : "sortButton z-a dark_background01 dark_border"
-            }
-            sortFunction={() =>
-              setBreedsArray(sort_From_Z_To_A(breedsArray, "name"))
-            }
-          />
-          
-          <SortButton
-            class_name={
-              checked
-                ? "sortButton a-z light light_border"
-                : "sortButton a-z dark_background01 dark_border"
-            }
-            sortFunction={() =>
-              setBreedsArray(sort_From_A_To_Z(breedsArray, "name"))
-            }
-          />
+              <SortButton
+                class_name={
+                  checked
+                    ? "sortButton z-a light light_border"
+                    : "sortButton z-a dark_background01 dark_border"
+                }
+                sortFunction={() =>
+                  setBreedsArray(sort_From_Z_To_A(breedsArray, "name"))
+                }
+              />
+
+              <SortButton
+                class_name={
+                  checked
+                    ? "sortButton a-z light light_border"
+                    : "sortButton a-z dark_background01 dark_border"
+                }
+                sortFunction={() =>
+                  setBreedsArray(sort_From_A_To_Z(breedsArray, "name"))
+                }
+              />
+            </div>
+          </div>
         </Header>
         {errorMessage !== "" ? (
           <h3 style={{ textAlign: "center", marginTop: 50 }}>

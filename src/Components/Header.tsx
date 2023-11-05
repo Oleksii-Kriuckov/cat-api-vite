@@ -13,7 +13,8 @@ const Header = (props: HeaderProps) => {
 
   return (
     <header
-      className="d-flex justify-content-between"
+      className="d-flex justify-content-between 
+      flex-column flex-sm-column align-items-start flex-md-row"
       style={{ width: "100%", marginBottom: 20, gap: 10 }}
     >
       <div className="d-flex">
