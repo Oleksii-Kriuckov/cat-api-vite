@@ -252,6 +252,7 @@ main {
 }
 
 .title_button {
+  width: 150px;
   padding: 5px 30px;
   background: #FF868E;
   font-style: normal;

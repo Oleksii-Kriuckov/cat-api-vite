@@ -31,7 +31,7 @@ const GalleryBar = () => {
 
       <GalleryItem title="BREED">
         <SelectBreeds
-          width={290}
+          id="select_breeds_gallery"// width={290}
           optionArray={copyBreedsArray}
           class_name={
             isLight
@@ -44,7 +44,7 @@ const GalleryBar = () => {
       </GalleryItem>
       <GalleryItem title="LIMIT">
         <SelectLimits
-          width={290} // 240 with UpdateButton
+          id="select_limits_gallery" // width={290}, 240 with UpdateButton
           optionArray={optionArrayForLimitGallery}
           class_name={
             isLight

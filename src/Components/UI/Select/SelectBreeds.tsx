@@ -8,7 +8,7 @@ import { BreedInfo } from "../../../Types/types";
 type SelectProps = PropsWithChildren<{
   children: string;
   optionArray: BreedInfo[];
-  width: string | number;
+  id: string;
   class_name: string;
 }>;
 
@@ -23,9 +23,9 @@ const SelectBreeds = (props: SelectProps) => {
   };
 
   return (
-    <div className="select_wrapper">
+    // <div className="select_wrapper">
       <select
-        style={{ width: props.width }}
+        id={props.id}
         className={props.class_name}
         onChange={(e) => changeOption(e)}
       >
@@ -36,7 +36,7 @@ const SelectBreeds = (props: SelectProps) => {
           </option>
         ))}
       </select>
-    </div>
+    // </div>
   );
 };
 

@@ -29,9 +29,9 @@ const Header = (props: HeaderProps) => {
         </TitleButton>
       </div>
 
-      <div className="d-flex" style={{ gap: 10 }}>
+      {/* <div className="d-flex" style={{ gap: 10 }}> */}
         {props.children}
-      </div>
+      {/* </div> */}
     </header>
   );
 };

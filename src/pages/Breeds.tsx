@@ -58,29 +58,30 @@ const Breeds = () => {
       <Section>
         <Header class_name="title title_button" title_content="BREEDS">
           <div
+            id='breeds_header'
             className="d-flex flex-column flex-sm-row"
             style={{ gap: 10 }}
           >
             <SelectBreeds
-              width={225}
+              id="select_breeds"// width={225}
               optionArray={copyBreedsArray}
               class_name={
                 checked
-                  ? "breedsSelect light border_hover light_border"
-                  : "breedsSelect dark_background01 dark_border"
+                  ? "flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect light border_hover light_border"
+                  : "flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect dark_background01 dark_border"
               }
             >
               All breeds
             </SelectBreeds>
 
-            <div className="d-flex" style={{ gap: 10 }}>
+            <div id="limits_sort_wrapper" className="d-flex" style={{ gap: 10 }}>
               <SelectLimits
-                width={100}
+                id="select_limits_breeds"// width={100}
                 optionArray={optionArrayForLimitBreeds}
                 class_name={
                   checked
-                    ? "breedsSelect light border_hover light_border"
-                    : "breedsSelect dark_background01 dark_border"
+                    ? "flex-grow-1 flex-sm-grow-0 breedsSelect light border_hover light_border"
+                    : "flex-grow-1 flex-sm-grow-0 breedsSelect dark_background01 dark_border"
                 }
               />
 

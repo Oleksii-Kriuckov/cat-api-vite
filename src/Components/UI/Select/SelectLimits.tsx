@@ -4,7 +4,7 @@ import { useSetRecoilState, useRecoilState } from "recoil";
 
 type SelectLimitsProps = {
   optionArray: string[];
-  width: string | number;
+  id: string;
   class_name: string;
 };
 
@@ -18,9 +18,9 @@ const SelectLimits = (props: SelectLimitsProps) => {
   };
 
   return (
-    <div>
+    // <div>
       <select
-        style={{ width: props.width }}
+        id={props.id}
         className={props.class_name}
         value={limit}
         onChange={(e) => changeLimit(e.target.value)}
@@ -31,7 +31,7 @@ const SelectLimits = (props: SelectLimitsProps) => {
           </option>
         ))}
       </select>
-    </div>
+    // </div>
   );
 };
 

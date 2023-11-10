@@ -18,8 +18,8 @@ export function MyOffcanvas() {
     <div className="offcanvas_wrapper">
       <SquareButton
         id="aside_button"
-        class_name_dark="link_button dark_background pink_hover"
-        class_name_light="link_button light_background pink_hover_dark"
+        class_name_dark="link_button dark_background pink_hover_dark"
+        class_name_light="link_button light_background pink_hover"
         onClick={handleShow}
       />
 

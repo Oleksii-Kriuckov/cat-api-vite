@@ -10,6 +10,10 @@
     display: none;
   }
 
+  #select_breeds {
+    width: 225px;
+  }
+
   #box {
     margin: 30px;
     margin-left: auto;
@@ -18,7 +22,6 @@
   main {
     width: 740px;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -35,6 +38,10 @@
     display: none;
   }
 
+  #select_breeds {
+    width: 225px;
+  }
+
   .search {
     width: 400px;
   }
@@ -45,36 +52,16 @@
   #box {
     margin: 30px auto;
   }
-
-}
-
-// @media (min-width: 660px) and (max-width: 767px) {
-//   .search {
-//     width: 320px;
-//   }
-// }
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .aside_wrapper {
-    display: none;
-  }
-
-  .initial {
-    display: none;
-  }
-
-  main {
-    margin: auto;
-    padding: 20px;
-    width: 100vw;
-  }
-  #offcanvas {
-    width: 100vw;
-    padding: 30px;
-  }
 }
 
 @media (min-width: 576px) {
+  #select_limits_breeds{
+    width: 100px;
+  }
+  #breeds_header{
+    max-width: 470px;
+  }
+
   .card_button {
     width: 138px;
   }
@@ -93,47 +80,73 @@
   .block {
     background-position: right 20px top 20px;
   }
-  // .card_back {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+}  
+
+@media (min-width: 576px) and (max-width: 767px) {
+  // .search {
+  //   width: 320px;
   // }
-  // .navbar_mobile {
-  //   display: none;
-  // }
+
+  #select_breeds {
+  }
 }
 
+@media (max-width: 767px) {
+  .aside_wrapper {
+    display: none;
+  }  
+
+  .initial {
+    display: none;
+  }  
+
+  main {
+    margin: auto;
+    padding: 20px;
+    width: 100vw;
+  }  
+  #offcanvas {
+    width: 100vw;
+    padding: 30px;
+  }  
+  
+  #breeds_header{
+    width: 100%;
+  }  
+}  
+
 @media (max-width: 575px) {
+  #select_breeds {
+    width: 100%;
+  }  
+  // #select_limits_breeds {
+  //   flex-grow: 1;  
+  // }
+  #breeds_header{
+    max-width: 300px;
+  }
   .search {
     width: 100%;
-  }
+  }  
 
   aside {
     max-width: 400px;
-  }
+  }  
 
   .card_button {
     width: 100%;
-  }
+  }  
   .nav_card {
-    // flex-direction: column;
     gap: 20px;
     margin-top: 20px;
-  }
+  }  
 
   .offcan {
     max-width: 400px;
     width: 100%;
-  }
+  }  
 
   .block {
     background-position: right 20px top 20px;
-  }
-  // .navbar {
-  //   display: none;
-  // }
-
-  // .card_back {
-  //   display: none;
-  // }
-}
+  }  
+}  
