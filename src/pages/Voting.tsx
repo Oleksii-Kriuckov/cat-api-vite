@@ -34,10 +34,9 @@ const Voting = () => {
       <Section>
         <Header class_name="title title_button" title_content="VOTING">
           <RectButton
-            class_name="upload_photo"
-            onClick={() => {
-              setActionInfoArray([]);
-            }}
+            id="clear_log"
+            class_name="rect_btn"
+            onClick={() => setActionInfoArray([])}
           >
             Clear log
           </RectButton>

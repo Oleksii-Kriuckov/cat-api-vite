@@ -1,7 +1,8 @@
 import { PropsWithChildren } from "react";
 import TitleButton from "./UI/Buttons/TitleButton/TitleButton";
 import { SquareButton } from "./UI/Buttons/SquareButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useMatch } from "react-router-dom";
+import { BREEDS_ROUTE } from "../Router/path";
 
 type HeaderProps = PropsWithChildren<{
   class_name: string;
@@ -10,11 +11,14 @@ type HeaderProps = PropsWithChildren<{
 
 const Header = (props: HeaderProps) => {
   const navigate = useNavigate();
+  const match = useMatch({
+    path: BREEDS_ROUTE
+  })
 
   return (
     <header
-      className="d-flex justify-content-between 
-      flex-column flex-sm-column align-items-start flex-md-row"
+      className={`d-flex justify-content-between 
+      flex-column ${match ? 'flex-md-row' : 'flex-sm-row'} align-items-start`}
       style={{ width: "100%", marginBottom: 20, gap: 10 }}
     >
       <div className="d-flex">

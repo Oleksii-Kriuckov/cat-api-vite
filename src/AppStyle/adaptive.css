@@ -43,29 +43,6 @@
     margin: 30px auto;
   }
 }
-@media (min-width: 576px) {
-  #select_limits_breeds {
-    width: 100px;
-  }
-  #breeds_header {
-    max-width: 470px;
-  }
-  .card_button {
-    width: 138px;
-  }
-  aside {
-    width: 446px;
-  }
-  main {
-    padding: 30px;
-  }
-  .offcan {
-    width: 446px;
-  }
-  .block {
-    background-position: right 20px top 20px;
-  }
-}
 @media (max-width: 767px) {
   .aside_wrapper {
     display: none;
@@ -84,6 +61,35 @@
   }
   #breeds_header {
     width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  #select_limits_breeds {
+    width: 100px;
+  }
+  #breeds_header {
+    max-width: 470px;
+  }
+  #clear_log {
+    margin-left: auto;
+  }
+  .upload {
+    margin-left: auto;
+  }
+  .card_button {
+    width: 138px;
+  }
+  aside {
+    width: 446px;
+  }
+  main {
+    padding: 30px;
+  }
+  .offcan {
+    width: 446px;
+  }
+  .block {
+    background-position: right 20px top 20px;
   }
 }
 @media (max-width: 575px) {

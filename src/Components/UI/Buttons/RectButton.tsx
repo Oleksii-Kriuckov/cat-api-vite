@@ -5,6 +5,7 @@ import { lightDark$ } from "../../../Recoil/atoms";
 type Props = PropsWithChildren<{
   children: string;
   class_name: string;
+  id: string;
   onClick: () => void;
 }>;
 
@@ -13,6 +14,7 @@ export const RectButton = (props: Props) => {
 
   return (
     <div
+      id={props.id}
       className={
         isLight
           ? `${props.class_name} title light_pink_background`

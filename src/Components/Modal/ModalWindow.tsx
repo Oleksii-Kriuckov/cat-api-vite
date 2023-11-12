@@ -15,7 +15,7 @@ export default function ModalWindow() {
   const handleClose = () => setOpenModal(false);
 
   return (
-    <div style={{ marginLeft: "auto" }}>
+    <div>
       <Upload onClick={handleOpen} />
 
       <Modal

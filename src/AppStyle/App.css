@@ -229,8 +229,11 @@ main {
   cursor: pointer;
 }
 
-.upload_photo {
+#upload_photo {
   margin: auto;
+}
+
+.rect_btn {
   padding: 12px 25px;
   width: 170px;
   font-size: 12px;
@@ -238,7 +241,7 @@ main {
   color: #FF868E;
   cursor: pointer;
 }
-.upload_photo:hover {
+.rect_btn:hover {
   background: #FF868E;
   color: #ffffff;
 }
