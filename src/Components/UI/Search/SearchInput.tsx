@@ -26,11 +26,14 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="search" style={{ position: "relative" }}>
+    <div
+      className="search flex-grow-0 flex-sm-grow-1 flex-md-grow-0"
+      style={{ position: "relative" }}
+    >
       <input
         type="text"
         className={isLight ? "search_light" : "search_dark"}
-        placeholder="Search for breeds by name"
+        placeholder="Search for breeds"
         value={inputValue}
         onChange={(e) => {
           setInputValue(e.target.value);
