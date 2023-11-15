@@ -2,7 +2,6 @@ import { useEffect, useMemo } from "react";
 import NavBar from "../Components/NavBar";
 import Header from "../Components/Header";
 import Section from "../Components/Section/Section";
-import SelectBreeds from "../Components/UI/Select/SelectBreeds";
 import {
   errorMessage$,
   breedsArray$,
@@ -16,12 +15,13 @@ import { useRecoilValue, useRecoilState } from "recoil";
 import SortButton from "../Components/UI/Buttons/sortButton/SortButton";
 import { useSearchSort } from "../Hooks/useSearchSort";
 import GridForBreeds from "../Components/UI/Grid/GridForBreeds";
-import SelectLimits from "../Components/UI/Select/SelectLimits";
 import { usePagination } from "../Hooks/usePagination";
 import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageIndicatorBlock";
 import { optionArrayForLimitBreeds } from "../Components/UI/Select/DataForSelects";
 import { BlackText } from "../Components/UI/Texts/BlackText";
 import useFetch from "../Hooks/useFetch";
+import { SelectCommon } from "../Components/UI/Select/SelectCommon";
+import useChange from "../Hooks/useChange";
 
 const Breeds = () => {
   const [breedsArray, setBreedsArray] = useRecoilState(breedsArray$);
@@ -29,12 +29,13 @@ const Breeds = () => {
   const displayBreed = useRecoilValue(displayArray$);
   const [limit, setLimit] = useRecoilState(limit$);
   const [pageNumber, setPageNumber] = useRecoilState(pageNumber$);
-  const checked = useRecoilValue(lightDark$);
+  const isLight = useRecoilValue(lightDark$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
 
   const { sliceArray, pageAmount } = usePagination(breedsArray);
   const { sort_From_A_To_Z, sort_From_Z_To_A } = useSearchSort();
   const { getBreeds } = useFetch();
+  const { changeBreeds, changeLimit } = useChange();
 
   useEffect(() => {
     if (breedsArray.length === 0) {
@@ -58,36 +59,36 @@ const Breeds = () => {
       <Section>
         <Header class_name="title title_button" title_content="BREEDS">
           <div
-            id='breeds_header'
+            id="breeds_header"
             className="d-flex flex-column flex-sm-row"
             style={{ gap: 10 }}
           >
-            <SelectBreeds
-              id="select_breeds"// width={225}
+            <SelectCommon
+              id="select_breeds"
+              class_name_light="flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect light border_hover light_border"
+              class_name_dark="flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect dark_background01 dark_border"
               optionArray={copyBreedsArray}
-              class_name={
-                checked
-                  ? "flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect light border_hover light_border"
-                  : "flex-grow-0 flex-sm-grow-1 flex-md-grow-0 breedsSelect dark_background01 dark_border"
-              }
+              onChange={changeBreeds}
             >
               All breeds
-            </SelectBreeds>
+            </SelectCommon>
 
-            <div id="limits_sort_wrapper" className="d-flex" style={{ gap: 10 }}>
-              <SelectLimits
-                id="select_limits_breeds"// width={100}
+            <div
+              id="limits_sort_wrapper"
+              className="d-flex"
+              style={{ gap: 10 }}
+            >
+              <SelectCommon
+                id="select_limits_breeds"
                 optionArray={optionArrayForLimitBreeds}
-                class_name={
-                  checked
-                    ? "flex-grow-1 flex-sm-grow-0 breedsSelect light border_hover light_border"
-                    : "flex-grow-1 flex-sm-grow-0 breedsSelect dark_background01 dark_border"
-                }
+                class_name_light="flex-grow-1 flex-sm-grow-0 breedsSelect light border_hover light_border"
+                class_name_dark="flex-grow-1 flex-sm-grow-0 breedsSelect dark_background01 dark_border"
+                onChange={(e) => changeLimit(Number(e.target.value))}
               />
 
               <SortButton
                 class_name={
-                  checked
+                  isLight
                     ? "sortButton z-a light light_border"
                     : "sortButton z-a dark_background01 dark_border"
                 }
@@ -98,7 +99,7 @@ const Breeds = () => {
 
               <SortButton
                 class_name={
-                  checked
+                  isLight
                     ? "sortButton a-z light light_border"
                     : "sortButton a-z dark_background01 dark_border"
                 }
