@@ -3,10 +3,10 @@ import Modal from "@mui/material/Modal";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { modal_dark, modal_light, style } from "./styleObj";
 import { lightDark$, openModal$ } from "../../Recoil/atoms";
-import { Upload } from "../UI/Buttons/UploadButtons/Upload";
 import Dropzone from "../Dropzone/Dropzone";
 import { SquareButton } from "../UI/Buttons/SquareButton";
 import "./ModalWindow.css";
+import { RectButton } from "../UI/Buttons/RectButton";
 
 export default function ModalWindow() {
   const isLight = useRecoilValue(lightDark$);
@@ -16,7 +16,9 @@ export default function ModalWindow() {
 
   return (
     <div>
-      <Upload onClick={handleOpen} />
+      <RectButton id="upload" class_name="title" onClick={handleOpen}>
+        UPLOAD
+      </RectButton>
 
       <Modal
         open={openModal}
