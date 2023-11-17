@@ -1,16 +1,13 @@
-.gallery_bar {
-  width: 640px;
-  height: 156px;
+#gallery_bar {
+  /* width: 640px; */
+  /* height: 156px; */
   border-radius: 20px;
   padding: 10px 20px 20px;
-  display: grid;
-  grid-template-columns: 290px 290px;
-  gap: 10px 20px;
   margin-bottom: 20px;
 }
 
 .gallery_item {
-  width: 290px;
+  /* width: 290px; */
   height: 58px;
 }
 

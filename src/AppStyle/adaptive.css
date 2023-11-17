@@ -8,6 +8,10 @@
   .aside_mobile {
     display: none;
   }
+  #gallery_bar {
+    -ms-grid-columns: 290px 290px;
+    grid-template-columns: 290px 290px;
+  }
   #select_breeds {
     width: 225px;
   }
@@ -22,6 +26,10 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .aside_wrapper {
     display: none;
+  }
+  #gallery_bar {
+    -ms-grid-columns: 290px 290px;
+    grid-template-columns: 290px 290px;
   }
   main {
     margin: auto;
@@ -63,6 +71,12 @@
     width: 100%;
   }
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  #gallery_bar {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media (min-width: 576px) {
   #select_limits_breeds {
     width: 100px;
@@ -72,6 +86,9 @@
   }
   #clear_log {
     margin-left: auto;
+  }
+  #gallery_bar {
+    gap: 10px 20px;
   }
   .upload {
     margin-left: auto;
@@ -99,6 +116,9 @@
   #breeds_header {
     max-width: 300px;
   }
+  #gallery_bar {
+    gap: 10px;
+  }
   .search {
     width: 100%;
   }
@@ -118,5 +138,33 @@
   }
   .block {
     background-position: right 20px top 20px;
+  }
+}
+@media (min-width: 376px) {
+  .page_button,
+  .disabled {
+    width: 120px;
+  }
+  .s {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .xs {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .page_button,
+  .disabled {
+    width: 100px;
+  }
+  .s {
+    display: none;
+  }
+  .xs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }

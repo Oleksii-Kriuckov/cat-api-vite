@@ -1,5 +1,4 @@
-.prev_next_button {
-  width: 122px;
+.page_button {
   height: 40px;
   border-radius: 10px;
   font-style: normal;
@@ -7,52 +6,73 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 2px;
-  color: #FF868E;
+  color: #ff868e;
   background-repeat: no-repeat;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.prev_next_button:hover {
-  background: #FF868E;
+.page_button:hover {
+  background: #ff868e;
   color: #ffffff;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.prev_next_button_light {
-  background-color: #FBE0DC;
+.page_button_light {
+  background-color: #fbe0dc;
 }
 
-.prev_next_button_dark {
+.page_button_dark {
   background-color: rgba(255, 134, 142, 0.2);
 }
 
 .prev {
   background-image: url("src/Components/Graphic/Icons/left-pink.png");
-  background-position: 28px 12px;
-  padding: 12px 26px 12px 60px;
+  background-position: 25px 12px;
+  padding: 12px 25px 12px 60px;
 }
 .prev:hover {
   background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
-  background-position: 28px 12px;
-  padding: 12px 26px 12px 60px;
+  background-position: 25px 12px;
+  padding: 12px 25px 12px 60px;
+}
+
+.prev_mob {
+  background-image: url("src/Components/Graphic/Icons/left-pink.png");
+  background-position: 15px 12px;
+  padding: 12px 15px 12px 45px;
+}
+.prev_mob:hover {
+  background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
+  background-position: 15px 12px;
+  padding: 12px 15px 12px 45px;
 }
 
 .next {
   background-image: url("src/Components/Graphic/Icons/right-pink.png");
   background-position: 81px 12px;
-  padding: 12px 55px 12px 30px;
+  padding: 12px 60px 12px 25px;
 }
 .next:hover {
   background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
   background-position: 81px 12px;
-  padding: 12px 55px 12px 30px;
+  padding: 12px 60px 12px 25px;
+}
+
+.next_mob {
+  background-image: url("src/Components/Graphic/Icons/right-pink.png");
+  background-position: 69px 12px;
+  padding: 12px 40px 12px 20px;
+}
+.next_mob:hover {
+  background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
+  background-position: 69px 12px;
+  padding: 12px 40px 12px 20px;
 }
 
 .disabled {
-  width: 122px;
   height: 40px;
   border-radius: 10px;
   font-style: normal;
@@ -64,7 +84,7 @@
       -ms-user-select: none;
           user-select: none;
   letter-spacing: 2px;
-  color: #8C8C8C;
+  color: #8c8c8c;
   background-repeat: no-repeat;
 }
 
@@ -78,12 +98,24 @@
 
 .prev_disabled {
   background-image: url("src/Components/Graphic/Icons/left.png");
-  background-position: 28px 12px;
-  padding: 12px 26px 12px 60px;
+  background-position: 25px 12px;
+  padding: 12px 25px 12px 60px;
+}
+
+.prev_disabled_mob {
+  background-image: url("src/Components/Graphic/Icons/left.png");
+  background-position: 15px 12px;
+  padding: 12px 15px 12px 45px;
 }
 
 .next_disabled {
   background-image: url("src/Components/Graphic/Icons/right.png");
   background-position: 81px 12px;
-  padding: 12px 55px 12px 30px;
+  padding: 12px 60px 12px 25px;
+}
+
+.next_disabled_mob {
+  background-image: url("src/Components/Graphic/Icons/right.png");
+  background-position: 69px 12px;
+  padding: 12px 40px 12px 20px;
 }

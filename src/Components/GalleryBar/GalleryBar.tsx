@@ -18,17 +18,18 @@ const GalleryBar = () => {
 
   return (
     <div
+    id="gallery_bar"
       className={
         isLight
-          ? "gallery_bar light position-relative"
-          : "gallery_bar dark_background01 position-relative"
+          ? "d-flex flex-column d-sm-grid light position-relative"
+          : "d-flex flex-column d-sm-grid dark_background01 position-relative"
       }
     >
       <GalleryItem title="ORDER">
         <SelectCommon
           id="select_gallery"
-          class_name_light="gallerySelect light_background black light_border"
-          class_name_dark="gallerySelect dark white dark_border"
+          class_name_light="light_background black light_border"
+          class_name_dark="dark white dark_border"
           optionArray={orderArray}
           onChange={sortByOrder}
         />
@@ -37,8 +38,8 @@ const GalleryBar = () => {
       <GalleryItem title="TYPE">
         <SelectCommon
           id="select_gallery"
-          class_name_light="gallerySelect light_background black light_border"
-          class_name_dark="gallerySelect dark white dark_border"
+          class_name_light="light_background black light_border"
+          class_name_dark="dark white dark_border"
           optionArray={typeArray}
           onChange={sortByType}
         />
@@ -48,8 +49,8 @@ const GalleryBar = () => {
         <SelectCommon
           id="select_gallery"
           optionArray={copyBreedsArray}
-          class_name_light="gallerySelect light_background black light_border"
-          class_name_dark="gallerySelect dark white dark_border"
+          class_name_light="light_background black light_border"
+          class_name_dark="dark white dark_border"
           onChange={changeBreeds}
         >
           None
@@ -60,8 +61,8 @@ const GalleryBar = () => {
         <SelectCommon
          id="select_gallery"
          optionArray={optionArrayForLimitGallery}
-         class_name_light="gallerySelect light_background black light_border"
-         class_name_dark="gallerySelect dark white dark_border"
+         class_name_light="light_background black light_border"
+         class_name_dark="dark white dark_border"
          onChange={(e) => changeLimit(Number(e.target.value))}
         />
       </GalleryItem>

@@ -1,8 +1,13 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import "./PrevNextButtonsStyle.css";
 import { lightDark$, pageNumber$ } from "../../../../Recoil/atoms";
+import "./styles/PrevNextButtonsStyle.css";
 
-const PrevButton = () => {
+type Props = { 
+  main_class: string,
+  class_disabled: string
+ };
+
+const PrevButton = ({main_class, class_disabled}: Props) => {
   const [pageNumber, setPageNumber] = useRecoilState(pageNumber$);
   const isLight = useRecoilValue(lightDark$);
 
@@ -16,11 +21,11 @@ const PrevButton = () => {
       className={
         isLight
           ? pageNumber > 1
-            ? " prev_next_button_light prev prev_next_button"
-            : "disabled prev_disabled disabled_light"
+            ? `page_button ${main_class} page_button_light`
+            : `disabled ${class_disabled} disabled_light`
           : pageNumber > 1
-          ? "prev_next_button prev prev_next_button_dark"
-          : "disabled prev_disabled disabled_dark"
+          ? `page_button ${main_class} page_button_dark`
+          : `disabled ${class_disabled} disabled_dark`
       }
       onClick={decreasePage}
     >

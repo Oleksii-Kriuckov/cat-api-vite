@@ -23,7 +23,7 @@ main {
 }
 
 .dark {
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
 }
 
 .light_background {
@@ -31,7 +31,7 @@ main {
 }
 
 .light_pink_background {
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
 }
 
 .dark_pink_background {
@@ -47,7 +47,7 @@ main {
 }
 
 .light_border:hover {
-  outline: 2px solid #FBE0DC;
+  outline: 2px solid #fbe0dc;
 }
 
 .dark_border option {
@@ -61,7 +61,7 @@ main {
 }
 
 .pink_hover:hover {
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
 }
 
 .pink_hover_dark:hover {
@@ -69,15 +69,15 @@ main {
 }
 
 .black {
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
 
 .gray {
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
 
 .pink {
-  color: #FF868E;
+  color: #ff868e;
   text-decoration: none;
 }
 
@@ -100,7 +100,7 @@ main {
   margin-right: 10px;
 }
 #back_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/back-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -120,7 +120,7 @@ main {
   right: 10px;
 }
 #search_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/search-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -140,7 +140,7 @@ main {
   bottom: 20px;
 }
 #update_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/update-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -158,7 +158,7 @@ main {
   display: none;
 }
 .fav_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/fav-full-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -177,7 +177,7 @@ main {
   display: none;
 }
 .like_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/like-white-30.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -196,7 +196,7 @@ main {
   display: none;
 }
 .dislike_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/dislike-white-30.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -222,7 +222,7 @@ main {
   right: 20px;
 }
 #close_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/close-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -238,11 +238,11 @@ main {
   width: 170px;
   font-size: 12px;
   line-height: 16px;
-  color: #FF868E;
+  color: #ff868e;
   cursor: pointer;
 }
 .rect_btn:hover {
-  background: #FF868E;
+  background: #ff868e;
   color: #ffffff;
 }
 
@@ -257,7 +257,7 @@ main {
 .title_button {
   width: 150px;
   padding: 5px 30px;
-  background: #FF868E;
+  background: #ff868e;
   font-style: normal;
   font-size: 20px;
   line-height: 30px;
@@ -266,18 +266,18 @@ main {
 
 .id_button {
   padding: 5px 30px;
-  background: #FBE0DC;
+  background: #fbe0dc;
   font-style: normal;
   font-size: 20px;
   line-height: 30px;
-  color: #FF868E;
+  color: #ff868e;
 }
 
 .page {
   font-style: normal;
   font-size: 16px;
   line-height: 16px;
-  color: #FF868E;
+  color: #ff868e;
   padding: 12px 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -286,7 +286,7 @@ main {
 }
 
 .page_light {
-  background: #FBE0DC;
+  background: #fbe0dc;
 }
 
 .page_dark {
