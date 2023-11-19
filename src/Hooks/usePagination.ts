@@ -4,8 +4,9 @@ import {
   pageNumber$,
   displayArray$,
 } from "../Recoil/atoms";
+import { NewAct, BreedInfo } from "../Types/types";
 
-export const usePagination = (array: {}[]) => {
+export const usePagination = (array: NewAct[] | BreedInfo[]) => {
   const limit = useRecoilValue(limit$);
   const pageNumber = useRecoilValue(pageNumber$);
   const  setDisplayBreed = useSetRecoilState(displayArray$);
@@ -25,5 +26,6 @@ export const usePagination = (array: {}[]) => {
       setDisplayBreed(array.slice((pageNumber - 1) * limit));
     }
   };
+  
   return {pageAmount, sliceArray };
 };

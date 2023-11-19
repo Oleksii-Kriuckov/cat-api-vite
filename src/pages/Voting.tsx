@@ -35,7 +35,7 @@ const Voting = () => {
         <Header class_name="title title_button" title_content="VOTING">
           <RectButton
             id="clear_log"
-            class_name="rect_btn title"
+            class_name="rect_btn title_button"
             onClick={() => setActionInfoArray([])}
           >
             Clear log

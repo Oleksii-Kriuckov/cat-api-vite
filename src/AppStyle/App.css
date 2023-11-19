@@ -246,7 +246,7 @@ main {
   color: #ffffff;
 }
 
-.title {
+.title_button {
   height: 40px;
   border-radius: 10px;
   font-weight: 500;
@@ -254,7 +254,7 @@ main {
   letter-spacing: 2px;
 }
 
-.title_button {
+.title {
   width: 150px;
   padding: 5px 30px;
   background: #ff868e;

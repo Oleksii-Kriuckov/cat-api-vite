@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import TitleButton from "./UI/Buttons/TitleButton/TitleButton";
+import {Title} from "./UI/Title";
 import { SquareButton } from "./UI/Buttons/SquareButton";
 import { useNavigate, useMatch } from "react-router-dom";
 import { BREEDS_ROUTE } from "../Router/path";
@@ -28,9 +28,9 @@ const Header = (props: HeaderProps) => {
           class_name_light="light_pink_background"
           onClick={() => navigate(-1)}
         />
-        <TitleButton class_name={props.class_name}>
+        <Title class_name={props.class_name}>
           {props.title_content}
-        </TitleButton>
+        </Title>
       </div>
 
         {props.children}

@@ -1,7 +1,7 @@
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
 import Section from "../Components/Section/Section";
-import TitleButton from "../Components/UI/Buttons/TitleButton/TitleButton";
+import {Title} from "../Components/UI/Title";
 import { breedInfo$ } from "../Recoil/atoms";
 import { useRecoilValue } from "recoil";
 import BreedInfoBar from "../Components/BreedInfoBar/BreedInfoBar";
@@ -13,10 +13,10 @@ export default function BreedInfo() {
     <div>
       <NavBar />
       <Section>
-        <Header class_name="title id_button" title_content="BREED">
-          <TitleButton class_name="title title_button">
+        <Header class_name="title_button id_button" title_content="BREED">
+          <Title class_name="title title_button">
             {breedInfo.id}
-          </TitleButton>
+          </Title>
         </Header>
         {breedInfo.image.url ? 
         <img

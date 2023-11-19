@@ -6,10 +6,7 @@ type Props = PropsWithChildren<{
   children: string;
   class_name: string;
   id: string;
-  img?: string;
-  img_class?: string;
-  padding?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }>;
 
 export const RectButton = (props: Props) => {
