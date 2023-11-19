@@ -30,6 +30,7 @@ const Likes = () => {
           {likesArray.length === 0 ? (
             <DefaultState>No item found</DefaultState>
           ) :
+          // replace GridForm with GridOnePAge
             <GridForm
               alt={likesArray[0].alt}
               class_name_btn={

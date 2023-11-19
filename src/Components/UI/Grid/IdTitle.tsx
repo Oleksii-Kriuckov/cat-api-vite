@@ -3,7 +3,7 @@ import {  useRecoilValue } from "recoil";
 import "./GridStyle.css";
 import { lightDark$ } from "../../../Recoil/atoms";
 
-type NameTitleProps = PropsWithChildren<{ children: string }>;
+type NameTitleProps = PropsWithChildren<{ children: string[] }>;
 
 export const IdTitle = (props: NameTitleProps) => {
   const isLight = useRecoilValue(lightDark$);

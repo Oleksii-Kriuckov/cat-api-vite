@@ -1,13 +1,17 @@
 import { useRecoilValue } from "recoil";
 import "./GridStyle.css";
 import { countLastPageRows } from "../../../functions/countRows";
-import { IdTitle } from "./IdTitle";
+// import { IdTitle } from "./IdTitle";
 import { limit$, pageNumber$ } from "../../../Recoil/atoms";
-import { NewAct } from "../../../Types/types";
+import { BreedInfo, NewAct } from "../../../Types/types";
+import { PropsWithChildren } from "react";
 
-type GridForGalleryProps = { array: NewAct[]; pageAmount: number };
+type GridMultiPageProps = PropsWithChildren<{
+  array: BreedInfo[] | NewAct[];
+  pageAmount: number;
+}>;
 
-const GridForGallery = (props: GridForGalleryProps) => {
+const GridMultiPage = (props: GridMultiPageProps) => {
   const limit = useRecoilValue(limit$);
   const pageNumber = useRecoilValue(pageNumber$);
 
@@ -21,18 +25,9 @@ const GridForGallery = (props: GridForGalleryProps) => {
             : `repeat(${countLastPageRows(props.array.length, limit)}, 140px)`,
       }}
     >
-      {props.array.map((elem, ind) =>
-          <div
-            className="grid_item for_breeds"
-            key={ind}
-            style={{ backgroundImage: `url(${elem.image.url})` }}
-          >
-            {" "}
-            <IdTitle>Add at {elem.date}</IdTitle>
-          </div>
-      )}
+      {props.children}
     </div>
   );
 };
 
-export default GridForGallery;
+export default GridMultiPage;

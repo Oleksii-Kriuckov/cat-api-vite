@@ -34,7 +34,9 @@ const Favorites = () => {
         <Header class_name="title title_button" title_content="FAVORITES" />
         {favoritesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
-        ) : isObject(favoritesArray[0]) ? (
+        ) : 
+        // delete isObject, replace GridForm with GridOnePAge
+        isObject(favoritesArray[0]) ? (
           <GridForm
             alt={favoritesArray[0].alt}
             class_name_btn={

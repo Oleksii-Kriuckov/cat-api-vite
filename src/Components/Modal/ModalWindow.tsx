@@ -16,7 +16,7 @@ export default function ModalWindow() {
 
   return (
     <div>
-      <RectButton id="upload" class_name="title_button" onClick={handleOpen}>
+      <RectButton id="upload" class_name="" onClick={handleOpen}>
         UPLOAD
       </RectButton>
 

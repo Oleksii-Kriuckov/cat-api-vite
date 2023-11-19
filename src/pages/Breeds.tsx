@@ -14,7 +14,6 @@ import {
 import { useRecoilValue, useRecoilState } from "recoil";
 import SortButton from "../Components/UI/Buttons/sortButton/SortButton";
 import { useSearchSort } from "../Hooks/useSearchSort";
-import GridForBreeds from "../Components/UI/Grid/GridForBreeds";
 import { usePagination } from "../Hooks/usePagination";
 import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageIndicatorBlock";
 import { optionArrayForLimitBreeds } from "../Components/UI/Select/DataForSelects";
@@ -22,6 +21,9 @@ import { BlackText } from "../Components/UI/Texts/BlackText";
 import useFetch from "../Hooks/useFetch";
 import { SelectCommon } from "../Components/UI/Select/SelectCommon";
 import useChange from "../Hooks/useChange";
+import GridMultiPage from "../Components/UI/Grid/GridMultiPage";
+import { BreedTitle } from "../Components/UI/Grid/BreedTitle";
+import { isObjectBreedInfo } from "../functions";
 
 const Breeds = () => {
   const [breedsArray, setBreedsArray] = useRecoilState(breedsArray$);
@@ -116,7 +118,20 @@ const Breeds = () => {
           </h3>
         ) : (
           <>
-            <GridForBreeds pageAmount={pageAmount} array={displayBreed} />
+            <GridMultiPage array={displayBreed} pageAmount={pageAmount}>
+              {displayBreed.map((elem) => (
+                <div
+                  className="grid_item for_breeds"
+                  key={elem.id}
+                  style={{ backgroundImage: `url(${elem.image.url})` }}
+                >
+                  <div className="background_grid_item"></div>
+                  {isObjectBreedInfo(elem) && (
+                    <BreedTitle info={elem}>{elem.name}</BreedTitle>
+                  )}
+                </div>
+              ))}
+            </GridMultiPage>
             <PageIndicatorBlock pageAmount={pageAmount} />
           </>
         )}

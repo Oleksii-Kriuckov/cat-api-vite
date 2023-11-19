@@ -17,8 +17,8 @@ export const RectButton = (props: Props) => {
       id={props.id}
       className={
         isLight
-          ? `${props.class_name} light_pink_background`
-          : `${props.class_name} dark_pink_background`
+          ? `${props.class_name} title_button light_pink_background`
+          : `${props.class_name} title_button dark_pink_background`
       }
       onClick={props.onClick}
     >

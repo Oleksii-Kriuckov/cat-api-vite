@@ -4,10 +4,8 @@ import { SEARCH_ROUTE } from "../../../Router/path";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { lightDark$, inputValue$ } from "../../../Recoil/atoms";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
-import "./inputStyle.css";
 import { SquareButton } from "../Buttons/SquareButton";
-
-// type SearchInputProps = {};
+import "./inputStyle.css";
 
 const SearchInput = () => {
   const navigate = useNavigate();

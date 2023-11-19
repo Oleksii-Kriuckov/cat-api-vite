@@ -13,11 +13,13 @@ import {
   pageNumber$,
   breedsArray$,
 } from "../Recoil/atoms";
-import GridForGallery from "../Components/UI/Grid/GridForGallery";
 import { usePagination } from "../Hooks/usePagination";
 import PageIndicatorBlock from "../Components/UI/Buttons/PrevNextButtons/PageIndicatorBlock";
 import ModalWindow from "../Components/Modal/ModalWindow";
 import useFetch from "../Hooks/useFetch";
+import GridMultiPage from "../Components/UI/Grid/GridMultiPage";
+import { isObjectNewAct } from "../functions";
+import { IdTitle } from "../Components/UI/Grid/IdTitle";
 
 const Gallery = () => {
   const [copyGalleryArray, setCopyGalleryArray] =
@@ -35,7 +37,7 @@ const Gallery = () => {
       getBreeds();
     }
 
-    setCopyGalleryArray(galleryArray)
+    setCopyGalleryArray(galleryArray);
     return () => {
       setLimit(5);
       setPageNumber(1);
@@ -60,7 +62,19 @@ const Gallery = () => {
           <DefaultState>No item found</DefaultState>
         ) : (
           <>
-            <GridForGallery pageAmount={pageAmount} array={displayArray} />
+            <GridMultiPage array={displayArray} pageAmount={pageAmount}>
+              {displayArray.map((elem, ind) => (
+                <div
+                  className="grid_item for_breeds"
+                  key={ind}
+                  style={{ backgroundImage: `url(${elem.image.url})` }}
+                >
+                  {isObjectNewAct(elem) && <IdTitle>Add at {elem.date}</IdTitle>}
+                  
+                </div>
+              ))}
+            </GridMultiPage>
+            {/* <GridForGallery pageAmount={pageAmount} array={displayArray} /> */}
             <PageIndicatorBlock pageAmount={pageAmount} />
           </>
         )}

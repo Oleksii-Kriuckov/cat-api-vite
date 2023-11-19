@@ -108,7 +108,7 @@ function Dropzone() {
             {fileInfo}
             <RectButton
               id="upload_photo"
-              class_name="rect_btn title_button"
+              class_name="rect_btn"
               onClick={addPhoto}
             >
               UPLOAD PHOTO

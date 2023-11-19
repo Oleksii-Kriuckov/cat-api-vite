@@ -6,7 +6,8 @@ import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { searchingBreeds$, inputValue$ } from "../Recoil/atoms";
 import { useSetRecoilState, useRecoilState } from "recoil";
 import { useSearchSort } from "../Hooks/useSearchSort";
-import { GridForSearching } from "../Components/UI/Grid/GridForSearching";
+import GridOnePage from "../Components/UI/Grid/GridOnePage";
+import { BreedTitle } from "../Components/UI/Grid/BreedTitle";
 
 const Search = () => {
   const [searchingBreeds, setSearchingBreeds] =
@@ -31,7 +32,20 @@ const Search = () => {
         {
           searchingBreeds.length === 0 ? (
             <DefaultState>No item found</DefaultState>
-          ) : <GridForSearching array={searchingBreeds}/>
+          ) : (
+            <GridOnePage array={searchingBreeds}>
+              {searchingBreeds.map((elem, ind) => (
+                <div
+                  className="grid_item for_breeds"
+                  key={ind}
+                  style={{ backgroundImage: `url(${elem.image.url})` }}
+                >
+                  <div className="background_grid_item"></div>
+                  <BreedTitle info={elem}>{elem.name}</BreedTitle>
+                </div>
+              ))}
+            </GridOnePage>
+          )
         }
       </Section>
     </div>

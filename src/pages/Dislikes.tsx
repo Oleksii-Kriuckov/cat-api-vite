@@ -30,7 +30,10 @@ const Dislikes = () => {
         <Header class_name="title title_button" title_content="DISLIKES" />
         {dislikesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
-        ) : isObject(dislikesArray[0]) ? (
+        ) : 
+        // delete isObject, replace GridForm with GridOnePAge
+        
+        isObject(dislikesArray[0]) ? (
           <GridForm
             alt={dislikesArray[0].alt}
             class_name_btn={checked ? "dislike_button light_background" : 'dislike_button dark'}
