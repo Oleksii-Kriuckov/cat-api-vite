@@ -74,7 +74,6 @@ const Gallery = () => {
                 </div>
               ))}
             </GridMultiPage>
-            {/* <GridForGallery pageAmount={pageAmount} array={displayArray} /> */}
             <PageIndicatorBlock pageAmount={pageAmount} />
           </>
         )}
