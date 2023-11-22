@@ -16,17 +16,30 @@ const GridMultiPage = (props: GridMultiPageProps) => {
   const pageNumber = useRecoilValue(pageNumber$);
 
   return (
-    <div
-      className="grid"
-      style={{
-        gridTemplateRows:
-          pageNumber !== props.pageAmount
-            ? `repeat(${(limit / 5) * 3}, 140px)`
-            : `repeat(${countLastPageRows(props.array.length, limit)}, 140px)`,
-      }}
-    >
-      {props.children}
-    </div>
+    <>
+      <div
+        className="grid-lg"
+        style={{
+          gridTemplateRows:
+            pageNumber !== props.pageAmount
+              ? `repeat(${(limit / 5) * 3}, 140px)`
+              : `repeat(${countLastPageRows(props.array.length, limit)}, 140px)`,
+        }}
+      >
+        {props.children}
+      </div>
+      <div
+        className="grid-sm"
+        style={{
+          gridTemplateRows:
+            pageNumber !== props.pageAmount
+              ? `repeat(${(limit / 5) * 3}, 27vw)`
+              : `repeat(${countLastPageRows(props.array.length, limit)}, 140px)`,
+        }}
+      >
+        {props.children}
+      </div>
+    </>
   );
 };
 

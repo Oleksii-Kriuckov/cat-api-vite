@@ -13,7 +13,7 @@ type GridFormProps = PropsWithChildren<{
 const GridOnePage = (props: GridFormProps) => {
   return (
     <div
-      className="grid"
+      className="grid-lg"
       style={{
         gridTemplateRows: `repeat(${countRows(props.array.length)}, 140px)`,
         marginBottom: 40,
