@@ -60,8 +60,7 @@
   }
   main {
     margin: auto;
-    padding: 20px;
-    width: 100vw;
+    width: 100%;
   }
   #offcanvas {
     width: 100vw;
@@ -89,6 +88,9 @@
   }
   #gallery_bar {
     gap: 10px 20px;
+  }
+  #breeds_info_bar {
+    padding: 40px;
   }
   .upload {
     margin-left: auto;
@@ -119,11 +121,17 @@
   #gallery_bar {
     gap: 10px;
   }
+  main {
+    padding: 20px;
+  }
   .search {
     width: 100%;
   }
   aside {
     max-width: 400px;
+  }
+  #breeds_info_bar {
+    padding: 30px;
   }
   .card_button {
     width: 100%;

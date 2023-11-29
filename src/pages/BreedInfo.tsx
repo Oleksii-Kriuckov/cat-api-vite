@@ -20,9 +20,10 @@ export default function BreedInfo() {
         </Header>
         {breedInfo.image.url ? 
         <img
+          className="breed_info_img"
           src={breedInfo.image.url}
           alt="cat"
-          style={{ width: "640px",  borderRadius: "20px" }} //height: "360px",
+          style={{ width: "100%",  borderRadius: "20px" }} //height: "360px",
         /> : 
         <div>There is no photo</div>
       }

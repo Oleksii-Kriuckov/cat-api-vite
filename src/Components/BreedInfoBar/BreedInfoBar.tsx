@@ -8,7 +8,10 @@ const BreedInfoBar = () => {
   const isLight = useRecoilValue(lightDark$);
 
   return (
-    <div className={isLight ? "breedsinfo_bar " : "breedsinfo_bar_dark"}>
+    <div
+      id="breeds_info_bar"
+      className={isLight ? "breeds_info_border_light " : "breeds_info_border_dark"}
+    >
       <div
         className={
           isLight
@@ -19,8 +22,8 @@ const BreedInfoBar = () => {
         <BlackText>{breedInfo.name}</BlackText>
       </div>
       <div className="breed_description">{breedInfo.description}</div>
-      <div className="d-flex mb-4">
-        <div style={{ margin: "0px 20px auto 40px", width: 270 }}>
+      <div className="d-flex char">
+        <div>
           <p className="characteristic">
             {" "}
             <BlackText>Temperament:</BlackText>

@@ -2,7 +2,7 @@
   width: max-content;
   height: 62px;
   padding: 5px 40px;
-  margin: -30px auto;
+  margin: -75px auto 10px;
   border-radius: 20px;
   text-align: center;
   font-style: normal;
@@ -14,18 +14,18 @@
   background: #282828;
 }
 
-.breedsinfo_bar {
-  width: 640px;
+#breeds_info_bar {
+  position: relative;
+  width: 100%;
   margin-top: 50px;
-  border: 2px solid #fbe0dc;
   border-radius: 20px;
 }
 
-.breedsinfo_bar_dark {
-  width: 640px;
-  margin-top: 50px;
+.breeds_info_border_light{
+  border: 2px solid #fbe0dc;
+}
+.breeds_info_border_dark {
   border: 2px solid rgba(255, 134, 142, 0.2);
-  border-radius: 20px;
 }
 
 .breed_description {
@@ -34,8 +34,15 @@
   font-size: 18px;
   line-height: 22px;
   color: #8c8c8c;
-  margin: 25px 40px 20px;
+  margin-bottom: 20px;
   text-align: justify;
+}
+
+.char {
+  gap: 40px;
+}
+.char :nth-child(1){
+  max-width: 270px;
 }
 
 .characteristic {
