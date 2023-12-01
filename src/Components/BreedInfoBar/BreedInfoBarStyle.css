@@ -38,19 +38,11 @@
   text-align: justify;
 }
 
-.char {
-  gap: 40px;
-}
-.char :nth-child(1){
-  max-width: 270px;
-}
-
 .characteristic {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
-  color: #1d1d1d;
 }
 
 .description {

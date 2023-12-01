@@ -22,7 +22,7 @@ const BreedInfoBar = () => {
         <BlackText>{breedInfo.name}</BlackText>
       </div>
       <div className="breed_description">{breedInfo.description}</div>
-      <div className="d-flex char">
+      <div className="d-flex flex-column flex-sm-row row-gap-3 char">
         <div>
           <p className="characteristic">
             {" "}

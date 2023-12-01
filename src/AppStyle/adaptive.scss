@@ -108,12 +108,20 @@
     gap: 10px 20px;
   }
 
-  #breeds_info_bar{
+  #breeds_info_bar {
     padding: 40px;
   }
 
   .upload {
     margin-left: auto;
+  }
+
+  .char {
+    gap: 40px;
+  }
+  .char :nth-child(1) {
+    flex-basis: 270px;
+    flex-shrink: 2;
   }
 
   .card_button {
@@ -159,9 +167,9 @@
 
   aside {
     max-width: 400px;
-  }
+  } 
 
-  #breeds_info_bar{
+  #breeds_info_bar {
     padding: 30px;
   }
 
@@ -208,5 +216,9 @@
   }
   .xs {
     display: flex;
+  }
+
+  #breeds_info_bar {
+    padding: 20px;
   }
 }
