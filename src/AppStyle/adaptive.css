@@ -8,38 +8,20 @@
   .aside_mobile {
     display: none;
   }
-  #gallery_bar {
-    -ms-grid-columns: 290px 290px;
-    grid-template-columns: 290px 290px;
-  }
-  #select_breeds {
-    width: 225px;
-  }
   #box {
     margin: 30px;
     margin-left: auto;
-  }
-  main {
-    width: 740px;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .aside_wrapper {
     display: none;
   }
-  #gallery_bar {
-    -ms-grid-columns: 290px 290px;
-    grid-template-columns: 290px 290px;
-  }
   main {
     margin: auto;
-    width: 740px;
   }
   .initial {
     display: none;
-  }
-  #select_breeds {
-    width: 225px;
   }
   .search {
     width: 400px;
@@ -51,12 +33,40 @@
     margin: 30px auto;
   }
 }
+@media (min-width: 768px) {
+  #gallery_bar {
+    -ms-grid-columns: 290px 290px;
+    grid-template-columns: 290px 290px;
+  }
+  #select_breeds {
+    width: 225px;
+  }
+  #box {
+    width: 680px;
+  }
+  .dropzone_wrapper {
+    width: 600px;
+  }
+  .dropzone {
+    height: 320px;
+    padding: 20px 40px;
+  }
+  main {
+    width: 740px;
+  }
+}
 @media (max-width: 767px) {
   .aside_wrapper {
     display: none;
   }
   .initial {
     display: none;
+  }
+  .dropzone_wrapper {
+    width: 94%;
+  }
+  .modal_h1 {
+    font-size: 36px;
   }
   main {
     margin: auto;
@@ -71,9 +81,18 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  #box {
+    margin: 30px 30px;
+  }
   #gallery_bar {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+  .modal_h1 {
+    font-size: 30px;
+  }
+  .dropzone {
+    padding: 20px 30px;
   }
 }
 @media (min-width: 576px) {
@@ -121,26 +140,23 @@
   }
 }
 @media (max-width: 575px) {
+  #box {
+    margin: 20px 20px;
+  }
   #select_breeds {
     width: 100%;
   }
   #breeds_header {
     max-width: 300px;
   }
+  #breeds_info_bar {
+    padding: 32px;
+  }
   #gallery_bar {
     gap: 10px;
   }
-  main {
-    padding: 20px;
-  }
   .search {
     width: 100%;
-  }
-  aside {
-    max-width: 400px;
-  }
-  #breeds_info_bar {
-    padding: 30px;
   }
   .card_button {
     width: 100%;
@@ -149,12 +165,24 @@
     gap: 20px;
     margin-top: 20px;
   }
+  .modal_h1 {
+    font-size: 20px;
+  }
+  .dropzone {
+    padding: 20px 20px;
+  }
   .offcan {
     max-width: 400px;
     width: 100%;
   }
   .block {
     background-position: right 20px top 20px;
+  }
+  main {
+    padding: 20px;
+  }
+  aside {
+    max-width: 400px;
   }
 }
 @media (min-width: 376px) {

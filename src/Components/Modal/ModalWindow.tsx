@@ -41,7 +41,7 @@ export default function ModalWindow() {
             onClick={handleClose}
           />
           <h1 className="modal_h1">Upload a .jpg or .png Cat Image</h1>
-          <p className="gray modal_p" style={{ fontWeight: 400 }}>
+          {/* <p className="gray modal_p">
             Any uploads must comply with the{" "}
             <a
               href="https://thecatapi.com/privacy"
@@ -52,7 +52,7 @@ export default function ModalWindow() {
               upload guidelines
             </a>{" "}
             or face deletion.
-          </p>
+          </p> */}
           <Dropzone />
         </Box>
       </Modal>

@@ -1,6 +1,5 @@
 export const style = {
   position: "relative",
-  width: 680,
   borderRadius: "20px",
   p: "20px",
   border: "none",
