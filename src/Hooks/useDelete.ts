@@ -9,7 +9,7 @@ import {
   removeDislikesActions$,
 } from "../Recoil/atoms";
 import { useRecoilState } from "recoil";
-import { dateTransform } from "../functions/dateFunctions";
+import { dateTransform } from "../functions/index";
 
 export const useDelete = () => {
   const [likesArray, setLikesArray] = useRecoilState(likesArray$);

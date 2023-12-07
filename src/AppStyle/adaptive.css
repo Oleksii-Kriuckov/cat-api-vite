@@ -1,0 +1,218 @@
+@media (min-width: 1280px) {
+  .search {
+    width: 470px;
+  }
+  .offcanvas_wrapper {
+    display: none;
+  }
+  .aside_mobile {
+    display: none;
+  }
+  #box {
+    margin: 30px;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .aside_wrapper {
+    display: none;
+  }
+  main {
+    margin: auto;
+  }
+  .initial {
+    display: none;
+  }
+  .search {
+    width: 400px;
+  }
+  #offcanvas {
+    width: 768px;
+  }
+  #box {
+    margin: 30px auto;
+  }
+}
+@media (min-width: 768px) {
+  #gallery_bar {
+    -ms-grid-columns: 290px 290px;
+    grid-template-columns: 290px 290px;
+  }
+  #select_breeds {
+    width: 225px;
+  }
+  #box {
+    width: 680px;
+  }
+  .dropzone_wrapper {
+    width: 600px;
+  }
+  .dropzone {
+    height: 320px;
+    padding: 20px 40px;
+  }
+  main {
+    width: 740px;
+  }
+}
+@media (max-width: 767px) {
+  .aside_wrapper {
+    display: none;
+  }
+  .initial {
+    display: none;
+  }
+  .dropzone_wrapper {
+    width: 94%;
+  }
+  .modal_h1 {
+    font-size: 36px;
+  }
+  main {
+    margin: auto;
+    width: 100%;
+  }
+  #offcanvas {
+    width: 100vw;
+    padding: 30px;
+  }
+  #breeds_header {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  #box {
+    margin: 30px 30px;
+  }
+  #gallery_bar {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal_h1 {
+    font-size: 30px;
+  }
+  .dropzone {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 576px) {
+  #select_limits_breeds {
+    width: 100px;
+  }
+  #breeds_header {
+    max-width: 470px;
+  }
+  #clear_log {
+    margin-left: auto;
+  }
+  #gallery_bar {
+    gap: 10px 20px;
+  }
+  #breeds_info_bar {
+    padding: 40px;
+  }
+  .upload {
+    margin-left: auto;
+  }
+  .char {
+    gap: 40px;
+  }
+  .char :nth-child(1) {
+    -ms-flex-preferred-size: 270px;
+        flex-basis: 270px;
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
+  }
+  .card_button {
+    width: 138px;
+  }
+  aside {
+    width: 446px;
+  }
+  main {
+    padding: 30px;
+  }
+  .offcan {
+    width: 446px;
+  }
+  .block {
+    background-position: right 20px top 20px;
+  }
+}
+@media (max-width: 575px) {
+  #box {
+    margin: 20px 20px;
+  }
+  #select_breeds {
+    width: 100%;
+  }
+  #breeds_header {
+    max-width: 300px;
+  }
+  #breeds_info_bar {
+    padding: 32px;
+  }
+  #gallery_bar {
+    gap: 10px;
+  }
+  .search {
+    width: 100%;
+  }
+  .card_button {
+    width: 100%;
+  }
+  .nav_card {
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .modal_h1 {
+    font-size: 20px;
+  }
+  .dropzone {
+    padding: 20px 20px;
+  }
+  .offcan {
+    max-width: 400px;
+    width: 100%;
+  }
+  .block {
+    background-position: right 20px top 20px;
+  }
+  main {
+    padding: 20px;
+  }
+  aside {
+    max-width: 400px;
+  }
+}
+@media (min-width: 376px) {
+  .page_button,
+  .disabled {
+    width: 120px;
+  }
+  .s {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .xs {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .page_button,
+  .disabled {
+    width: 100px;
+  }
+  .s {
+    display: none;
+  }
+  .xs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #breeds_info_bar {
+    padding: 20px;
+  }
+}

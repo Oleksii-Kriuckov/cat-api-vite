@@ -1,0 +1,175 @@
+#back_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/back-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+#back_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/back-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#search_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/search-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#search_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/search-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#update_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/update-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#update_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/update-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.fav_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/fav-color-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+.fav_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/fav-full-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.like_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/like-30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  display: none;
+}
+.like_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/like-white-30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.dislike_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/dislike-30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  display: none;
+}
+.dislike_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/dislike-white-30.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#aside_button {
+  background-image: url("src/Components/Graphic/Icons/stroke.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#close_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("src/Components/Graphic/Icons/close-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#close_button:hover {
+  background-color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/white-icon/close-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#upload {
+  width: 145px;
+  color: #ff868e;
+  background-image: url("src/Components/Graphic/Icons/upload-16.png");
+  background-repeat: no-repeat;
+  background-position: 30px 12px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 12px 30px 12px 56px;
+  cursor: pointer;
+}
+#upload:hover {
+  background: #ff868e;
+  color: #ffffff;
+  background-image: url("src/Components/Graphic/Icons/white-icon/upload-white-16.png");
+  background-repeat: no-repeat;
+  background-position: 30px 12px;
+}
+
+#upload_photo {
+  margin: auto;
+}
+
+.rect_btn {
+  padding: 12px 25px;
+  width: 170px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ff868e;
+  cursor: pointer;
+}
+.rect_btn:hover {
+  background: #ff868e;
+  color: #ffffff;
+}

@@ -1,19 +1,23 @@
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../../Recoil/atoms";
 
-type Props = { class_name: string; onClick: () => void };
+type Props = {
+  id: string;
+  class_name_light: string;
+  class_name_dark: string;
+  onClick: () => void;
+};
 
-export const SquareButton = ({ class_name, onClick }: Props) => {
+export const SquareButton = (props: Props) => {
   const isLight = useRecoilValue(lightDark$);
 
   return (
-    <button
+    <div
+      id={props.id}
       className={
-        isLight
-          ? `${class_name} light_background`
-          : `${class_name} dark_pink_background`
+        isLight ? `${props.class_name_light}` : `${props.class_name_dark}`
       }
-      onClick={onClick}
+      onClick={props.onClick}
     />
   );
 };

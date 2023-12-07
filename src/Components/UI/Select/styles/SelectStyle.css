@@ -3,7 +3,7 @@
   border: none;
   height: 40px;
   padding: 8px 0 8px 10px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 .breedsSelect:active {
   outline: none;
@@ -19,23 +19,23 @@
   border: none;
 }
 
-.gallerySelect {
-  width: 290px;
+#select_gallery {
+  width: 100%;
   height: 40px;
   border-radius: 10px;
   border: none;
   padding: 8px 10px;
 }
-.gallerySelect option {
+#select_gallery option {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   border: none;
 }
-.gallerySelect:active {
+#select_gallery:active {
   outline: none;
 }
-.gallerySelect:focus {
+#select_gallery:focus {
   outline: none;
 }

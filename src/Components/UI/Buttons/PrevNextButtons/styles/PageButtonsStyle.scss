@@ -1,0 +1,110 @@
+@import "../../../../../AppStyle/variables";
+
+.page_button {
+  height: 40px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: $darkPink;
+  background-repeat: no-repeat;
+  user-select: none;
+  &:hover {
+    background: $darkPink;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+.page_button_light {
+  background-color: $pink;
+}
+.page_button_dark{
+  background-color: rgba(255, 134, 142, 0.2);
+}
+
+.prev {
+  background-image: url("src/Components/Graphic/Icons/left-pink.png");
+  background-position: $bgpPrev;
+  padding: $padPrev;
+  &:hover {
+    background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
+    background-position: $bgpPrev;
+    padding: $padPrev;
+  }
+}
+.prev_mob {
+  background-image: url("src/Components/Graphic/Icons/left-pink.png");
+  background-position: $bgpPrevMob;
+  padding: $padPrevMob;
+  &:hover {
+    background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
+    background-position: $bgpPrevMob;
+    padding: $padPrevMob;
+  }
+}
+
+.next {
+  background-image: url("src/Components/Graphic/Icons/right-pink.png");
+  background-position: $bgpNext;
+  padding: $padNext;
+  &:hover {
+    background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
+    background-position: $bgpNext;
+    padding: $padNext;
+  }
+}
+.next_mob {
+  background-image: url("src/Components/Graphic/Icons/right-pink.png");
+  background-position: $bgpNextMob;
+  padding: $padNextMob;
+  &:hover {
+    background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
+    background-position: $bgpNextMob;
+    padding: $padNextMob;
+  }
+}
+
+.disabled {
+  height: 40px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  user-select: none;
+  letter-spacing: 2px;
+  color: $textGrey;
+  background-repeat: no-repeat;
+}
+.disabled_light {
+  background-color: $bgLight;
+}
+.disabled_dark {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.prev_disabled {
+  background-image: url("src/Components/Graphic/Icons/left.png");
+  background-position: $bgpPrev;
+  padding: $padPrev;
+}
+.prev_disabled_mob {
+  background-image: url("src/Components/Graphic/Icons/left.png");
+  background-position: $bgpPrevMob;
+  padding: $padPrevMob;
+}
+
+.next_disabled {
+  background-image: url("src/Components/Graphic/Icons/right.png");
+  background-position: $bgpNext;
+  padding: $padNext;
+}
+
+.next_disabled_mob {
+  background-image: url("src/Components/Graphic/Icons/right.png");
+  background-position: $bgpNextMob;
+  padding: $padNextMob;
+}

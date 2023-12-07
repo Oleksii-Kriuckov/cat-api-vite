@@ -4,7 +4,7 @@ import { CardData } from "./CardData";
 
 const NavCards = () => {
   return (
-    <div className="d-flex justify-content-between">
+    <div className="nav_card d-flex flex-column flex-sm-row justify-content-between">
       {CardData.map(({ src, bgColor, buttonName, link }) => (
         <Card key={buttonName} src={src} bgColor={bgColor} link={link}>
           {buttonName}

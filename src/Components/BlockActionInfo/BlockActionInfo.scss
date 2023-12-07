@@ -1,3 +1,5 @@
+@import "../../AppStyle/variables";
+
 .date {
   font-style: normal;
   font-weight: 400;
@@ -15,7 +17,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8c8c8c;
+  color: $textGrey;
   padding-top: 3px;
   .id {
     font-weight: 500;
@@ -31,5 +33,4 @@
   border-radius: 10px;
   margin-bottom: 10px;
   background-repeat: no-repeat;
-  background-position: 600px 20px;
 }

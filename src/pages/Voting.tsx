@@ -34,10 +34,9 @@ const Voting = () => {
       <Section>
         <Header class_name="title title_button" title_content="VOTING">
           <RectButton
-            class_name="upload_photo"
-            onClick={() => {
-              setActionInfoArray([]);
-            }}
+            id="clear_log"
+            class_name="rect_btn"
+            onClick={() => setActionInfoArray([])}
           >
             Clear log
           </RectButton>
@@ -54,9 +53,10 @@ const Voting = () => {
               <img
                 src={voteResponseData.url}
                 alt="cat"
+                // className="voting_img"
                 style={{
-                  width: "640px",
-                  maxHeight: "640px",
+                  width: "100%",
+                  maxHeight: "740px",
                   borderRadius: "20px",
                 }}
               />

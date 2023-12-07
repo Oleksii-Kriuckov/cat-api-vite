@@ -4,12 +4,10 @@ import { SEARCH_ROUTE } from "../../../Router/path";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { lightDark$, inputValue$ } from "../../../Recoil/atoms";
 import { useSearchSort } from "../../../Hooks/useSearchSort";
-import "./inputStyle.css";
 import { SquareButton } from "../Buttons/SquareButton";
+import "./inputStyle.css";
 
-type SearchInputProps = { width: string | number };
-
-const SearchInput = (props: SearchInputProps) => {
+const SearchInput = () => {
   const navigate = useNavigate();
   const isLight = useRecoilValue(lightDark$);
   const [inputValue, setInputValue] = useRecoilState(inputValue$);
@@ -26,12 +24,14 @@ const SearchInput = (props: SearchInputProps) => {
   };
 
   return (
-    <div style={{ position: "relative", width: props.width }}>
+    <div
+      className="search flex-grow-0 flex-sm-grow-1 flex-md-grow-0"
+      style={{ position: "relative" }}
+    >
       <input
         type="text"
-        className={isLight ? "search search_light" : "search search_dark"}
-        placeholder="Search for breeds by name"
-        style={{ width: props.width }}
+        className={isLight ? "search_light" : "search_dark"}
+        placeholder="Search for breeds"
         value={inputValue}
         onChange={(e) => {
           setInputValue(e.target.value);
@@ -39,7 +39,12 @@ const SearchInput = (props: SearchInputProps) => {
         onKeyUp={pressEnter}
       />
 
-      <SquareButton class_name="search_button" onClick={search} />
+      <SquareButton
+        id="search_button"
+        class_name_dark="dark_pink_background"
+        class_name_light="light_pink_background"
+        onClick={search}
+      />
     </div>
   );
 };

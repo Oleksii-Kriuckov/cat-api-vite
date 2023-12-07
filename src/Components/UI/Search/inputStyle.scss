@@ -1,4 +1,7 @@
-.search {
+@import "../../../AppStyle/variables.scss";
+
+input {
+  width: 100%;
   border-radius: 20px;
   border: 2px solid transparent;
   height: 60px;
@@ -8,16 +11,25 @@
   font-size: 20px;
   line-height: 30px;
   &:focus {
-    border: 2px solid #ff868e;
+    border: 2px solid $darkPink;
     outline: none;
-    &:hover{border: 2px solid #ff868e;}
+    &:hover{border: 2px solid $darkPink;}
   }
 }
+
+input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $textGrey;
+}
+
 .search_light {
   background: #ffffff;
-  color: #1d1d1d;
+  color: $dark;
   &:hover {
-    border: 2px solid #fbe0dc;
+    border: 2px solid $pink;
   }
 }
 .search_dark {
@@ -26,11 +38,4 @@
   &:hover {
     border: 2px solid rgba(255, 134, 142, 0.3);
   }
-}
-.search::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #8c8c8c;
 }

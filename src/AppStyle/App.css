@@ -1,10 +1,25 @@
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.initial {
+  width: 680px;
+}
+
 .App {
   font-style: normal;
   width: 100%;
 }
 
+.background {
+  width: 680px;
+  height: 840px;
+  border-radius: 20px;
+}
+
 .light {
-  background-color: #f8f8f7;
+  background-color: #ededed;
 }
 
 .dark {
@@ -16,7 +31,7 @@
 }
 
 .light_pink_background {
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
 }
 
 .dark_pink_background {
@@ -46,7 +61,7 @@
 }
 
 .pink_hover:hover {
-  background-color: #FBE0DC;
+  background-color: #fbe0dc;
 }
 
 .pink_hover_dark:hover {
@@ -54,15 +69,15 @@
 }
 
 .black {
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
 
 .gray {
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
 
 .pink {
-  color: #FF868E;
+  color: #ff868e;
   text-decoration: none;
 }
 
@@ -74,7 +89,7 @@
   width: 100%;
 }
 
-.back_button {
+#back_button {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -84,15 +99,15 @@
   background-position: center;
   margin-right: 10px;
 }
-.back_button:hover {
-  background-color: #FF868E;
+#back_button:hover {
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/back-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.search_button {
+#search_button {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -104,15 +119,15 @@
   top: 10px;
   right: 10px;
 }
-.search_button:hover {
-  background-color: #FF868E;
+#search_button:hover {
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/search-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.update_button {
+#update_button {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -124,8 +139,8 @@
   right: 20px;
   bottom: 20px;
 }
-.update_button:hover {
-  background-color: #FF868E;
+#update_button:hover {
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/update-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -143,7 +158,7 @@
   display: none;
 }
 .fav_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/fav-full-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -162,7 +177,7 @@
   display: none;
 }
 .like_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/like-white-30.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -181,14 +196,20 @@
   display: none;
 }
 .dislike_button:hover {
-  background-color: #FF868E;
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/dislike-white-30.png");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.close_button {
+#aside_button {
+  background-image: url("src/Components/Graphic/Icons/stroke.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#close_button {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -200,16 +221,19 @@
   top: 20px;
   right: 20px;
 }
-.close_button:hover {
-  background-color: #FF868E;
+#close_button:hover {
+  background-color: #ff868e;
   background-image: url("src/Components/Graphic/Icons/white-icon/close-white-20.png");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.upload_photo {
+#upload_photo {
   margin: auto;
+}
+
+.rect_btn {
   padding: 12px 25px;
   width: 170px;
   font-size: 12px;
@@ -217,12 +241,12 @@
   color: #ff868e;
   cursor: pointer;
 }
-.upload_photo:hover {
+.rect_btn:hover {
   background: #ff868e;
   color: #ffffff;
 }
 
-.title {
+.title_button {
   height: 40px;
   border-radius: 10px;
   font-weight: 500;
@@ -230,9 +254,10 @@
   letter-spacing: 2px;
 }
 
-.title_button {
+.title {
+  width: 150px;
   padding: 5px 30px;
-  background: #FF868E;
+  background: #ff868e;
   font-style: normal;
   font-size: 20px;
   line-height: 30px;
@@ -241,11 +266,11 @@
 
 .id_button {
   padding: 5px 30px;
-  background: #FBE0DC;
+  background: #fbe0dc;
   font-style: normal;
   font-size: 20px;
   line-height: 30px;
-  color: #FF868E;
+  color: #ff868e;
 }
 
 .page {

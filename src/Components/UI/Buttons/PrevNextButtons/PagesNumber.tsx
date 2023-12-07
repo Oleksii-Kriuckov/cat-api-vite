@@ -9,7 +9,7 @@ const PagesNumber = (props: Props) => {
 
   return (
     <div
-      className={isLight ? "title page page_light" : "title page page_dark"}
+      className={isLight ? "title_button page page_light" : "title_button page page_dark"}
     >{`${pageNumber} from ${props.pageAmount}`}</div>
   );
 };
