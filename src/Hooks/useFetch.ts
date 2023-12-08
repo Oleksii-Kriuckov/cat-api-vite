@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useSetRecoilState, useRecoilValue } from "recoil";
-import breeds from "../Assets/breeds.json";
+import breeds from "../assets/breeds.json";
 import {
   isLoading$,
   breedsArray$,

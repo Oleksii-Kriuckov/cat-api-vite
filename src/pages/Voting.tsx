@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import Header from "../Components/Header";
 import Section from "../Components/Section/Section";
 import GroupVoteButtons from "../Components/UI/Buttons/VoteButtons/GroupVoteButtons";
@@ -6,16 +6,11 @@ import NavBar from "../Components/NavBar";
 import Loader from "../Components/UI/Loader/Loader";
 import useFetch from "../Hooks/useFetch";
 import { useRecoilValue, useRecoilState } from "recoil";
-import {
-  isLoading$,
-  actionInfoArray$,
-  errorMessage$,
-  lightDark$,
-} from "../Recoil/atoms";
+import { isLoading$, actionInfoArray$, errorMessage$ } from "../Recoil/atoms";
 import { voteResponseData$ } from "../Recoil/selectors";
 import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
-import Transition from "../Components/Transition/Transition";
+import { AlertButton } from "../Components/AlertButton/AlertButton";
 import "../AppStyle/App.css";
 
 const Voting = () => {
@@ -23,10 +18,8 @@ const Voting = () => {
 
   const isLoading = useRecoilValue(isLoading$);
   const voteResponseData = useRecoilValue(voteResponseData$);
-  const [actionInfoArray, setActionInfoArray] =
-    useRecoilState(actionInfoArray$);
+  const actionInfoArray = useRecoilValue(actionInfoArray$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
-  const nodeRef = useRef(null);
 
   useEffect(() => {
     getRandomCat();
@@ -41,7 +34,7 @@ const Voting = () => {
       <Section>
         <Header class_name="title title_button" title_content="VOTING">
           <div style={{ position: "relative" }}>
-            <Transition>Logs are cleared</Transition>
+            <AlertButton>Logs are cleared</AlertButton>
           </div>
         </Header>
         {isLoading ? (

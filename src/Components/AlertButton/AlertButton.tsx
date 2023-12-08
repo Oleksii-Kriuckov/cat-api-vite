@@ -1,4 +1,4 @@
-import React, { useRef, useState, PropsWithChildren } from "react";
+import { useRef, useState, PropsWithChildren } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { actionInfoArray$, lightDark$ } from "../../Recoil/atoms";
@@ -7,7 +7,7 @@ import { RectButton } from "../UI/Buttons/RectButton";
 
 type Props = PropsWithChildren<{children: string,}>
 
-export default function Transition({children}: Props) {
+export function AlertButton({children}: Props) {
   const [showAlert, setShowAlert] = useState(false);
   const setActionInfoArray = useSetRecoilState(actionInfoArray$);
   const isLight = useRecoilValue(lightDark$);

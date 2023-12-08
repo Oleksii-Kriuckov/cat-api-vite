@@ -30,3 +30,7 @@ export const isObjectBreedInfo = (value: any): value is BreedInfo =>
 
 export const isObjectNewAct = (value: any): value is NewAct =>
   typeof value === "object" && typeof value.date === "string";
+
+export function isObjEmpty (obj: object) {
+    return Object.keys(obj).length === 0;
+}
