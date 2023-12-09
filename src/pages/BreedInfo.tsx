@@ -28,7 +28,7 @@ export default function BreedInfo() {
         <Header class_name="title_button id_button" title_content="BREED">
           <Title class_name="title title_button">{breedInfo.id}</Title>
         </Header>
-        { breedInfo.image ? (
+        { breedInfo && breedInfo.image ? (
           <>
             <img
               className="breed_info_img"
@@ -39,7 +39,7 @@ export default function BreedInfo() {
             <BreedInfoBar />
           </>
         ) : (
-          <div>There is no photo</div>
+          <div>Info about the {breedInfo.name} breed did not load</div>
         )}
       </Section>
     </div>

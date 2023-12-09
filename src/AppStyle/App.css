@@ -98,8 +98,8 @@ main {
 }
 
 .title {
-  width: 150px;
-  padding: 5px 30px;
+  width: 170px;
+  padding: 5px 25px;
   background: #ff868e;
   font-style: normal;
   font-size: 20px;
@@ -134,32 +134,4 @@ main {
 
 .page_dark {
   background: rgba(255, 134, 142, 0.2);
-}
-
-#alert {
-  border-radius: 10px;
-  height: 40px;
-  padding: 6px 25px;
-  position: absolute;
-  top: -50px;
-}
-
-.trans-enter {
-  opacity: 0;
-}
-
-.trans-enter-active {
-  opacity: 1;
-  -webkit-transition: all 1700ms;
-  transition: all 1700ms;
-}
-
-.trans-exit {
-  opacity: 1;
-}
-
-.trans-exit-active {
-  opacity: 0;
-  -webkit-transition: all 700ms;
-  transition: all 700ms;
 }

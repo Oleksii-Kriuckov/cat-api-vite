@@ -37,7 +37,7 @@ export default function ModalWindow() {
           <SquareButton
             id="close_button"
             class_name_dark="dark_pink_background"
-            class_name_light="light_background"
+            class_name_light="light_pink_background"
             onClick={handleClose}
           />
           <h1 className="modal_h1">Upload a .jpg or .png Cat Image</h1>

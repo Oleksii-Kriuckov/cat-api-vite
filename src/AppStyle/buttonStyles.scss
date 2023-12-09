@@ -3,16 +3,16 @@
 
 #back_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/back-20.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/back-white-20.png"
+    $url: "../Components/Graphic/Icons/back-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/back-white-20.png"
   );
   margin-right: 10px;
 }
 
 #search_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/search-20.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/search-white-20.png"
+    $url: "../Components/Graphic/Icons/search-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/search-white-20.png"
   );
   position: absolute;
   top: 10px;
@@ -21,8 +21,8 @@
 
 #update_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/update-20.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/update-white-20.png"
+    $url: "../Components/Graphic/Icons/update-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/update-white-20.png"
   );
   position: absolute;
   right: 20px;
@@ -31,16 +31,16 @@
 
 .fav_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/fav-color-20.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/fav-full-white-20.png"
+    $url: "../Components/Graphic/Icons/fav-color-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/fav-full-white-20.png"
   );
   display: none;
 }
 
 .like_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/like-30.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/like-white-30.png"
+    $url: "../Components/Graphic/Icons/like-30.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/like-white-30.png"
   );
   background-size: 20px 20px;
   display: none;
@@ -48,23 +48,23 @@
 
 .dislike_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/dislike-30.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/dislike-white-30.png"
+    $url: "../Components/Graphic/Icons/dislike-30.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/dislike-white-30.png"
   );
   background-size: 20px 20px;
   display: none;
 }
 
 #aside_button {
-  background-image: url("src/Components/Graphic/Icons/stroke.png");
+  background-image: url("../Components/Graphic/Icons/stroke.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #close_button {
   @include pinkButton(
-    $url: "src/Components/Graphic/Icons/close-20.png",
-    $urlHover: "src/Components/Graphic/Icons/white-icon/close-white-20.png"
+    $url: "../Components/Graphic/Icons/close-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/close-white-20.png"
   );
   position: absolute;
   top: 20px;
@@ -74,7 +74,7 @@
 #upload {
   width: 145px;
   color: $darkPink;
-  background-image: url("src/Components/Graphic/Icons/upload-16.png");
+  background-image: url("../Components/Graphic/Icons/upload-16.png");
   background-repeat: no-repeat;
   background-position: 30px 12px;
   font-size: 12px;
@@ -84,7 +84,7 @@
   &:hover {
     background: $darkPink;
     color: #ffffff;
-    background-image: url("src/Components/Graphic/Icons/white-icon/upload-white-16.png");
+    background-image: url("../Components/Graphic/Icons/white-icon/upload-white-16.png");
     background-repeat: no-repeat;
     background-position: 30px 12px;
   }

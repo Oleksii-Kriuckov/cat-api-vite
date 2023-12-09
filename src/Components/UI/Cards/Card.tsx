@@ -14,7 +14,7 @@ type CardProps = PropsWithChildren<{
 const Card = (props: CardProps) => {
   const match = useMatch(props.link);
 
-  const checked = useRecoilValue(lightDark$);
+  const isLight = useRecoilValue(lightDark$);
   return (
     <div>
       <div
@@ -26,11 +26,11 @@ const Card = (props: CardProps) => {
       <NavLink
         to={props.link}
         className={
-          checked
+          isLight
             ? "card_button light_background pink_hover"
             : "card_button dark_background01 pink_hover_dark"
         }
-        style={match ? { backgroundColor: "#ff868e" } : {}}
+        style={match ? { backgroundColor: "#ff868e", color: 'white' } : {}}
       >
         {props.children}
       </NavLink>

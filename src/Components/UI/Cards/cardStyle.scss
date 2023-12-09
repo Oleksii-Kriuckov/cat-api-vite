@@ -28,9 +28,9 @@
 }
 
 .active {
-  color: #fff;
+  color: $textGrey;
   &:hover {
-    color: #fff;
+    color: $textGrey;
     cursor: context-menu;
   }
 }

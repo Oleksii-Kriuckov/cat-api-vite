@@ -19,17 +19,17 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: 2px;
-  color: #FF868E;
+  color: #ff868e;
 }
 .card_button:hover {
-  color: #FF868E;
+  color: #ff868e;
 }
 
 .active {
-  color: #fff;
+  color: #8c8c8c;
 }
 .active:hover {
-  color: #fff;
+  color: #8c8c8c;
   cursor: context-menu;
 }
 
