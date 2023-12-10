@@ -11,28 +11,30 @@
 
   & :first-child {
     background-color: #97EAB9;
-    background-image: url('src/Components/Graphic/Icons/white-icon/like-white-30.png');
+    // background-image: url('src/Components/Graphic/Icons/white-icon/like-white-30.png');
+    background-image: url('../../../Graphic/Icons/white-icon/like-white-30.png');
     &:hover {
         background-color: rgba(151, 234, 185, 0.4);
-        background-image: url("src/Components/Graphic/Icons/like-color-30.png");
+        // background-image: url("src/Components/Graphic/Icons/like-color-30.png");
+        background-image: url("../../../Graphic/Icons/like-color-30.png");
     }
   }
 
   & :nth-child(2) {
     background-color: #FF868E;
-    background-image: url("src/Components/Graphic/Icons/white-icon/fav-white-30.png");
+    background-image: url("../../../Graphic/Icons/white-icon/fav-white-30.png");
     &:hover {
         background-color: rgba(255, 134, 142, 0.4);
-        background-image: url("src/Components/Graphic/Icons/fav-30.png");
+        background-image: url("../../../Graphic/Icons/fav-30.png");
     }
 }
 
 & :last-child {
     background-color: #FFD280;
-    background-image: url("src/Components/Graphic/Icons/white-icon/dislike-white-30.png");
+    background-image: url("../../../Graphic/Icons/white-icon/dislike-white-30.png");
     &:hover {
         background-color: rgba(255, 210, 128, 0.4);
-        background-image: url("src/Components/Graphic/Icons/dislike-color-30.png");
+        background-image: url("../../../Graphic/Icons/dislike-color-30.png");
     }
   }
 }
