@@ -33,7 +33,7 @@ const Search = () => {
           searchingBreeds.length === 0 ? (
             <DefaultState>No item found</DefaultState>
           ) : (
-            <GridOnePage array={searchingBreeds}>
+            <GridOnePage array={searchingBreeds}> 
               {searchingBreeds.map((elem, ind) => (
                 <div
                   className="grid_item for_breeds"

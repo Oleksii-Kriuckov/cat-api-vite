@@ -118,7 +118,7 @@ const Breeds = () => {
           </h3>
         ) : (
           <>
-            <GridMultiPage array={displayBreed} pageAmount={pageAmount}>
+            <GridMultiPage array={displayBreed}>
               {displayBreed.map((elem) => (
                 <div
                   className="grid_item for_breeds"

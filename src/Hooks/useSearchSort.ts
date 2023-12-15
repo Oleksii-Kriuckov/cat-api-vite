@@ -4,14 +4,18 @@ import {
   searchingBreeds$,
 } from "../Recoil/atoms";
 import { useRecoilValue, useSetRecoilState } from "recoil";
+import useFetch from "./useFetch";
 
 export const useSearchSort = () => {
   const inputValue = useRecoilValue(inputValue$);
-  const  setSearchingBreeds =
-  useSetRecoilState(searchingBreeds$);
+  const setSearchingBreeds = useSetRecoilState(searchingBreeds$);
   const copyBreedsArray = useRecoilValue(copyBreedsArray$);
+  const { getBreeds } = useFetch();
 
   const searchBreeds = () => {
+    if (copyBreedsArray.length === 0) {
+      getBreeds();
+    }
     setSearchingBreeds(
       copyBreedsArray.filter((breed) => {
         if (inputValue) {

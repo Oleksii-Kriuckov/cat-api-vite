@@ -62,7 +62,7 @@ const Gallery = () => {
           <DefaultState>No item found</DefaultState>
         ) : (
           <>
-            <GridMultiPage array={displayArray} pageAmount={pageAmount}>
+            <GridMultiPage array={displayArray}>
               {displayArray.map((elem, ind) => (
                 <div
                   className="grid_item for_breeds"
