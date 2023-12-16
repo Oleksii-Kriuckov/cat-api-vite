@@ -20,6 +20,7 @@ import useFetch from "../Hooks/useFetch";
 import GridMultiPage from "../Components/UI/Grid/GridMultiPage";
 import { isObjectNewAct } from "../functions";
 import { IdTitle } from "../Components/UI/Grid/IdTitle";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Gallery = () => {
   const [copyGalleryArray, setCopyGalleryArray] =
@@ -69,11 +70,13 @@ const Gallery = () => {
                   key={ind}
                   style={{ backgroundImage: `url(${elem.image.url})` }}
                 >
-                  {isObjectNewAct(elem) && <IdTitle>Add at {elem.date}</IdTitle>}
-                  
+                  {isObjectNewAct(elem) && (
+                    <IdTitle>Add at {elem.date}</IdTitle>
+                  )}
                 </div>
               ))}
             </GridMultiPage>
+            <UpButton />
             <PageIndicatorBlock pageAmount={pageAmount} />
           </>
         )}

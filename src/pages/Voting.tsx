@@ -12,6 +12,7 @@ import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
 import { AlertButton } from "../Components/AlertButton/AlertButton";
 import "../AppStyle/App.css";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Voting = () => {
   const { getRandomCat } = useFetch();
@@ -68,6 +69,7 @@ const Voting = () => {
                   </BlockActionInfo>
                 </div>
               ))}
+              <UpButton/>
             </div>
           )
         )}

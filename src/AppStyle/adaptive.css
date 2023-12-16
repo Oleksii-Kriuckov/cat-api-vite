@@ -126,6 +126,10 @@
   .card_button {
     width: 138px;
   }
+  .scroll-to-top {
+    bottom: 30px;
+    right: 30px;
+  }
   aside {
     width: 446px;
   }
@@ -177,6 +181,10 @@
   }
   .block {
     background-position: right 20px top 20px;
+  }
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
   }
   main {
     padding: 20px;

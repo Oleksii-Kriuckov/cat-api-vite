@@ -8,6 +8,7 @@ import { useSetRecoilState, useRecoilState } from "recoil";
 import { useSearchSort } from "../Hooks/useSearchSort";
 import GridOnePage from "../Components/UI/Grid/GridOnePage";
 import { BreedTitle } from "../Components/UI/Grid/BreedTitle";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Search = () => {
   const [searchingBreeds, setSearchingBreeds] =
@@ -29,11 +30,11 @@ const Search = () => {
       <NavBar />
       <Section>
         <Header class_name="title title_button" title_content="SEARCH" />
-        {
-          searchingBreeds.length === 0 ? (
-            <DefaultState>No item found</DefaultState>
-          ) : (
-            <GridOnePage array={searchingBreeds}> 
+        {searchingBreeds.length === 0 ? (
+          <DefaultState>No item found</DefaultState>
+        ) : (
+          <>
+            <GridOnePage array={searchingBreeds}>
               {searchingBreeds.map((elem, ind) => (
                 <div
                   className="grid_item for_breeds"
@@ -45,8 +46,9 @@ const Search = () => {
                 </div>
               ))}
             </GridOnePage>
-          )
-        }
+            <UpButton />
+          </>
+        )}
       </Section>
     </div>
   );

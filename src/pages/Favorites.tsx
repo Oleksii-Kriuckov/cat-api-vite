@@ -14,11 +14,12 @@ import { linkButtonArray } from "../Components/UI/Buttons/LinkButtons/LinkButton
 import { RemoveActionsBlock } from "../Components/RemoveActionsBlock";
 import GridOnePage from "../Components/UI/Grid/GridOnePage";
 import RemoveButton from "../Components/UI/Buttons/RemoveButton";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Favorites = () => {
   const favoritesArray = useRecoilValue(favoritesArray$);
   const removeFavoritesArray = useRecoilValue(removeFavoritesActions$);
-  const { addToFavorites} = useAddToCategories();
+  const { addToFavorites } = useAddToCategories();
   const checked = useRecoilValue(lightDark$);
 
   useEffect(() => {
@@ -32,25 +33,32 @@ const Favorites = () => {
         <Header class_name="title title_button" title_content="FAVORITES" />
         {favoritesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
-        ) : 
-          <GridOnePage array={favoritesArray}>
-            {favoritesArray.map((elem, ind) =>
-          <div
-            className="grid_item grid_form"
-            key={ind}
-            style={{ backgroundImage: `url(${elem.image.url})` }}
-          >
-            <div className="background_grid_item"></div>
-            <RemoveButton
-              alt={favoritesArray[0].alt}
-              class_name={checked ? "fav_button light_background" : "fav_button dark"}
-              id={elem.id}
-              message="removed from Favorites"
-            />
-          </div>
-      )}
-          </GridOnePage>
-      }
+        ) : (
+          <>
+            <GridOnePage array={favoritesArray}>
+              {favoritesArray.map((elem, ind) => (
+                <div
+                  className="grid_item grid_form"
+                  key={ind}
+                  style={{ backgroundImage: `url(${elem.image.url})` }}
+                >
+                  <div className="background_grid_item"></div>
+                  <RemoveButton
+                    alt={favoritesArray[0].alt}
+                    class_name={
+                      checked
+                        ? "fav_button light_background"
+                        : "fav_button dark"
+                    }
+                    id={elem.id}
+                    message="removed from Favorites"
+                  />
+                </div>
+              ))}
+            </GridOnePage>
+            <UpButton />
+          </>
+        )}
         <RemoveActionsBlock removeArray={removeFavoritesArray} />
       </Section>
     </div>

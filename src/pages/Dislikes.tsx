@@ -14,6 +14,7 @@ import { linkButtonArray } from "../Components/UI/Buttons/LinkButtons/LinkButton
 import { RemoveActionsBlock } from "../Components/RemoveActionsBlock";
 import GridOnePage from "../Components/UI/Grid/GridOnePage";
 import RemoveButton from "../Components/UI/Buttons/RemoveButton";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Dislikes = () => {
   const dislikesArray = useRecoilValue(dislikesArray$);
@@ -33,27 +34,30 @@ const Dislikes = () => {
         {dislikesArray.length === 0 ? (
           <DefaultState>No item found</DefaultState>
         ) : (
-          <GridOnePage array={dislikesArray}>
-            {dislikesArray.map((elem, ind) => (
-              <div
-                className="grid_item grid_form"
-                key={ind}
-                style={{ backgroundImage: `url(${elem.image.url})` }}
-              >
-                <div className="background_grid_item"></div>
-                <RemoveButton
-                  alt={dislikesArray[0].alt}
-                  class_name={
-                    checked
-                      ? "dislike_button light_background"
-                      : "dislike_button dark"
-                  }
-                  id={elem.id}
-                  message="removed from Dislikes"
-                />
-              </div>
-            ))}
-          </GridOnePage>
+          <>
+            <GridOnePage array={dislikesArray}>
+              {dislikesArray.map((elem, ind) => (
+                <div
+                  className="grid_item grid_form"
+                  key={ind}
+                  style={{ backgroundImage: `url(${elem.image.url})` }}
+                >
+                  <div className="background_grid_item"></div>
+                  <RemoveButton
+                    alt={dislikesArray[0].alt}
+                    class_name={
+                      checked
+                        ? "dislike_button light_background"
+                        : "dislike_button dark"
+                    }
+                    id={elem.id}
+                    message="removed from Dislikes"
+                  />
+                </div>
+              ))}
+            </GridOnePage>
+            <UpButton />
+          </>
         )}
         <RemoveActionsBlock removeArray={removeDislikesActions} />
       </Section>

@@ -24,6 +24,7 @@ import useChange from "../Hooks/useChange";
 import GridMultiPage from "../Components/UI/Grid/GridMultiPage";
 import { BreedTitle } from "../Components/UI/Grid/BreedTitle";
 import { isObjectBreedInfo } from "../functions";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 const Breeds = () => {
   const [breedsArray, setBreedsArray] = useRecoilState(breedsArray$);
@@ -132,6 +133,7 @@ const Breeds = () => {
                 </div>
               ))}
             </GridMultiPage>
+            <UpButton/>
             <PageIndicatorBlock pageAmount={pageAmount} />
           </>
         )}

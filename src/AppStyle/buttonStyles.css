@@ -16,6 +16,28 @@
   cursor: pointer;
 }
 
+#up_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: url("../Components/Graphic/Icons/white-icon/up-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  background-color: #ff868e;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 30;
+}
+#up_button:hover {
+  background-color: #ff868e;
+  background-image: url("../Components/Graphic/Icons/white-icon/up-white-20.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
 #search_button {
   width: 40px;
   height: 40px;
@@ -172,4 +194,13 @@
 .rect_btn:hover {
   background: #ff868e;
   color: #ffffff;
+}
+
+/* ScrollToTopButton.css */
+.scroll-to-top {
+  display: none;
+}
+
+.scroll-to-top.visible {
+  display: block;
 }

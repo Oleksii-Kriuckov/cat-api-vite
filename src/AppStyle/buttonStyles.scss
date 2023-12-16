@@ -9,6 +9,17 @@
   margin-right: 10px;
 }
 
+#up_button {
+  @include pinkButton(
+    $url: "../Components/Graphic/Icons/white-icon/up-white-20.png",
+    $urlHover: "../Components/Graphic/Icons/white-icon/up-white-20.png"
+  );
+  position: fixed;
+  background-color: $darkPink;
+  transition: opacity 0.3s;
+  z-index: 30;
+}
+
 #search_button {
   @include pinkButton(
     $url: "../Components/Graphic/Icons/search-20.png",
@@ -105,4 +116,13 @@
     background: $darkPink;
     color: #ffffff;
   }
+}
+/* ScrollToTopButton.css */
+
+.scroll-to-top {
+  display: none;
+}
+
+.scroll-to-top.visible {
+  display: block;
 }
