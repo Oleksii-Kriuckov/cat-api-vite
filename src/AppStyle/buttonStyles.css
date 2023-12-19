@@ -183,6 +183,40 @@
   margin: auto;
 }
 
+.title_button {
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.disabled {
+  color: #8c8c8c;
+}
+
+.disabled_light {
+  background-color: #ededed;
+}
+
+.disabled_dark {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.small_button {
+  height: 40px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .rect_btn {
   padding: 12px 25px;
   width: 170px;
@@ -196,7 +230,12 @@
   color: #ffffff;
 }
 
-/* ScrollToTopButton.css */
+.rect_btn_disabled {
+  padding: 12px 25px;
+  width: 170px;
+}
+
+/* UpButton.css */
 .scroll-to-top {
   display: none;
 }

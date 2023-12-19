@@ -13,7 +13,7 @@ const LogoBar = () => {
   return (
     <div
       className="d-flex justify-content-between align-items-center"
-      style={{ marginBottom: 70 }}
+      style={{ marginBottom: 60 }}
     >
       <img
         src={isLight ? logo : logoDark}

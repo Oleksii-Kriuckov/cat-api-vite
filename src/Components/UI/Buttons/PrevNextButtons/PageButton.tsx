@@ -21,10 +21,10 @@ const PageButton = (props: Props) => {
         isLight
           ? props.condition
             ? `page_button ${props.main_class} page_button_light`
-            : `disabled ${props.class_disabled} disabled_light`
+            : `small_button disabled ${props.class_disabled} disabled_light`
           : props.condition
           ? `page_button ${props.main_class} page_button_dark`
-          : `disabled ${props.class_disabled} disabled_dark`
+          : `small_button disabled ${props.class_disabled} disabled_dark`
       }
       onClick={props.onClick}
     >

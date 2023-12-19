@@ -26,85 +26,70 @@
 }
 
 .prev {
-  background-image: url("src/Components/Graphic/Icons/left-pink.png");
+  background-image: url("../../../../Graphic/Icons/left-pink.png");
   background-position: $bgpPrev;
   padding: $padPrev;
   &:hover {
-    background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
+    background-image: url("../../../../Graphic/Icons/white-icon/left-white.png");
     background-position: $bgpPrev;
     padding: $padPrev;
   }
 }
 .prev_mob {
-  background-image: url("src/Components/Graphic/Icons/left-pink.png");
+  background-image: url("../../../../Graphic/Icons/left-pink.png");
   background-position: $bgpPrevMob;
   padding: $padPrevMob;
   &:hover {
-    background-image: url("src/Components/Graphic/Icons/white-icon/left-white.png");
+    background-image: url("../../../../Graphic/Icons/white-icon/left-white.png");
     background-position: $bgpPrevMob;
     padding: $padPrevMob;
   }
 }
 
 .next {
-  background-image: url("src/Components/Graphic/Icons/right-pink.png");
+  background-image: url("../../../../Graphic/Icons/right-pink.png");
   background-position: $bgpNext;
   padding: $padNext;
   &:hover {
-    background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
+    background-image: url("../../../../Graphic/Icons/white-icon/right-white.png");
     background-position: $bgpNext;
     padding: $padNext;
   }
 }
 .next_mob {
-  background-image: url("src/Components/Graphic/Icons/right-pink.png");
+  background-image: url("../../../../Graphic/Icons/right-pink.png");
   background-position: $bgpNextMob;
   padding: $padNextMob;
   &:hover {
-    background-image: url("src/Components/Graphic/Icons/white-icon/right-white.png");
+    background-image: url("../../../../Graphic/Icons/white-icon/right-white.png");
     background-position: $bgpNextMob;
     padding: $padNextMob;
   }
 }
 
-.disabled {
-  height: 40px;
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  user-select: none;
-  letter-spacing: 2px;
-  color: $textGrey;
-  background-repeat: no-repeat;
-}
-.disabled_light {
-  background-color: $bgLight;
-}
-.disabled_dark {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .prev_disabled {
-  background-image: url("src/Components/Graphic/Icons/left.png");
+  background-image: url("../../../../Graphic/Icons/left.png");
   background-position: $bgpPrev;
   padding: $padPrev;
+  background-repeat: no-repeat;
 }
 .prev_disabled_mob {
-  background-image: url("src/Components/Graphic/Icons/left.png");
+  background-image: url("../../../../Graphic/Icons/left.png");
   background-position: $bgpPrevMob;
   padding: $padPrevMob;
+  background-repeat: no-repeat;
 }
 
 .next_disabled {
-  background-image: url("src/Components/Graphic/Icons/right.png");
+  background-image: url("../../../../Graphic/Icons/right.png");
   background-position: $bgpNext;
+  background-repeat: no-repeat;
   padding: $padNext;
 }
 
 .next_disabled_mob {
-  background-image: url("src/Components/Graphic/Icons/right.png");
+  background-image: url("../../../../Graphic/Icons/right.png");
   background-position: $bgpNextMob;
+  background-repeat: no-repeat;
   padding: $padNextMob;
 }

@@ -1,6 +1,7 @@
 @import "mixins";
 @import "variables";
 
+
 #back_button {
   @include pinkButton(
     $url: "../Components/Graphic/Icons/back-20.png",
@@ -105,6 +106,35 @@
   margin: auto;
 }
 
+.title_button {
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.disabled {
+  color: $textGrey;
+}
+.disabled_light {
+  background-color: $bgLight;
+}
+.disabled_dark {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.small_button {
+  height: 40px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
 .rect_btn {
   padding: 12px 25px;
   width: 170px;
@@ -117,12 +147,14 @@
     color: #ffffff;
   }
 }
-/* ScrollToTopButton.css */
-
+.rect_btn_disabled {
+  padding: 12px 25px;
+  width: 170px;
+}
+/* UpButton.css */
 .scroll-to-top {
   display: none;
 }
-
 .scroll-to-top.visible {
   display: block;
 }

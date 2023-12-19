@@ -5,7 +5,7 @@ type Props = {removeArray: NewAct[]};
 
 export const RemoveActionsBlock = (props: Props) => {
   return (
-    <div>
+    <div style={{marginTop: 20}}>
       {props.removeArray.map((block) => {
           return (
             <BlockActionInfo

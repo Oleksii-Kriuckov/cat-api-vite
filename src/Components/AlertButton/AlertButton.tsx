@@ -1,29 +1,27 @@
-import { useRef, useState, PropsWithChildren } from "react";
+import { useRef, PropsWithChildren } from "react";
 import { CSSTransition } from "react-transition-group";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { actionInfoArray$, lightDark$ } from "../../Recoil/atoms";
+import { useRecoilValue } from "recoil";
+import { lightDark$ } from "../../Recoil/atoms";
 import "./style.css";
 import { RectButton } from "../UI/Buttons/RectButton";
 
-type Props = PropsWithChildren<{children: string,}>
+type Props = PropsWithChildren<{
+  children: string;
+  state: boolean;
+  disable: boolean;
+  click: () => void;
+}>;
 
-export function AlertButton({children}: Props) {
-  const [showAlert, setShowAlert] = useState(false);
-  const setActionInfoArray = useSetRecoilState(actionInfoArray$);
+export function AlertButton({ children, state, disable, click }: Props) {
   const isLight = useRecoilValue(lightDark$);
 
-  const clearLogs = () => {
-    setShowAlert(true);
-    setActionInfoArray([]);
-    setTimeout(() => setShowAlert(false), 2000);
-  };
   const nodeRef = useRef(null);
 
   return (
     <div>
       <CSSTransition
         nodeRef={nodeRef}
-        in={showAlert}
+        in={state}
         timeout={600}
         classNames="my-node"
         unmountOnExit
@@ -40,7 +38,12 @@ export function AlertButton({children}: Props) {
           {children}
         </div>
       </CSSTransition>
-      <RectButton id="clear_log" class_name="rect_btn" onClick={clearLogs}>
+      <RectButton
+        id="clear_log"
+        class_name="rect_btn"
+        disable={disable}
+        onClick={click}
+      >
         Clear log
       </RectButton>
     </div>

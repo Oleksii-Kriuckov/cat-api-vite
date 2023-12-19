@@ -6,23 +6,23 @@
 }
 
 .z-a {
-  background-image: url("src/Components/Graphic/Icons/sort-20.png");
+  background-image: url("../../../Graphic/Icons/sort-20.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 .z-a:hover {
-  background-image: url("src/Components/Graphic/Icons/sort-color-20.png");
+  background-image: url("../../../Graphic/Icons/sort-color-20.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .a-z {
-  background-image: url("src/Components/Graphic/Icons/soft-revert-20.png");
+  background-image: url("../../../Graphic/Icons/soft-revert-20.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 .a-z:hover {
-  background-image: url("src/Components/Graphic/Icons/sort-revert-color-20.png");
+  background-image: url("../../../Graphic/Icons/sort-revert-color-20.png");
   background-repeat: no-repeat;
   background-position: center;
 }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Section from "../Components/Section/Section";
 import GroupVoteButtons from "../Components/UI/Buttons/VoteButtons/GroupVoteButtons";
@@ -11,16 +11,24 @@ import { voteResponseData$ } from "../Recoil/selectors";
 import BlockActionInfo from "../Components/BlockActionInfo/BlockActionInfo";
 import { BlackText } from "../Components/UI/Texts/BlackText";
 import { AlertButton } from "../Components/AlertButton/AlertButton";
-import "../AppStyle/App.css";
 import { UpButton } from "../Components/UI/Buttons/UpButton";
+import "../AppStyle/App.css";
 
 const Voting = () => {
   const { getRandomCat } = useFetch();
+  const [showAlert, setShowAlert] = useState(false);
+  const [actionInfoArray, setActionInfoArray] =
+    useRecoilState(actionInfoArray$);
 
   const isLoading = useRecoilValue(isLoading$);
   const voteResponseData = useRecoilValue(voteResponseData$);
-  const actionInfoArray = useRecoilValue(actionInfoArray$);
   const [errorMessage, setErrorMessage] = useRecoilState(errorMessage$);
+
+  const clearLogs = () => {
+    setShowAlert(true);
+    setActionInfoArray([]);
+    setTimeout(() => setShowAlert(false), 2000);
+  };
 
   useEffect(() => {
     getRandomCat();
@@ -35,7 +43,14 @@ const Voting = () => {
       <Section>
         <Header class_name="title title_button" title_content="VOTING">
           <div style={{ position: "relative" }}>
-            <AlertButton>Logs are cleared</AlertButton>
+            {/*  */}
+            <AlertButton
+              disable={actionInfoArray.length === 0}
+              state={showAlert}
+              click={clearLogs}
+            >
+              Logs are cleared
+            </AlertButton>
           </div>
         </Header>
         {isLoading ? (
@@ -69,7 +84,7 @@ const Voting = () => {
                   </BlockActionInfo>
                 </div>
               ))}
-              <UpButton/>
+              <UpButton />
             </div>
           )
         )}
