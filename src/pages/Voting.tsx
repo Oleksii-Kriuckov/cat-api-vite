@@ -48,9 +48,7 @@ const Voting = () => {
               disable={actionInfoArray.length === 0}
               state={showAlert}
               click={clearLogs}
-            >
-              Logs are cleared
-            </AlertButton>
+            />
           </div>
         </Header>
         {isLoading ? (

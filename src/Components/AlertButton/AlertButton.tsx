@@ -2,17 +2,17 @@ import { useRef, PropsWithChildren } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../Recoil/atoms";
-import "./style.css";
 import { RectButton } from "../UI/Buttons/RectButton";
+import "./style.css";
 
 type Props = PropsWithChildren<{
-  children: string;
+  // children: string;
   state: boolean;
   disable: boolean;
   click: () => void;
 }>;
 
-export function AlertButton({ children, state, disable, click }: Props) {
+export function AlertButton({ state, disable, click }: Props) {
   const isLight = useRecoilValue(lightDark$);
 
   const nodeRef = useRef(null);
@@ -34,8 +34,8 @@ export function AlertButton({ children, state, disable, click }: Props) {
               ? { background: "#ededed", color: "#8C8C8C" }
               : { background: "#3e3e3e", color: "#8C8C8C" }
           }
-        >
-          {children}
+        > Logs are cleared
+          {/* {children} */}
         </div>
       </CSSTransition>
       <RectButton

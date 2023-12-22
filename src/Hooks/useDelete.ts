@@ -13,19 +13,18 @@ import { dateTransform } from "../functions/index";
 
 export const useDelete = () => {
   const [likesArray, setLikesArray] = useRecoilState(likesArray$);
-  const [favoritesArray, setFavoritesArray] =
-    useRecoilState(favoritesArray$);
+  const [favoritesArray, setFavoritesArray] = useRecoilState(favoritesArray$);
   const [dislikesArray, setDislikesArray] = useRecoilState(dislikesArray$);
   const [galleryArray, setGalleryArray] = useRecoilState(galleryArray$);
   const [actionInfoArray, setActionInfoArray] =
     useRecoilState(actionInfoArray$);
-  const [removeLikesActions, setRemoveLikesActions] =
-    useRecoilState(removeLikesActions$);
+  const [removeLikesActions, setRemoveLikesActions] = useRecoilState(removeLikesActions$);
   const [removeFavoritesArray, setRemoveFavoritesArray] = useRecoilState(
     removeFavoritesActions$
   );
-  const [removeDislikesArray, setRemoveDislikesArray] =
-    useRecoilState(removeDislikesActions$);
+  const [removeDislikesArray, setRemoveDislikesArray] = useRecoilState(
+    removeDislikesActions$
+  );
 
   const addRemoveAction = (id: string, alt: string, message: string) => {
     const newAction = {
@@ -38,11 +37,7 @@ export const useDelete = () => {
       alt,
     };
 
-    setGalleryArray(
-      galleryArray.filter((elem) => {
-          return elem.id !== id;
-      })
-    );
+    setGalleryArray(galleryArray.filter((elem) => elem.id !== id));
 
     setActionInfoArray([newAction, ...actionInfoArray]);
 
@@ -50,7 +45,7 @@ export const useDelete = () => {
       case "like":
         setLikesArray(
           likesArray.filter((elem) => {
-              return elem.id !== id;
+            return elem.id !== id;
           })
         );
         setRemoveLikesActions([newAction, ...removeLikesActions]);
@@ -59,7 +54,7 @@ export const useDelete = () => {
       case "favorite":
         setFavoritesArray(
           favoritesArray.filter((elem) => {
-              return elem.id !== id;
+            return elem.id !== id;
           })
         );
         setRemoveFavoritesArray([newAction, ...removeFavoritesArray]);
@@ -68,7 +63,7 @@ export const useDelete = () => {
       case "dislike":
         setDislikesArray(
           dislikesArray.filter((elem) => {
-              return elem.id !== id;
+            return elem.id !== id;
           })
         );
         setRemoveDislikesArray([newAction, ...removeDislikesArray]);
