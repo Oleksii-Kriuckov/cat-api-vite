@@ -1,28 +1,7 @@
 import { useRecoilValue } from "recoil";
-import { styled } from "@mui/material/styles";
-import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { useDelete } from "../../../Hooks/useDelete";
 import { lightDark$ } from "../../../Recoil/atoms";
-
-const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.common.white,
-    color: "#1D1D1D",
-    fontSize: 12,
-  },
-}));
-
-const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(() => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: "#282828",
-    color: "#fff",
-    fontSize: 12,
-  },
-}));
+import { LightTooltip, DarkTooltip } from "../Tooltips";
 
 type RemoveButtonProps = {
   id: string;
@@ -34,7 +13,7 @@ type RemoveButtonProps = {
 const RemoveButton = (props: RemoveButtonProps) => {
   const { addRemoveAction } = useDelete();
   const isLight = useRecoilValue(lightDark$);
-
+// замінити hover tooltip на click tooltip
   return (
     <>
       {isLight ? (
@@ -45,12 +24,12 @@ const RemoveButton = (props: RemoveButtonProps) => {
           ></div>
         </LightTooltip>
       ) : (
-        <BootstrapTooltip title="Click to remove" placement="top">
+        <DarkTooltip title="Click to remove" placement="top">
           <div
             className={props.class_name}
             onClick={() => addRemoveAction(props.id, props.alt, props.message)}
           ></div>
-        </BootstrapTooltip>
+        </DarkTooltip>
       )}
     </>
   );

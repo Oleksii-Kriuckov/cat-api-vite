@@ -2,7 +2,9 @@ import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../../../../Recoil/atoms";
 import { PropsWithChildren } from "react";
 import "./styles/PageButtonsStyle.css";
-import "../../../../AppStyle/adaptive.css"
+import "../../../../AppStyle/adaptive/desktop.css"
+import "../../../../AppStyle/adaptive/tablet.css"
+import "../../../../AppStyle/adaptive/mobile.css"
 
 type Props = PropsWithChildren<{ 
   children: string,

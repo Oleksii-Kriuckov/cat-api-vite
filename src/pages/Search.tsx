@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import NavBar from "../Components/NavBar";
 import Header from "../Components/Header";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { searchingBreeds$, inputValue$ } from "../Recoil/atoms";
 import { useSetRecoilState, useRecoilState } from "recoil";

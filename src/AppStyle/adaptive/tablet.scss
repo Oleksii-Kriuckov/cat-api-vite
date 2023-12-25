@@ -1,0 +1,162 @@
+@media (min-width: 768px) {
+  #gallery_bar {
+    grid-template-columns: 290px 290px;
+  }
+
+  #select_breeds {
+    width: 220px;
+  }
+
+  #box {
+    width: 680px;
+  }
+
+  .dropzone_wrapper {
+    width: 600px;
+  }
+
+  .dropzone {
+    height: 320px;
+    padding: 20px 40px;
+  }
+
+  .breed_name {
+    width: max-content;
+    height: 62px;
+    padding: 5px 40px;
+    margin: -75px auto 10px;
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  main {
+    width: 740px;
+  }
+  section {
+    min-height: 495px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aside_wrapper {
+    display: none;
+  }
+
+  .initial {
+    display: none;
+  }
+
+  .dropzone_wrapper {
+    width: 94%;
+  }
+
+  .modal_h1 {
+    font-size: 36px;
+  }
+
+  main {
+    margin: auto;
+    width: 100%;
+  }
+  #offcanvas {
+    width: 100vw;
+    padding: 30px;
+  }
+
+  #breeds_header {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #box {
+    margin: 30px 30px;
+  }
+
+  #gallery_bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal_h1 {
+    font-size: 30px;
+  }
+  .dropzone {
+    padding: 20px 30px;
+  }
+
+  .breed_name {
+    width: max-content;
+    height: 52px;
+    padding: 5px 25px;
+    margin: -70px auto 10px;
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 576px) {
+  #select_limits_breeds {
+    width: 100px;
+  }
+  #breeds_header {
+    max-width: 470px;
+  }
+  #clear_log {
+    margin-left: auto;
+  }
+  #gallery_bar {
+    gap: 10px 20px;
+  }
+
+  #breeds_info_bar {
+    padding: 40px;
+  }
+
+  .upload {
+    margin-left: auto;
+  }
+
+  .char {
+    gap: 40px;
+  }
+  .char :nth-child(1) {
+    flex-basis: 270px;
+    flex-shrink: 2;
+  }
+
+  .card_button {
+    width: 138px;
+  }
+
+  .groupButtons {
+    margin-top: -40px;
+    width: 248px;
+    height: 80px;
+    margin: -40px auto 15px;
+  }
+  .vote_button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .scroll-to-top {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  aside {
+    width: 446px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .offcan {
+    width: 446px;
+  }
+
+  .block {
+    background-position: right 20px top 20px;
+  }
+}

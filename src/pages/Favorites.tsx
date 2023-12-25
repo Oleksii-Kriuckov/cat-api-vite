@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {

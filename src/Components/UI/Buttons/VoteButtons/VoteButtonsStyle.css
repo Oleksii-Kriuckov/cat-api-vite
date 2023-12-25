@@ -1,6 +1,4 @@
 .groupButtons {
-  width: 248px;
-  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +7,6 @@
   outline: 4px solid #ffffff;
   border-radius: 20px;
   overflow: hidden;
-  margin: 15px auto;
 }
 .groupButtons :first-child {
   background-color: #97EAB9;
@@ -37,8 +34,6 @@
 }
 
 .vote_button {
-  width: 80px;
-  height: 80px;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;

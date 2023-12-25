@@ -8,7 +8,7 @@ import { linkButtonArray } from "../LinkButtons/LinkButtonData";
 //Buttons for voting Like, Favorite, Dislike
 const GroupVoteButtons = () => {
   return (
-    <div className="groupButtons" style={{ marginTop: -40 }}>
+    <div className="groupButtons">
       <VoteButton
         message={LikeMessage}
         icon={LikeIcon}

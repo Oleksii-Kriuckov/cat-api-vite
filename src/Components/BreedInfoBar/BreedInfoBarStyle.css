@@ -1,14 +1,8 @@
 .breed_name {
-  width: max-content;
-  height: 62px;
-  padding: 5px 40px;
-  margin: -75px auto 10px;
   border-radius: 20px;
   text-align: center;
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
-  line-height: 52px;
 }
 .breed_name_dark {
   background: #282828;
@@ -21,7 +15,7 @@
   border-radius: 20px;
 }
 
-.breeds_info_border_light{
+.breeds_info_border_light {
   border: 2px solid #fbe0dc;
 }
 .breeds_info_border_dark {
@@ -46,9 +40,9 @@
 }
 
 .description {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 23px;
-color: #8C8C8C;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #8c8c8c;
 }

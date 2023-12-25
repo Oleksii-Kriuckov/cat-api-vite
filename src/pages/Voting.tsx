@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import GroupVoteButtons from "../Components/UI/Buttons/VoteButtons/GroupVoteButtons";
 import NavBar from "../Components/NavBar";
 import Loader from "../Components/UI/Loader/Loader";

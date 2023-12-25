@@ -3,8 +3,10 @@ import Layout from "./Components/Layout";
 import Initial from "./pages/Initial";
 import { AppRoutes } from "./Router/routes";
 import "./AppStyle/App.css";
-import "./AppStyle/adaptive.css";
 import "./AppStyle/buttonStyles.css"
+import "./AppStyle/adaptive/desktop.css";
+import "./AppStyle/adaptive/tablet.css";
+import "./AppStyle/adaptive/mobile.css";
 
 function App() {
 

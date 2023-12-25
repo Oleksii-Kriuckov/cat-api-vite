@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import NavBar from "../Components/NavBar";
 import Header from "../Components/Header";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import {
   errorMessage$,
   breedsArray$,

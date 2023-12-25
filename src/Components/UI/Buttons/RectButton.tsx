@@ -25,7 +25,7 @@ export const RectButton = (props: Props) => {
           ? `${props.class_name} title_button light_pink_background`
           : `${props.class_name} title_button dark_pink_background`
       }
-      onClick={!props.disable && props.onClick}
+      onClick={!props.disable ? props.onClick : () => {}}
     >
       {props.children.toUpperCase()}
     </div>

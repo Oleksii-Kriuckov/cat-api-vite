@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
@@ -16,6 +16,7 @@ import GridOnePage from "../Components/UI/Grid/GridOnePage";
 import RemoveButton from "../Components/UI/Buttons/RemoveButton";
 import { UpButton } from "../Components/UI/Buttons/UpButton";
 import { AlertButton } from "../Components/AlertButton/AlertButton";
+import GridBackground from "../Components/UI/Grid/GridBackground";
 
 const Dislikes = () => {
   const dislikesArray = useRecoilValue(dislikesArray$);
@@ -42,7 +43,7 @@ const Dislikes = () => {
       <NavBar />
       <Section>
         <Header class_name="title title_button" title_content="DISLIKES">
-        <div style={{ position: "relative" }}>
+          <div style={{ position: "relative" }}>
             <AlertButton
               disable={removeDislikesArray.length === 0}
               state={showAlert}
@@ -73,6 +74,12 @@ const Dislikes = () => {
                     message="removed from Dislikes"
                   />
                 </div>
+                // <GridBackground
+                //   key={ind}
+                //   imageUrl={`url(${elem.image.url})`}
+                //   alt={dislikesArray[0].alt}
+                //   id={elem.id}
+                // />
               ))}
             </GridOnePage>
             <UpButton />

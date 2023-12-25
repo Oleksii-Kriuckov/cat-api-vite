@@ -1,38 +1,3 @@
-@media (min-width: 1280px) {
-  .search {
-    width: 470px;
-  }
-  .offcanvas_wrapper {
-    display: none;
-  }
-  .aside_mobile {
-    display: none;
-  }
-  #box {
-    margin: 30px;
-    margin-left: auto;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .aside_wrapper {
-    display: none;
-  }
-  main {
-    margin: auto;
-  }
-  .initial {
-    display: none;
-  }
-  .search {
-    width: 400px;
-  }
-  #offcanvas {
-    width: 768px;
-  }
-  #box {
-    margin: 30px auto;
-  }
-}
 @media (min-width: 768px) {
   #gallery_bar {
     -ms-grid-columns: 290px 290px;
@@ -51,8 +16,21 @@
     height: 320px;
     padding: 20px 40px;
   }
+  .breed_name {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 62px;
+    padding: 5px 40px;
+    margin: -75px auto 10px;
+    font-size: 36px;
+    line-height: 52px;
+  }
   main {
     width: 740px;
+  }
+  section {
+    min-height: 495px;
   }
 }
 @media (max-width: 767px) {
@@ -94,6 +72,16 @@
   .dropzone {
     padding: 20px 30px;
   }
+  .breed_name {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 52px;
+    padding: 5px 25px;
+    margin: -70px auto 10px;
+    font-size: 34px;
+    line-height: 44px;
+  }
 }
 @media (min-width: 576px) {
   #select_limits_breeds {
@@ -126,6 +114,16 @@
   .card_button {
     width: 138px;
   }
+  .groupButtons {
+    margin-top: -40px;
+    width: 248px;
+    height: 80px;
+    margin: -40px auto 15px;
+  }
+  .vote_button {
+    width: 80px;
+    height: 80px;
+  }
   .scroll-to-top {
     bottom: 30px;
     right: 30px;
@@ -141,86 +139,5 @@
   }
   .block {
     background-position: right 20px top 20px;
-  }
-}
-@media (max-width: 575px) {
-  #box {
-    margin: 20px 20px;
-  }
-  #select_breeds {
-    width: 100%;
-  }
-  #breeds_header {
-    max-width: 300px;
-  }
-  #breeds_info_bar {
-    padding: 32px;
-  }
-  #gallery_bar {
-    gap: 10px;
-  }
-  .search {
-    width: 100%;
-  }
-  .card_button {
-    width: 100%;
-  }
-  .nav_card {
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .modal_h1 {
-    font-size: 20px;
-  }
-  .dropzone {
-    padding: 20px 20px;
-  }
-  .offcan {
-    max-width: 400px;
-    width: 100%;
-  }
-  .block {
-    background-position: right 20px top 20px;
-  }
-  .scroll-to-top {
-    bottom: 20px;
-    right: 20px;
-  }
-  main {
-    padding: 20px;
-  }
-  aside {
-    max-width: 400px;
-  }
-}
-@media (min-width: 376px) {
-  .page_button,
-  .disabled {
-    width: 120px;
-  }
-  .s {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .xs {
-    display: none;
-  }
-}
-@media (max-width: 375px) {
-  .page_button,
-  .disabled {
-    width: 100px;
-  }
-  .s {
-    display: none;
-  }
-  .xs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #breeds_info_bar {
-    padding: 20px;
   }
 }

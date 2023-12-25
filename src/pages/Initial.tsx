@@ -4,7 +4,8 @@ import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../Recoil/atoms";
 import useFetch from "../Hooks/useFetch";
 import Aside from "../Components/Aside/Aside";
-import '../AppStyle/adaptive.css'
+import '../AppStyle/adaptive/desktop.css'
+import '../AppStyle/adaptive/tablet.css'
 
 const Initial = () => {
   const isLight = useRecoilValue(lightDark$);

@@ -1,7 +1,7 @@
 import { useMemo, useEffect } from "react";
 import NavBar from "../Components/NavBar";
 import Header from "../Components/Header";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import GalleryBar from "../Components/GalleryBar/GalleryBar";
 import { useRecoilValue, useRecoilState } from "recoil";
@@ -54,7 +54,7 @@ const Gallery = () => {
       <NavBar />
       <Section>
         <Header class_name="title title_button" title_content="GALLERY">
-          <ModalWindow />
+          {/* <ModalWindow /> */}
         </Header>
         <GalleryBar />
         {galleryArray.length === 0 ? (

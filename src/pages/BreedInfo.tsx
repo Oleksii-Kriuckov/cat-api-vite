@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
-import Section from "../Components/Section/Section";
+import Section from "../Components/Section";
 import { Title } from "../Components/UI/Title";
 import { breedInfo$ } from "../Recoil/atoms";
 import { useRecoilState } from "recoil";
@@ -10,6 +10,7 @@ import BreedInfoBar from "../Components/BreedInfoBar/BreedInfoBar";
 import { BreedInfo } from "../Types/types";
 import allBreeds from "../assets/breeds.json";
 import { isObjEmpty } from "../functions";
+import { UpButton } from "../Components/UI/Buttons/UpButton";
 
 export default function BreedInfo() {
   const [breedInfo, setBreedInfo] = useRecoilState(breedInfo$);
@@ -37,6 +38,7 @@ export default function BreedInfo() {
               style={{ width: "100%", borderRadius: "20px" }} //height: "360px",
             />
             <BreedInfoBar />
+            <UpButton/>
           </>
         ) : (
           <div>Info about the {breedInfo.name} breed did not load</div>
