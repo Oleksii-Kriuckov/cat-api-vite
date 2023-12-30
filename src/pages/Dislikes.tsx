@@ -4,16 +4,11 @@ import NavBar from "../Components/NavBar";
 import Section from "../Components/Section";
 import DefaultState from "../Components/UI/DefaultState/DefaultState";
 import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  dislikesArray$,
-  removeDislikesActions$,
-  lightDark$,
-} from "../Recoil/atoms";
+import { dislikesArray$, removeDislikesActions$ } from "../Recoil/atoms";
 import { useAddToCategories } from "../Hooks/useAddToCategories";
 import { linkButtonArray } from "../Components/UI/Buttons/LinkButtons/LinkButtonData";
 import { RemoveActionsBlock } from "../Components/RemoveActionsBlock";
 import GridOnePage from "../Components/UI/Grid/GridOnePage";
-import RemoveButton from "../Components/UI/Buttons/RemoveButton";
 import { UpButton } from "../Components/UI/Buttons/UpButton";
 import { AlertButton } from "../Components/AlertButton/AlertButton";
 import GridBackground from "../Components/UI/Grid/GridBackground";
@@ -21,7 +16,6 @@ import GridBackground from "../Components/UI/Grid/GridBackground";
 const Dislikes = () => {
   const dislikesArray = useRecoilValue(dislikesArray$);
   const removeDislikesActions = useRecoilValue(removeDislikesActions$);
-  const isLight = useRecoilValue(lightDark$);
   const [showAlert, setShowAlert] = useState(false);
   const [removeDislikesArray, setRemoveDislikesArray] = useRecoilState(
     removeDislikesActions$
@@ -56,30 +50,13 @@ const Dislikes = () => {
         ) : (
           <>
             <GridOnePage array={dislikesArray}>
-              {dislikesArray.map((elem, ind) => (
-                <div
-                  className="grid_item grid_form"
-                  key={ind}
-                  style={{ backgroundImage: `url(${elem.image.url})` }}
-                >
-                  <div className="background_grid_item"></div>
-                  <RemoveButton
-                    alt={dislikesArray[0].alt}
-                    class_name={
-                      isLight
-                        ? "dislike_button light_background"
-                        : "dislike_button dark"
-                    }
-                    id={elem.id}
-                    message="removed from Dislikes"
-                  />
-                </div>
-                // <GridBackground
-                //   key={ind}
-                //   imageUrl={`url(${elem.image.url})`}
-                //   alt={dislikesArray[0].alt}
-                //   id={elem.id}
-                // />
+              {dislikesArray.map((elem) => (
+                <GridBackground
+                  key={elem.id}
+                  imageUrl={`url(${elem.image.url})`}
+                  alt={dislikesArray[0].alt}
+                  id={elem.id}
+                />
               ))}
             </GridOnePage>
             <UpButton />

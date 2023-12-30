@@ -6,7 +6,6 @@ import { RectButton } from "../UI/Buttons/RectButton";
 import "./style.css";
 
 type Props = PropsWithChildren<{
-  // children: string;
   state: boolean;
   disable: boolean;
   click: () => void;
@@ -34,8 +33,9 @@ export function AlertButton({ state, disable, click }: Props) {
               ? { background: "#ededed", color: "#8C8C8C" }
               : { background: "#3e3e3e", color: "#8C8C8C" }
           }
-        > Logs are cleared
-          {/* {children} */}
+        >
+          {" "}
+          Logs are cleared
         </div>
       </CSSTransition>
       <RectButton

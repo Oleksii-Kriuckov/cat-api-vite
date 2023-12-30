@@ -1,6 +1,5 @@
 import { useRecoilValue } from "recoil";
 import { lightDark$ } from "../Recoil/atoms";
-import "./sectionStyle.css";
 
 type SectionProps = {children: React.ReactNode};
 
