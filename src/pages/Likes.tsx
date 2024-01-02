@@ -54,6 +54,7 @@ const Likes = () => {
                 {likesArray.map((elem) => (
                   <GridBackground
                     key={elem.id}
+                    kindButton='like_button'
                     imageUrl={`url(${elem.image.url})`}
                     alt={likesArray[0].alt}
                     id={elem.id}

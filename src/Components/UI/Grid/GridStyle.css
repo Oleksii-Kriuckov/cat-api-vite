@@ -52,18 +52,6 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.grid_form:hover .fav_button {
-  display: block;
-  cursor: pointer;
-}
-.grid_form:hover .like_button {
-  display: block;
-  cursor: pointer;
-}
-.grid_form:hover .dislike_button {
-  display: block;
-  cursor: pointer;
-}
 
 .background_grid_item {
   width: 100%;

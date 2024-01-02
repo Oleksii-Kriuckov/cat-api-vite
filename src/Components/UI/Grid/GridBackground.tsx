@@ -4,39 +4,48 @@ import RemoveButton from "../Buttons/RemoveButton";
 import { useState } from "react";
 import { ClickAwayListener } from "@mui/material";
 import { ManualTooltip } from "../Tooltips/Tooltips";
+import { KindButtons } from "../Buttons/LinkButtons/LinkButtonData";
 
 type Props = {
   key: string | number;
+  kindButton: KindButtons;
   imageUrl: string;
   alt: string;
   id: string;
 };
 
 const GridBackground = (props: Props) => {
-  const [open, setOpen] = useState(false);
+  const [openTooltip, setOpenTooltip] = useState(false);
+  const [visibleBtn, setVisibleBtn] = useState(false);
   const isLight = useRecoilValue(lightDark$);
 
   return (
-    <ClickAwayListener onClickAway={() => setOpen(false)}>
+    <ClickAwayListener onClickAway={() => setOpenTooltip(false)}>
       <div
         className="grid_item grid_form"
         key={props.key}
         style={{ backgroundImage: props.imageUrl }}
-        onTouchStart={() => setOpen(true)}
+        onTouchEnd={() => setOpenTooltip(true)}
+        onTouchCancel={() => setVisibleBtn(true)}
+        onMouseEnter={() => setVisibleBtn(true)}
+        onMouseLeave={() => setVisibleBtn(false)}
       >
         <div className="background_grid_item" />
-        <ManualTooltip open={open}/>
-        <RemoveButton
-          alt={props.alt}
-          class_name={
-            isLight ? "dislike_button light_background" : "dislike_button dark"
-          }
-          id={props.id}
-          message="removed from Dislikes"
-          // open={open}
-          // onClose={() => setOpen(false)}
-          // onOpen={() => setOpen(true)}
-        />
+        <ManualTooltip open={openTooltip} />
+        {visibleBtn ? (
+          <RemoveButton
+            alt={props.alt}
+            class_name={
+              isLight
+                ? `${props.kindButton} light_background`
+                : `${props.kindButton} dark`
+            }
+            id={props.id}
+            message="removed from Dislikes"
+            onClose={() => setOpenTooltip(false)}
+            onOpen={() => setOpenTooltip(true)}
+          />
+        ) : null}
       </div>
     </ClickAwayListener>
   );

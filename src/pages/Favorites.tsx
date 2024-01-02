@@ -52,6 +52,7 @@ const Favorites = () => {
               {favoritesArray.map((elem) => (
                 <GridBackground
                   key={elem.id}
+                  kindButton='fav_button'
                   imageUrl={`url(${elem.image.url})`}
                   alt={favoritesArray[0].alt}
                   id={elem.id}

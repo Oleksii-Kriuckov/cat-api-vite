@@ -49,20 +49,20 @@
 
 .grid_form {
   align-items: center;
-  &:hover {
-    .fav_button {
-      display: block;
-      cursor: pointer;
-    }
-    .like_button {
-      display: block;
-      cursor: pointer;
-    }
-    .dislike_button {
-      display: block;
-      cursor: pointer;
-    }
-  }
+  // &:hover {
+  //   .fav_button {
+  //     display: block;
+  //     cursor: pointer;
+  //   }
+  //   .like_button {
+  //     display: block;
+  //     cursor: pointer;
+  //   }
+  //   .dislike_button {
+  //     display: block;
+  //     cursor: pointer;
+  //   }
+  // }
 }
 
 .background_grid_item {

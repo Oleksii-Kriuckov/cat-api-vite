@@ -53,6 +53,7 @@ const Dislikes = () => {
               {dislikesArray.map((elem) => (
                 <GridBackground
                   key={elem.id}
+                  kindButton='dislike_button'
                   imageUrl={`url(${elem.image.url})`}
                   alt={dislikesArray[0].alt}
                   id={elem.id}
