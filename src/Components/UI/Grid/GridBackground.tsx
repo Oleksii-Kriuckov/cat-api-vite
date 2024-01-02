@@ -20,13 +20,14 @@ const GridBackground = (props: Props) => {
   const isLight = useRecoilValue(lightDark$);
 
   return (
-    <ClickAwayListener onClickAway={() => setOpenTooltip(false)}>
+    <ClickAwayListener onClickAway={() => {setVisibleBtn(false); setOpenTooltip(false)}}>
       <div
         className="grid_item grid_form"
         key={props.key}
         style={{ backgroundImage: props.imageUrl }}
         onTouchEnd={() => setOpenTooltip(true)}
         onTouchCancel={() => setVisibleBtn(true)}
+        onTouchMove={() => {setVisibleBtn(true); setOpenTooltip(true)}}
         onMouseEnter={() => setVisibleBtn(true)}
         onMouseLeave={() => setVisibleBtn(false)}
       >
